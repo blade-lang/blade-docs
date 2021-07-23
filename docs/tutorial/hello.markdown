@@ -22,14 +22,14 @@ shell. Incase you don't know, an interactive shell is an application that when r
 commands, does something based on them (execution) and either prints a
 result, asks for another command or both in that order. 
 
-Blade comes withn an interactive shell also knwon as the REPL mode (Read-Evaluate-Print-Loop). This
+Blade comes with an interactive shell also knwon as the REPL (Read-Evaluate-Print-Loop) mode. This
 mode allows you to quickly execute or test out ideas without writing a complete program (Er... depends
 on what you call a complete program).
 
 To start Blade in the REPL mode, simply type the following command in your terminal.
 
 ```terminal
-$ blade
+blade
 ```
 
 You should be presented with a screen looking like the below:
@@ -51,6 +51,7 @@ by pressing the combination `Ctrl`+`D`.
 
 
 ## The Hello, World program
+---
 
 Following in the footsteps of legends, we are going to start learning Blade by writing a simple _Hello, World_
 application. Now, fire up your Blade REPL, type the following and press ENTER.
@@ -62,6 +63,25 @@ echo 'Hello, World'
 You should see the text `'Hello, World'` printed immediately after it. Congratulation, you've written your first
 Blade program! The `'` surrounding our text is because we are in the REPL and serves as an easy way to identify
 strings in the REPL output.
+
+Now, let's try something a little more fun shall we? 
+
+Create a file somewhere on your computer and name it `hello.b`. Now, write your Hello, World program (shown above) 
+into the file and save it. Have you done that? Ok. Now, navigate to the folder/directory containing your file in 
+your preferred terminal (Err... is that Windows? Open the command prompt). Are you there? Now type the 
+following command.
+
+```terminal
+blade hello.b
+```
+
+Can you see it? Now you are a Blade ninja! Give yourself a pat on the back and tell yourself weldone. You did good.
+
+For those of you who still can't see it, pick a sledge hammer, smash your computer and go get something modern.
+
+
+## Blade the Calculator
+---
 
 We can take surely have more fun than just printing "Hello, World" to the screen. We can go ahead and do some
 amazing things now that we know how to print something to screen. How about we take a look at using Blade as
