@@ -66,8 +66,14 @@ strings in the REPL output.
 
 Now, let's try something a little more fun shall we? 
 
-Create a file somewhere on your computer and name it `hello.b`. Now, write your Hello, World program (shown above) 
-into the file and save it. Have you done that? Ok. Now, navigate to the folder/directory containing your file in 
+Create a file somewhere on your computer and name it `hello.b`. Now, the following program into the file and 
+save it. 
+
+```blade
+print('Hello, World')
+```
+
+Have you done that? Ok. Now, navigate to the folder/directory containing your file in 
 your preferred terminal (Err... is that Windows? Open the command prompt). Are you there? Now type the 
 following command.
 
@@ -75,9 +81,17 @@ following command.
 blade hello.b
 ```
 
-Can you see it? Now you are a Blade ninja! Give yourself a pat on the back and tell yourself weldone. You did good.
+Can you see it? Now you are a Blade ninja! You now know two ways to print something to screen and you can use 
+the REPL and a file to create a Blade program. Give yourself a pat on the back and tell yourself weldone. You did good.
 
 For those of you who still can't see it, pick a sledge hammer, smash your computer and go get something modern.
+
+We'll learn more about the `print` thing you saw there later. For now, it's good enough to know that there are two ways show something on the screen. 
+
+1. Using the `echo` command
+2. Using the `print` function
+
+You'll see how they differ when we explain `print` better [here](./tutorial/builtin-functions).
 
 
 ## Blade the Calculator

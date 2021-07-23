@@ -11,6 +11,10 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     filenames '*.b'
     mimetypes 'text/x-blade'
 
+    def self.detect?(text)
+      return 1 if text.shebang?('blade')
+    end
+
     keywords = %w(
       as assert break catch class continue default def die echo else finally
       for if import in iter return parent self try using when while
@@ -21,6 +25,14 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     )
 
     imports = %w(import)
+
+    builtins = %w(
+      print hex int is_bool is_string is_list is_dict is_number
+      is_instance is_iterable is_class is_function id bin abs
+      bytes file chr delprop getprop hashprop is_Callable is_object
+      is_bytes is_file max microtime time min oct rand ord setprop
+      sum to_int to_bool to_list to_number to_string typeof
+    )
 
     id = /[a-zA-Z_]\w*/
 
@@ -42,9 +54,9 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r(/\*.*?\*/)m, Comment::Multiline
       rule %r/"/, Str, :dqs
       rule %r/'/, Str, :sqs
-      rule %r/r"[^"]*"/, Str::Other
-      rule %r/r'[^']*'/, Str::Other
-      rule %r/##{id}*/i, Str::Symbol
+      rule %r/r"[^"]*"/, Str::Double
+      rule %r/r'[^']*'/, Str::Double
+      rule %r/(?:#{builtins.join('|')})\b/i, Name::Builtin
       rule %r/@#{id}/, Name::Decorator
       rule %r/(?:#{keywords.join('|')})\b/, Keyword
       rule %r/(?:#{declarations.join('|')})\b/, Keyword::Declaration
@@ -57,11 +69,17 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
       rule %r/#{id}:/, Name::Label
       rule %r/\$?#{id}/, Name
+      rule %r/^(>|\|)/, Punctuation
       rule %r/[~^*!%&\[\](){}<>\|+=:;,.\/?-]/, Operator
-      rule %r/\d*\.\d+([eE]\-?\d+)?/, Num::Float
-      rule %r/0x[\da-fA-F]+/, Num::Hex
-      rule %r/\d+L?/, Num::Integer
-      rule %r/\n/, Text
+      rule %r/[0-9][0-9]*\.[0-9]+([eE][0-9]+)?[fd]?/, Num::Float
+      rule %r/0x[0-9a-fA-F]+/i, Num::Hex
+      rule %r/0o[0-7][0-7_]*/i, Num::Oct
+      rule %r/0b[01][01_]*/i, Num::Bin
+      rule %r/[0-9]+/, Num::Integer
+
+      rule %r/"/, Str::Delimiter, :dq
+      rule %r/'/, Str::Delimiter, :sq
+      rule %r/:/, Punctuation
     end
 
     state :class do
