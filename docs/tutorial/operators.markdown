@@ -2,7 +2,7 @@
 layout: default
 title: Operators
 parent: Tutorial
-nav_order: 6
+nav_order: 7
 permalink: /tutorial/operators
 ---
 

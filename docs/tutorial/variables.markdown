@@ -2,7 +2,7 @@
 layout: default
 title: Variables
 parent: Tutorial
-nav_order: 5
+nav_order: 6
 permalink: /tutorial/variables
 ---
 

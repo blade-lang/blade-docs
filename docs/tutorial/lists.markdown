@@ -2,7 +2,7 @@
 layout: default
 title: Lists
 parent: Tutorial
-nav_order: 10
+nav_order: 11
 permalink: /tutorial/lists
 ---
 
