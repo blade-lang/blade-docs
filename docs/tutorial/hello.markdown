@@ -19,8 +19,8 @@ At the end of the chapter, you should be more motivated to learn Blade.
 
 If you've had any experience at all with programming, then you'll be familiar with an interactive
 shell. Incase you don't know, an interactive shell is an application that when run, prompts for
-commands, does something based on them (execution) and either asks for another command, prints a
-result or both. 
+commands, does something based on them (execution) and either prints a
+result, asks for another command or both in that order. 
 
 Blade comes withn an interactive shell also knwon as the REPL mode (Read-Evaluate-Print-Loop). This
 mode allows you to quickly execute or test out ideas without writing a complete program (Er... depends
