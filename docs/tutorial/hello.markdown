@@ -127,4 +127,4 @@ But if you want to do beautiful and amazing things, let's continue into the next
 
 <br><br>
 
-[Previous Topic](./intro) | [Next Topic](./numbers)
+[Previous Topic](./intro) | [Next Topic](./comments)
