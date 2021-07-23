@@ -70,6 +70,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/#{id}:/, Name::Label
       rule %r/\$?#{id}/, Name
       rule %r/^(>|\|)/, Punctuation
+      rule %r/^(\d|'|"|\[|\{).*?[\r\n]/, Text
       rule %r/[~^*!%&\[\](){}<>\|+=:;,.\/?-]/, Operator
       rule %r/[0-9][0-9]*\.[0-9]+([eE][0-9]+)?[fd]?/, Num::Float
       rule %r/0x[0-9a-fA-F]+/i, Num::Hex

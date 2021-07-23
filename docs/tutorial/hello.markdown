@@ -29,7 +29,7 @@ on what you call a complete program).
 To start Blade in the REPL mode, simply type the following command in your terminal.
 
 ```terminal
-blade
+$ blade
 ```
 
 You should be presented with a screen looking like the below:
@@ -78,7 +78,7 @@ your preferred terminal (Err... is that Windows? Open the command prompt). Are y
 following command.
 
 ```terminal
-blade hello.b
+$ blade hello.b
 ```
 
 Can you see it? Now you are a Blade ninja! You now know two ways to print something to screen and you can use 

@@ -38,6 +38,11 @@ a:not([class]):hover {
   color: #a22a9e;
 }
 
+.search-result:hover,
+.search-result.active {
+  background-color: #fef7ff;
+}
+
 ::selection {
   color     : #fff;
   background: #ab6db3;
