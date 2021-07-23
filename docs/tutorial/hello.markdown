@@ -57,7 +57,7 @@ Following in the footsteps of legends, we are going to start learning Blade by w
 application. Now, fire up your Blade REPL, type the following and press ENTER.
 
 ```blade
-echo 'Hello, World'
+> echo 'Hello, World'
 ```
 
 You should see the text `'Hello, World'` printed immediately after it. Congratulation, you've written your first

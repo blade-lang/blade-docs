@@ -1,2 +1,2 @@
-
-var x = 6
+echo 5 * 16 * 11
+echo 'It workd'

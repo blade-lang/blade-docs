@@ -61,7 +61,7 @@ Blade comes with support for REPL (Read-Evaluate-Print-Loop). The REPL mode is t
 
 Something like this:
 
-```terminal
+```blade
 $ blade
 Blade 0.0.5 (running on BladeVM 0.0.5), REPL/Interactive mode = ON
 Clang 12.0.0, (Build time = Jul 14 2021, 14:30:16)
