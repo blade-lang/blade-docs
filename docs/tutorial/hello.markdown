@@ -50,6 +50,45 @@ the bar (`|`) sign. You can exit the REPL mode by typing `exit()` and pressing t
 by pressing the combination `Ctrl`+`D`.
 
 
+## The Hello, World program
+
+Following in the footsteps of legends, we are going to start learning Blade by writing a simple _Hello, World_
+application. Now, fire up your Blade REPL, type the following and press ENTER.
+
+```blade
+echo 'Hello, World'
+```
+
+You should see the text `'Hello, World'` printed immediately after it. Congratulation, you've written your first
+Blade program! The `'` surrounding our text is because we are in the REPL and serves as an easy way to identify
+strings in the REPL output.
+
+We can take surely have more fun than just printing "Hello, World" to the screen. We can go ahead and do some
+amazing things now that we know how to print something to screen. How about we take a look at using Blade as
+a calculator?
+
+Now, let's try a few more commands in the REPL.
+
+```blade
+> echo 5 + 20
+25
+> echo 4 * 11
+44
+> echo 16 - 1 * 4 / 6 + 3
+18.33333333333334
+> echo 2 ** 5
+32
+```
+
+In the examples above, we used Blade as a simple arithemetic calculator. Notice that little `**`? That simply means
+raise to power and 2 raised to the power of 5 equals 32.
+
+---
+
+If all you ever want to do with Blade is use it as a handy calculator, you are welcomed to stop here. 
+But if you want to do beautiful and amazing things, let's continue into the next chapter together.
+
+
 
 
 <br><br>
