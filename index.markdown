@@ -93,6 +93,13 @@ It is important to remember that:
 > While Blade may not enforce the `.b` extension for all scripts, it is a _requirement_ for a scipt that is meant to be imported as a module into another program.
 
 
+## Editor Support
+---
+
+For editor support, we recommend Visual Studio Code along with the [blade-vscode Extension](https://marketplace.visualstudio.com/items?itemName=blade-lang.blade-vscode){:target="_blank"}. 
+Support for more editors are planned and on the way.
+
+
 ## Blade CLI options
 ---
 
