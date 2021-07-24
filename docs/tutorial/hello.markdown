@@ -95,7 +95,7 @@ We'll learn more about the `print` thing you saw there later. For now, it's good
 1. Using the `echo` command
 2. Using the `print` function
 
-You'll see how they differ when we explain `print` better [here](./tutorial/builtin-functions).
+You'll see how they differ when we explain `print` better [here](./builtin-functions).
 
 
 ## Blade the Calculator

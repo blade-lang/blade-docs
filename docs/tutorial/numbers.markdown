@@ -14,4 +14,4 @@ permalink: /tutorial/numbers
 
 <br><br>
 
-[Previous Topic](./hello) | [Next Topic](./strings)
+[Previous Topic](./comments) | [Next Topic](./strings)

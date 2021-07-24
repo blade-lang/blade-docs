@@ -32,7 +32,7 @@ Other times, we kind of find a very good solution to our problem in languages li
 Blade did learn a lot of things from it), but the structure of such languages usually creates a new overhead in
 writing complex programs. It's really difficult keeping tab of indentations in such languages especially when you are not in a GUI IDE environment. I really tried to work Python in `nano`, but mehn... it wasn't easy.
 
-If you are feeling me, the Blade is just right for you.
+If you are feeling me, then Blade is just right for you.
 
 Blade is a simple language that has tried very much to learn from the mistake and success of it's predecessors.
 
