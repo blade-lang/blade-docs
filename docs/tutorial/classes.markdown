@@ -2,7 +2,7 @@
 layout: default
 title: Class
 parent: Tutorial
-nav_order: 16
+nav_order: 15
 permalink: /tutorial/class
 ---
 
@@ -11,4 +11,4 @@ permalink: /tutorial/class
 
 <br><br>
 
-[Previous Topic](./type-casting) | [Next Topic](./working-with-files)
+[Previous Topic](./builtin-functions) | [Next Topic](./type-casting)

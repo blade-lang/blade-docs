@@ -81,6 +81,10 @@ following command.
 $ blade hello.b
 ```
 
+> Blade script files can have any name and can end with any extension. But
+> files that can be used as a module or form part of a package _MUST_ end with
+> the `.b` extension.
+
 Can you see it? Now you are a Blade ninja! You now know two ways to print something to screen and you can use 
 the REPL and a file to create a Blade program. Give yourself a pat on the back and tell yourself weldone. You did good.
 
@@ -121,7 +125,6 @@ raise to power and 2 raised to the power of 5 equals 32.
 
 If all you ever want to do with Blade is use it as a handy calculator, you are welcomed to stop here. 
 But if you want to do beautiful and amazing things, let's continue into the next chapter together.
-
 
 
 
