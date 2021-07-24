@@ -51,8 +51,26 @@ You can create block comments as follows:
 This 
 is a comment 
 that spans 
-multiple 
+multiple or block
 lines
+*/
+```
+
+A multi-line/block comment starts with a `/*` and ends with a `*/`.
+
+One important thing to note is that block comments in Blade can be nested within one another.
+This support was added to allow commenting out a portion of code that when uncommented do not lead
+to uncommenting another code within it's path that would lead to unintended bugs.
+
+```blade
+/* 
+This is a block
+    /* 
+        And this is the internal
+        block comment
+    */
+that contains,
+another block comment
 */
 ```
 

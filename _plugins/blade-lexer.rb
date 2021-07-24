@@ -51,7 +51,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
       rule %r/\s+/, Text
       rule %r(#.*?$), Comment::Single
-      rule %r(/\*.*?\*/)m, Comment::Multiline
+      rule %r(/\*), Comment::Multiline, :comment
       rule %r/"/, Str, :dqs
       rule %r/'/, Str, :sqs
       rule %r/r"[^"]*"/, Str::Double
@@ -81,6 +81,14 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/"/, Str::Delimiter, :dq
       rule %r/'/, Str::Delimiter, :sq
       rule %r/:/, Punctuation
+    end
+
+    # nested commenting
+    state :comment do
+      rule %r([^/\*]+), Comment::Multiline
+      rule %r(/\*), Comment::Multiline, :comment
+      rule %r(\*/), Comment::Multiline, :pop!
+      rule %r([*/]), Comment::Multiline
     end
 
     state :class do
