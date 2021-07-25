@@ -2,7 +2,7 @@
 layout: default
 title: Loops
 parent: Tutorial
-nav_order: 10
+nav_order: 9
 permalink: /tutorial/loops
 ---
 

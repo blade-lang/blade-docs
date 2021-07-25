@@ -2,7 +2,7 @@
 layout: default
 title: Functions
 parent: Tutorial
-nav_order: 13
+nav_order: 12
 permalink: /tutorial/functions
 ---
 

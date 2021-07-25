@@ -70,12 +70,12 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/#{id}:/, Name::Label
       rule %r/\$?#{id}/, Name
       rule %r/^(>|\|)/, Punctuation
-      rule %r/^(\d|'|"|\[|\{).*?[\r\n]/, Text
+      rule %r/^(\d|'|"|\[|\{|\-).*?[\r\n]/, Text
       rule %r/[~^*!%&\[\](){}<>\|+=:;,.\/?-]/, Operator
       rule %r/[0-9][0-9]*\.[0-9]+([eE][0-9]+)?[fd]?/, Num::Float
       rule %r/0x[0-9a-fA-F]+/i, Num::Hex
-      rule %r/0o[0-7][0-7_]*/i, Num::Oct
-      rule %r/0b[01][01_]*/i, Num::Bin
+      rule %r/0c[0-7][0-7]*/i, Num::Oct
+      rule %r/0b[01][01]*/i, Num::Bin
       rule %r/[0-9]+/, Num::Integer
 
       rule %r/"/, Str::Delimiter, :dq

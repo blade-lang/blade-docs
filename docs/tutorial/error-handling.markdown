@@ -2,7 +2,7 @@
 layout: default
 title: Error Handling
 parent: Tutorial
-nav_order: 18
+nav_order: 17
 permalink: /tutorial/error-handling
 ---
 

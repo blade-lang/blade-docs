@@ -11,4 +11,4 @@ permalink: /tutorial/variables
 
 <br><br>
 
-[Previous Topic](./strings) | [Next Topic](./operators)
+[Previous Topic](./strings) | [Next Topic](./reserved)

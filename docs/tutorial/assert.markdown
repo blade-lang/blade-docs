@@ -2,7 +2,7 @@
 layout: default
 title: Assertions
 parent: Tutorial
-nav_order: 19
+nav_order: 18
 permalink: /tutorial/asserts
 ---
 

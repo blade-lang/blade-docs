@@ -2,7 +2,7 @@
 layout: default
 title: Built-in Functions
 parent: Tutorial
-nav_order: 14
+nav_order: 13
 permalink: /tutorial/builtin-functions
 ---
 

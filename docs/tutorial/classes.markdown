@@ -2,7 +2,7 @@
 layout: default
 title: Class
 parent: Tutorial
-nav_order: 15
+nav_order: 14
 permalink: /tutorial/class
 ---
 

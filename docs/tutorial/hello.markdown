@@ -108,13 +108,13 @@ a calculator?
 Now, let's try a few more commands in the REPL.
 
 ```blade
-> echo 5 + 20
+> 5 + 20
 25
-> echo 4 * 11
+> 4 * 11
 44
-> echo 16 - 1 * 4 / 6 + 3
+> 16 - 1 * 4 / 6+3
 18.33333333333334
-> echo 2 ** 5
+> 2 ** 5
 32
 ```
 
