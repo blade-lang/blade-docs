@@ -1,18 +1,18 @@
 Jekyll::Hooks.register :site, :pre_render do |site|
-  puts "Adding custom Blade lexer plugin"
+  puts "Adding custom Blade REPL mode lexer plugin"
   require "rouge"
 
   # ...
   class BladeLexer < Rouge::RegexLexer
-    title "Blade"
+    title "BladeRepl"
     desc "The Blade programming language (bladelang.com)"
 
-    tag 'blade'
-    filenames '*.b'
-    mimetypes 'text/x-blade'
+    tag 'blade-repl'
+    filenames '*.br'
+    mimetypes 'text/x-blade-repl'
 
     def self.detect?(text)
-      return 1 if text.shebang?('blade')
+      return 1 if text.shebang?('blade-repl')
     end
 
     keywords = %w(
@@ -50,6 +50,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       end
 
       rule %r/\s+/, Text
+      rule %r(^[^>].*?$), Text
+      rule %r/^(>|\|)/, Punctuation
       rule %r(#.*?$), Comment::Single
       rule %r(/\*), Comment::Multiline, :comment
       rule %r/"/, Str, :dqs
