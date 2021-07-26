@@ -63,7 +63,7 @@ div.highlighter-rouge {
     font-weight: bold;
   }
 
-  .k {
+  .k, .kc {
     color: #569cd6;
   }
 
@@ -85,6 +85,10 @@ div.highlighter-rouge {
 
   .go {
     color: #D4D4D4;
+  }
+
+  .n {
+    color: #C586C0;
   }
 }
 

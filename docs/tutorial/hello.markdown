@@ -127,6 +127,12 @@ raise to power and 2 raised to the power of 5 equals 32.
 
 ---
 
+> At this point, it's important to introduce you to three constants in Blade. This constants cannot be changed and
+> have reserved meanings and functions in Blade. They include the boolean `true` and `false` as well as `nil` that 
+> denotes the abscence of a value.
+
+---
+
 If all you ever want to do with Blade is use it as a handy calculator, you are welcomed to stop here. 
 But if you want to do beautiful and amazing things, let's continue into the next chapter together.
 
