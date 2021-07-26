@@ -142,6 +142,10 @@ Blade 0.0.5 (running on BladeVM 0.0.5)
 
 Along with Blade's goal to be simplicity, flexibility and expressiveness is a strong desire to make the community around it as friendly and welcoming as possible. Therefore, all forms of contributions from pull requests, suggestions, typo fixes in documentation, feature request, bug reports and any contribution at all is greatly welcomed and appreciated.
 
+> WE NEED HELP! From review of this documentation, to suggestions on the core features of Blade, 
+testing of Blade features, writing more comprehensive tests, bug detection, code fixes and more. 
+PLEASE CONTRIBUTE!
+
 ### Contributing code, fixes and features
 
 The standard. The general workflow is as follows.
@@ -151,7 +155,7 @@ The standard. The general workflow is as follows.
 3. Push your changes to a branch in your forked repo. For coding guidelines, see the project [README](https://github.com/blade-lang/blade/blob/main/README.md) file.
 4. Submit a pull request to Blade from your forked repo.
 
-You can also just mail your issues to [Ore Richard Muywa](mailto:eqliqandfriends@gmail.com) directly.
+You can also just mail your issues to [Ore Richard Muyiwa](mailto:eqliqandfriends@gmail.com) directly.
 
 
 ## Sponsors
