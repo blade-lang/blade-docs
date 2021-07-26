@@ -60,9 +60,28 @@ to calculate powers.
 For example:
 
 ```blade
+> 17 / 5 # normal divison returns a floating-point number
+3.4
+> 17 // 5 # floor division discards the fractional part
+3
+> 17 % 5 # returns the reminder after the division
+2
+> 3 ** 2 # 3 squared
+9
+> 2 ** 5 # 2 to the power of 5
+32
+> 2 ** 0.5 # 2 raise to power half i.e. square root of 2
+1.414213562373095
 ```
 
+## Bitwise Operations
+---
 
+
+## Operator Precedence
+---
+
+The following table lists all operators from highest precedence to lowest in Blade.
 
 
 

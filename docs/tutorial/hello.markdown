@@ -101,9 +101,13 @@ You'll see how they differ when we explain `print` better [here](./builtin-funct
 ## Blade the Calculator
 ---
 
-We can take surely have more fun than just printing "Hello, World" to the screen. We can go ahead and do some
-amazing things now that we know how to print something to screen. How about we take a look at using Blade as
-a calculator?
+We can take surely have more fun than just printing "Hello, World" to the screen. We can go 
+ahead and do some amazing things now that we know how to print something to screen. How about 
+we take a look at using Blade as a calculator?
+
+When you type simple expressions into the Blade REPL without any command or write an expression 
+without an associated command within a condition, loop or at the end of a function, Blade outputs 
+the result for you. This allows us to do many amazing things in the REPL mode.
 
 Now, let's try a few more commands in the REPL.
 
