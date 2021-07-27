@@ -43,13 +43,14 @@ Jekyll::Hooks.register :site, :pre_render do |site|
         (\s*)(\()                                # signature start
       )mx do |m|
         # TODO: do this better, this shouldn't need a delegation
-        delegate Blade, m[1]
+        delegate BladeRepl, m[1]
         token Name::Function, m[2]
         token Text, m[3]
         token Punctuation, m[4]
       end
 
       rule %r/\s+/, Text
+      rule %r/(Unhandled [a-zA-Z_]*Exception:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s*File:.*?[\r\n]+)*/m, Error
       rule %r(^[^>|].*?$), Text
       rule %r/^(>|\|)/, Generic::Prompt
       rule %r(#.*?$), Comment::Single

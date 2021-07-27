@@ -12,5 +12,7 @@ for i in 1..10 {
 '名可名非常名'.length()
 
 def test() {
-    
+
 }
+
+'We have ${x} crates of ${y}'
