@@ -50,7 +50,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       end
 
       rule %r/\s+/, Text
-      rule %r(^[^>].*?$), Text
+      rule %r(^[^>|].*?$), Text
       rule %r/^(>|\|)/, Punctuation
       rule %r(#.*?$), Comment::Single
       rule %r(/\*), Comment::Multiline, :comment
