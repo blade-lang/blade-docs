@@ -20,7 +20,7 @@ Comment (otherwise known as Block Comments).
 
 A single line comment in Blade starts with an hash (`#`) character and can appear anywhere in a REPL session or a script except between two single (`'`) or double (`"`) quotation marks. A single line comment can start the entire line or be inserted later in a line.
 
-```blade
+```blade-repl
 > # this is my first Blade single line comment
 > echo 'Not a #comment'    # assigning x to 15
 'Not a #comment'

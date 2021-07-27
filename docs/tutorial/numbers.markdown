@@ -17,7 +17,7 @@ octal and binary numbers.
 
 For example:
 
-```blade
+```blade-repl
 > echo 21 # integer
 21
 > echo 50.6 # floating-point number
@@ -41,7 +41,7 @@ operators `+`, `-`, `*`, `/` work exactly as you expect them to work.
 
 For example:
 
-```blade
+```blade-repl
 > 5 + 6
 11
 > 21 + 7 - 8
@@ -62,7 +62,7 @@ to calculate powers.
 
 For example:
 
-```blade
+```blade-repl
 > 17 / 5 # normal divison returns a floating-point number
 3.4
 > 17 // 5 # floor division discards the fractional part
@@ -87,7 +87,7 @@ greater-or-equal-to (`>=`) and less-or-equal-to (`<`).
 
 For example:
 
-```blade
+```blade-repl
 > 10 > 5
 true
 > 21 < 4
@@ -111,7 +111,7 @@ all logical operators.
 
 For example:
 
-```blade
+```blade-repl
 > 5 > -1 or 4 < 6
 true
 > 11 > 4 and 21 < 18
@@ -145,7 +145,7 @@ objects). The operators are as follows:
 
 For example:
 
-```blade
+```blade-repl
 > 10 & 2
 2
 > 10 | 4

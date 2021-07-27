@@ -17,7 +17,7 @@ the backslash (`\`).
 
 For example:
 
-```blade
+```blade-repl
 > 'string in single quote'
 'string in single quote'
 > "another version with double quotes"
@@ -38,7 +38,7 @@ processing of the output.
 
 For example:
 
-```blade
+```blade-repl
 > print("It's the \"\\\" character")
 It's the "\" character
 ```

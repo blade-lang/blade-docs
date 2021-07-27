@@ -3,7 +3,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
   require "rouge"
 
   # ...
-  class BladeLexer < Rouge::RegexLexer
+  class BladeReplLexer < Rouge::RegexLexer
     title "BladeRepl"
     desc "The Blade programming language (bladelang.com)"
 

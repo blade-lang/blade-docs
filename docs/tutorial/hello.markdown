@@ -56,7 +56,7 @@ by pressing the combination `Ctrl`+`D`.
 Following in the footsteps of legends, we are going to start learning Blade by writing a simple _Hello, World_
 application. Now, fire up your Blade REPL, type the following and press ENTER.
 
-```blade
+```blade-repl
 > echo 'Hello, World'
 ```
 
@@ -111,7 +111,7 @@ the result for you. This allows us to do many amazing things in the REPL mode.
 
 Now, let's try a few more commands in the REPL.
 
-```blade
+```blade-repl
 > 5 + 20
 25
 > 4 * 11
