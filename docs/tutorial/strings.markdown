@@ -43,6 +43,35 @@ For example:
 It's the "\" character
 ```
 
+Blade strings support a lot of special characters called `escape sequence` for formatting and 
+they also need to be escaped with `\` as follows:
+
+| Sequence | Meaning |
+|----------|---------|
+| `\a` | Alert (Beep, Bell) |
+| `\b` | Backspace |
+| `\f` | Formfeed Page Break |
+| `\n` | Newline |
+| `\r` | Carriage Return |
+| `\t` | Horizontal Tab |
+| `\v` | Vertical Tab |
+| `\\` | Backslash |
+| `\'` | Single Quotation Mark |
+| `\"` | Dobule Quotation Mark |
+| `\0` | String terminator |
+| `\$` | Escape for interpolated strings |
+| `\xhh` | Hexadecimal number |
+| `\uhhhh` | Unicode code point below 10000 hexadecimal |
+| `\Uhhhhhhhhh` | Unicode code point where h is a hexadecimal digit |
+
+> 1. _`h`_ stands for hexadecimal digit.
+> 2. `\0` used anywhere in a string will cause the rest of the string to be ignored and useless.
+> 3. `\$` _See the `Interpolated Strings` section below._
+> 4. `\u` takes 4 hexadecimal digits _h_ after it.
+> 5. `\U` takes 8 hexadecimal digits _h_ after it.
+
+
+
 
 <br><br>
 

@@ -1,11 +1,12 @@
 body {
   font-family: 'Lucida Grande', Arial, sans-serif;
   font-size  : 100%;
-  color      : #000;
+  // color      : #000;
+  color      : #5c5962;
 }
 
 .side-bar {
-  background-color: #fff7fa;
+  background-color: #f3f3f3;
 }
 
 hr {
@@ -58,7 +59,7 @@ div.highlighter-rouge {
     color: #6A9955;
   }
 
-  .p {
+  .gp {
     color: #383B3D;
     font-weight: bold;
   }
@@ -133,5 +134,39 @@ pre {
 
 blockquote {
   border-left: 4px solid #c7c7c7;
-  padding: 0px 10px 0px 25px;
+  padding: 0px 25px 0px 25px;
+  margin: 0;
+  border-right: 4px solid #c7c7c7;
+}
+
+.side-bar {
+  .nav-list .nav-list-item {
+
+    .nav-list-link:hover {
+      background: #e3e3e3;
+    }
+
+    .nav-list-link.active {
+      background: #424242;
+      color: #fff !important;
+    }
+  }
+}
+
+@media (min-width: 66.5rem) {
+  .side-bar {
+    width: 280px;
+
+    .nav-list .nav-list-item > .nav-list {
+      padding-left: 0;
+    }
+  }
+
+  .site-nav, .site-header, .site-footer {
+    width: 280px;
+  }
+}
+
+.table-wrapper {
+  box-shadow: none;
 }
