@@ -3,7 +3,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
   require "rouge"
 
   # ...
-  class BladeReplLexer < Rouge::RegexLexer
+  class BladeRepl < Rouge::RegexLexer
     title "BladeRepl"
     desc "The Blade programming language (bladelang.com)"
 
@@ -60,6 +60,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/r'[^']*'/, Str::Double
       rule %r/(?:#{builtins.join('|')})\b/i, Name::Builtin
       rule %r/@#{id}/, Name::Decorator
+      rule %r/#{id}(?=\()/, Name::Function
       rule %r/(?:#{keywords.join('|')})\b/, Keyword
       rule %r/(?:#{declarations.join('|')})\b/, Keyword::Declaration
       rule %r/(?:true|false|nil)\b/, Keyword::Constant
@@ -116,7 +117,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     state :string do
       mixin :interpolation
-      rule %r/\\[nrt\"\'\\]/, Str::Escape
+      rule %r/\\[abfnrtv0$xuU\"\'\\]/, Str::Escape
     end
 
     state :interpolation do

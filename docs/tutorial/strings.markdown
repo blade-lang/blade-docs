@@ -71,6 +71,50 @@ they also need to be escaped with `\` as follows:
 > 5. `\U` takes 8 hexadecimal digits _h_ after it.
 
 
+## Unicode and UTF-8
+
+As mentioned in the previous section, Blade strings fully supports unicode and are UTF-8 encoded by default.
+Unicode code points can be represented using Unicode `\u` and `\U` escape sequences.
+
+For example,
+
+```blade-repl
+> '\u00a9'
+'©'
+> '10\u00B5s'
+'10µs'
+> '\U0002B695 is a chinese character'
+'𫚕 is a chinese character'
+```
+
+Unicode characters can also be written directly in strings. This means, that in a Blade string, you can
+actually use advanced texts like smilies, trademarks and many more directly in your source code.
+
+For example:
+
+```blade-repl
+> 'I am 😀'
+'I am 😀'
+> 'Black ♞ rule'
+'Black ♞ rule'
+> '道可道非常道，名可名非常名'
+'道可道非常道，名可名非常名'
+```
+
+To verify our UTF-8 support, how about we try to get the length of the chinese string `名可名非常名`. 
+With UTF-8 support, the length of this string should be six (6) and much longer without UTF-8 support. 
+To get the length of the string, we can call it's `length()` method.
+
+For example,
+
+```blade-repl
+> '名可名非常名'.length()
+6
+> 'Hello, World'.length() # compared with English text
+12
+```
+
+As you can see, Blade returns the correct length irrespective of the language of the source text.
 
 
 <br><br>

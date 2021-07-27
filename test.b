@@ -7,3 +7,10 @@ if x > 5 {
 for i in 1..10 {
     print('Hello, World')
 }
+
+
+'名可名非常名'.length()
+
+def test() {
+    
+}
