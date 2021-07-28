@@ -82,7 +82,7 @@ they also need to be escaped with `\` as follows:
 
 > 1. _`h`_ stands for hexadecimal digit.
 > 2. `\0` used anywhere in a string will cause the rest of the string to be ignored and useless.
-> 3. `\$` _See the `Interpolated Strings` section below._
+> 3. `\$` _See the [`Interpolated Strings`](#string-interpolation) section below._
 > 4. `\u` takes 4 hexadecimal digits _h_ after it.
 > 5. `\U` takes 8 hexadecimal digits _h_ after it.
 
@@ -204,7 +204,159 @@ true
 false
 ```
 
+> Characters are always interchangeable for strings, but not the reverse.
+
 ## String Operations
+---
+
+Blade strings support multiple operations categorized into one of the following four groups.
+
+Two or more strings can be concatenated (glued together) via the `+` operator whether it's a literal or 
+a variable, and a specific string can be repeated by multiplying it with a number via the `*` operator. 
+
+For example:
+
+```blade-repl
+> 'str' + 'ing'
+'string'
+> 'abc' * 4 # repeating 'abc' four times
+'abcabcabcabc'
+> 'hat!' * 4 + 'rick' # and even in a more complex form
+'hat!hat!hat!hat!rick'
+```
+
+The `+` operator is quite powerful with a string, allowing you to add a string to a number or a number 
+to a string.
+
+For example,
+
+```blade-repl
+> 5 + 'alive'
+'5alive'
+> 'Base' + 64
+'Base64'
+```
+
+Strings can also be checked for equality or inequality as needed. For example:
+
+```blade-repl
+> "abracadabra" == "xylophone"
+false
+> "Hello, world." != "Goodbye, world."
+true
+> "1 + 2 = 3" == "1 + 2 = ${1 + 2}"
+true
+```
+
+Strings indexes can be accessed. The first character of a Blade string have an index of `0`. The result of 
+string indexes are characters.
+
+For example:
+
+```blade-repl
+> 'Hello'[0]
+'H'
+> 'Hello'[3]
+'l'
+```
+
+Strings indexes can also be accessed with negative numbers. When using negative numbers to access string
+indexes, note that the indexes will be returned in reverse. i.e. we start counting from the far right
+where the first index will be `-1` (since -0 is the same as 0).
+
+For example:
+
+```blade-repl
+> 'Hello'[-1]
+'o'
+> 'Hello'[-4]
+'e'
+```
+
+Note that trying to access a non-existing index or an index out of the range of the length of the string
+will result in an error.
+
+For example, the following code throws an exception.
+
+```blade-repl
+> 'Hello'[6]
+Unhandled Exception: string index 6 out of range
+  StackTrace:
+    File: <repl>, Line: 1, In: <script>
+```
+
+In addition to indexing, slicing is also supported. While indexing is used to obtain individual characters, slicing allows you to obtain subparts of a string.
+
+For example:
+
+```blade-repl
+> 'Blade'[0,3] # characters starting from index 0 to index 3 - 1 (2)
+'Bla'
+> 'Blade'[2,5] # characters from index 2 to index 5 - 1 (4)
+'ade'
+```
+
+The general syntax for slicing in Blade is `[lower limit, upper limit]`. Both lower limit and upper limit
+can be omitted. When the lower limit is omitted, it defaults to `0` and when the upper limit is omitted,
+it defaults to the length of the object e.g. the string length.
+
+As with general indexing, the upper limit can also use negative numbers and follows the same rules as 
+indexing with a negative number. A negative number in the lower limit will cause an empty object to be 
+returned.
+
+> 1. Slices are lower limit inclusive and upper limit exclusive. For example, slice `[0,3]` will return
+> a substring starting from index `0` (inclusive) to index `2` and index itself will be excluded.
+> 2. Index `in[,i] + in[i,]` is equal to the value of `in`. 
+
+For example:
+
+```blade-repl
+> 'Blade'[0,3]  # starting from index 0 to 2
+'Bla'
+> 'Blade'[2,5]  # starting from index 2 to 4
+'ade'
+> 'Blade'[,]   # starting from index 0 to the end
+'Blade'
+> 'Blade'[,-3]   # starting from index 0 to string length - 3
+'Bl'
+> 'Blade'[3,]  # starting from index 3 to the end
+'de'
+> 'Blade'[-1,]  # negative index in lower limit returns an empty string
+''
+> 'Blade'[,4]   # starting from index 0 to 3
+'Blad'
+> 'Blade'[,3] + 'Blade'[3,]     # in[,i] + in[i,]
+'Blade'
+```
+
+Blade strings are immutable. Hence, a string cannot be changed. Assigning to an indexed position in the string results in an error:
+
+For example,
+
+```blade-repl
+> 'Blade'[0] = 'J'
+Unhandled Exception: strings do not support object assignment
+  StackTrace:
+    File: <repl>, Line: 1, In: <script>
+```
+
+> You may notice how we are trying to assign to a string object directly instead of a variable and think
+> that's why it isn't working. That's not why! In blade, if string wasn't immutable (e.g. Lists aren't 
+> immutable), Blade will go ahead and do that assignment. The fact that you aren't storing that value 
+> anywhere is up to you. But it's neither a syntax nor runtime error to do so.
+
+If you need to to modify a string, you need to create a new one. Don't worry, Blade is smart enough to 
+know when you don't need a string anymore and will gracefully delete the string for memory when necessary.
+
+
+---
+**_If you have no previous experience with C style languages or don't know what methods are, you may which 
+to proceed into the [next](./variables) topic of the tutorial and come back here after you've completed 
+the [Class](./class) tutorial._**
+
+---
+
+## String Methods
 ---
 
 ## Regular Expressions
