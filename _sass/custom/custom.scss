@@ -180,3 +180,30 @@ blockquote {
     margin-top: 2em;
   }
 }
+
+.language-blade-repl {
+  position: relative;
+
+  &::after {
+    content: "REPL";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 78%;
+    padding: 0 .75em;
+    border: 1px solid #ffffff4d;
+    border-bottom-left-radius: .25em;
+  }
+
+  &.off{
+    .highlight {
+      .gp, .err, .go {
+        display: none;
+      }
+    }
+
+    &::after {
+      text-decoration: line-through;
+    }
+  }
+}
