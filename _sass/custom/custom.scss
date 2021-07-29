@@ -207,3 +207,23 @@ blockquote {
     }
   }
 }
+
+.main-content {
+  dl {
+    display: block;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  dt {
+    display: block;
+    text-align: left;
+
+    strong {
+      font-size: 110%;
+    }
+  }
+  dd {
+    display: block;
+    margin-left: 2em;
+  }
+}

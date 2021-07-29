@@ -359,6 +359,211 @@ the [Class](./class) tutorial._**
 ## String Methods
 ---
 
+Blade string comes with a lot of powerful text processing capabilities wrapped in methods described below.
+
+{:#length} _string_.**length**()
+: Returns the length of a string. Note that this method is UTF-8 compartible and will return the UTF-8 
+  length for the string if the string contains UTF-8 characters whether written directly or via the
+  `\u` or `\U` escapes.
+
+  For example:
+
+  ```blade-repl
+  > 'This is a pretty long string'.length()
+  28
+  > 'उनका एक समय'.length()
+  11
+  > 'This text mixes English and 粵語'.length()
+  30
+  ```
+
+^
+{:#upper} _string_.**upper**()
+: Returns a copy of the string with all the cased characters converted to uppercase. Note that the result
+  of this method may return `false` when tested with `is_upper()` of the _string_ contains Unicode
+  characters that are not case folded.
+
+  For example:
+
+  ```blade-repl
+  > 'blade'.upper()
+  'BLADE'
+  ```
+
+^
+{:#lower} _string_.**lower**()
+: Return a copy of the string with all the cased characters converted to lowercase.<br>
+  
+  For example:
+
+  ```blade-repl
+  > 'Blade Is Bae'.lower()
+  'blade is bae'
+  ```
+
+^
+{:#is_alpha} _string_.**is_alpha**()
+: Returns `true` if all the characters in the string are all alphabeths and the string is not empty.,
+  otherwise returns `false`.
+
+  For example:
+
+  ```blade-repl
+  > 'abracadabra'.is_alpha()
+  true
+  > 'my tooth aches'.is_alpha()
+  false
+  > ''.is_alpha()
+  false
+  ```
+
+^
+{:#is_alnum} _string_.**is_alnum**()
+: Returns `true` if all the characters in the string are either alphabeths or numbers and the string is 
+  not empty, otherwise returns `false`. This method is the same as `string.is_alpha() or string.is_number()`.
+
+  For example:
+
+  ```blade-repl
+  > '3Idiots'.is_alnum()
+  true
+  > 'Three Idiots'.is_alnum()
+  false
+  > '3 Idiots'.is_alnum()
+  false
+  > '3'.is_alnum()
+  true
+  > 'idiots'.is_alnum()
+  true
+  > ''.is_alnum()
+  false
+  ```
+
+^
+{:#is_number} _string_.**is_number**()
+: Returns `true` if all the characters in the string are all digits and the string is not empty.,
+  otherwise returns `false`.
+
+  For example:
+
+  ```blade-repl
+  > '123.5'.is_number()
+  false
+  > '1970'.is_number()
+  true
+  > '1980s'.is_number()
+  false
+  ```
+
+^
+{:#is_lower} _string_.**is_lower**()
+: Returns `true` if at least one character in the string is cased, all cased characters are lower cased
+  and the string is not empty. Otherwise, it returns `false`.
+
+  For example:
+
+  ```blade-repl
+  > 'all'.is_lower()
+  true
+  > 'all...123'.is_lower()
+  true
+  > 'All...123'.is_lower()
+  false
+  > ''.is_lower()
+  false
+  ```
+
+^
+{:#is_upper} _string_.**is_upper**()
+: Returns `true` if at least one character in the string is cased, all cased characters are upper cased
+  and the string is not empty. Otherwise, it returns `false`.
+
+  For example:
+
+  ```blade-repl
+  > 'ALL'.is_upper()
+  true
+  > 'ALL...123'.is_upper()
+  true
+  > 'All...123'.is_upper()
+  false
+  > ''.is_upper()
+  false
+  ```
+
+^
+{:#is_space} _string_.**is_space**()
+: _Coming soon_
+
+^
+{:#trim} _string_.**trim**()
+: _Coming soon_
+
+^
+{:#ltrim} _string_.**ltrim**()
+: _Coming soon_
+
+^
+{:#rtrim} _string_.**rtrim**()
+: _Coming soon_
+
+^
+{:#join} _string_.**join**()
+: _Coming soon_
+
+^
+{:#split} _string_.**split**()
+: _Coming soon_
+
+^
+{:#index_of} _string_.**index_of**()
+: _Coming soon_
+
+^
+{:#starts_with} _string_.**starts_with**()
+: _Coming soon_
+
+^
+{:#ends_with} _string_.**ends_with**()
+: _Coming soon_
+
+^
+{:#count} _string_.**count**()
+: _Coming soon_
+
+^
+{:#to_number} _string_.**to_number**()
+: _Coming soon_
+
+^
+{:#to_list} _string_.**to_list**()
+: _Coming soon_
+
+^
+{:#to_bytes} _string_.**to_bytes**()
+: _Coming soon_
+
+^
+{:#lpad} _string_.**lpad**()
+: _Coming soon_
+
+^
+{:#rpad} _string_.**rpad**()
+: _Coming soon_
+
+^
+{:#match} _string_.**match**()
+: _Coming soon_
+
+^
+{:#matches} _string_.**matches**()
+: _Coming soon_
+
+^
+{:#replace} _string_.**replace**()
+: _Coming soon_
+
+
 ## Regular Expressions
 ---
 
