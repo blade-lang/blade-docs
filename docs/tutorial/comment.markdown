@@ -21,11 +21,11 @@ Comment (otherwise known as Block Comments).
 A single line comment in Blade starts with an hash (`#`) character and can appear anywhere in a REPL session or a script except between two single (`'`) or double (`"`) quotation marks. A single line comment can start the entire line or be inserted later in a line.
 
 ```blade-repl
-> # this is my first Blade single line comment
-> echo 'Not a #comment'    # assigning x to 15
+%> # this is my first Blade single line comment
+%> echo 'Not a #comment'    # assigning x to 15
 'Not a #comment'
-> # and I am just inserting the comment for fun
-> # echo 'Hello there!'
+%> # and I am just inserting the comment for fun
+%> # echo 'Hello there!'
 ```
 
 You can go ahead and try this lines out in the REPL. You'll see that only the second line has an effect and even that line was treated as if we never
@@ -79,8 +79,8 @@ another block comment
 > So in a REPL session, the above sample may fails. But you can definitely
 > write something like:
 >
-> ```blade
-> > /* A block comment */
+> ```blade-repl
+> %> /* A block comment */
 > ```
 
 

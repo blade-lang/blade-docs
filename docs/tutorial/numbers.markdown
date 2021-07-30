@@ -18,17 +18,17 @@ octal and binary numbers.
 For example:
 
 ```blade-repl
-> echo 21 # integer
+%> echo 21 # integer
 21
-> echo 50.6 # floating-point number
+%> echo 50.6 # floating-point number
 50.6
-> echo -103 # real number
+%> echo -103 # real number
 -103
-> echo 0xF1ABC3 # hexadecimal number
+%> echo 0xF1ABC3 # hexadecimal number
 15838147
-> echo 0c476 # octal number
+%> echo 0c476 # octal number
 318
-> echo 0b1101 # binary number
+%> echo 0b1101 # binary number
 13
 ```
 
@@ -42,17 +42,17 @@ operators `+`, `-`, `*`, `/` work exactly as you expect them to work.
 For example:
 
 ```blade-repl
-> 5 + 6
+%> 5 + 6
 11
-> 21 + 7 - 8
+%> 21 + 7 - 8
 20
-> 3 * 4 + 5
+%> 3 * 4 + 5
 17
-> 16 / 4
+%> 16 / 4
 4
-> (30 / 3) * 4
+%> (30 / 3) * 4
 40
-> (2 / 11) * ((21 / 3) + ((4 / 3) - (16 / 5)))
+%> (2 / 11) * ((21 / 3) + ((4 / 3) - (16 / 5)))
 0.9333333333333332
 ```
 
@@ -63,17 +63,17 @@ to calculate powers.
 For example:
 
 ```blade-repl
-> 17 / 5 # normal divison returns a floating-point number
+%> 17 / 5 # normal divison returns a floating-point number
 3.4
-> 17 // 5 # floor division discards the fractional part
+%> 17 // 5 # floor division discards the fractional part
 3
-> 17 % 5 # returns the reminder after the division
+%> 17 % 5 # returns the reminder after the division
 2
-> 3 ** 2 # 3 squared
+%> 3 ** 2 # 3 squared
 9
-> 2 ** 5 # 2 to the power of 5
+%> 2 ** 5 # 2 to the power of 5
 32
-> 2 ** 0.5 # 2 raise to power half i.e. square root of 2
+%> 2 ** 0.5 # 2 raise to power half i.e. square root of 2
 1.414213562373095
 ```
 
@@ -88,17 +88,17 @@ greater-or-equal-to (`>=`) and less-or-equal-to (`<`).
 For example:
 
 ```blade-repl
-> 10 > 5
+%> 10 > 5
 true
-> 21 < 4
+%> 21 < 4
 false
-> 12 >= 9
+%> 12 >= 9
 true
-> 56 <= 58
+%> 56 <= 58
 true
-> 31 == 31.0
+%> 31 == 31.0
 true
-> 46.000 != 46.00
+%> 46.000 != 46.00
 false
 ```
 
@@ -112,15 +112,15 @@ all logical operators.
 For example:
 
 ```blade-repl
-> 5 > -1 or 4 < 6
+%> 5 > -1 or 4 < 6
 true
-> 11 > 4 and 21 < 18
+%> 11 > 4 and 21 < 18
 false
-> !5
+%> !5
 false
-> !(51 > 5)
+%> !(51 > 5)
 false
-> !(21 < 40 and 11 > 13)
+%> !(21 < 40 and 11 > 13)
 true
 ```
 
@@ -146,17 +146,17 @@ objects). The operators are as follows:
 For example:
 
 ```blade-repl
-> 10 & 2
+%> 10 & 2
 2
-> 10 | 4
+%> 10 | 4
 14
-> 10 ^ 4
+%> 10 ^ 4
 14
-> 10 >> 2
+%> 10 >> 2
 2
-> 10 << 2
+%> 10 << 2
 40
-> ~10
+%> ~10
 -11
 ```
 

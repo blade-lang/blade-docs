@@ -51,8 +51,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
       rule %r/\s+/, Text
       rule %r/(Unhandled [a-zA-Z_]*Exception:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s*File:.*?[\r\n]+)*/m, Error
-      rule %r(^[^>\|].*?$), Generic::Output
-      rule %r/^(>|\|) /, Generic::Prompt
+      rule %r/^((%>)|( \|)) /, Generic::Prompt
+      rule %r/^(% )?[^>\|].*?$/, Generic::Output
       rule %r(#.*?$), Comment::Single
       rule %r(/\*), Comment::Multiline, :comment
       rule %r/"/, Str, :dqs

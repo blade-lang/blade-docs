@@ -18,13 +18,13 @@ the backslash (`\`).
 For example:
 
 ```blade-repl
-> 'string in single quote'
+%> 'string in single quote'
 'string in single quote'
-> "another version with double quotes"
+%> "another version with double quotes"
 'another version with double quotes'
-> 'What\'s the escape character?'
+%> 'What\'s the escape character?'
 "What's the escape character?"
-> "It's the \"\\\" character"
+%> "It's the \"\\\" character"
 "It's the "\" character"
 ```
 
@@ -32,11 +32,11 @@ For example:
 >
 > For example:
 > ```blade-repl
-> > 'Hello
+> %> 'Hello
 >   World'
 > 'Hello
 > World'
-> > "I am
+> %> "I am
 >   a living
 >   Legend!"
 > 'I am
@@ -55,7 +55,7 @@ processing of the output.
 For example:
 
 ```blade-repl
-> print("It's the \"\\\" character")
+%> print("It's the \"\\\" character")
 It's the "\" character
 ```
 
@@ -96,11 +96,11 @@ Unicode code points can be represented using Unicode `\u` and `\U` escape sequen
 For example,
 
 ```blade-repl
-> '\u00a9'
+%> '\u00a9'
 '©'
-> '10\u00B5s'
+%> '10\u00B5s'
 '10µs'
-> '\U0002B695 is a chinese character'
+%> '\U0002B695 is a chinese character'
 '𫚕 is a chinese character'
 ```
 
@@ -110,11 +110,11 @@ actually use advanced texts like smilies, trademarks and many more directly in y
 For example:
 
 ```blade-repl
-> 'I am 😀'
+%> 'I am 😀'
 'I am 😀'
-> 'Black ♞ rule'
+%> 'Black ♞ rule'
 'Black ♞ rule'
-> '道可道非常道，名可名非常名'
+%> '道可道非常道，名可名非常名'
 '道可道非常道，名可名非常名'
 ```
 
@@ -125,9 +125,9 @@ To get the length of the string, we can call it's `length()` method.
 For example,
 
 ```blade-repl
-> '名可名非常名'.length()
+%> '名可名非常名'.length()
 6
-> 'Hello, World'.length() # compared with English text
+%> 'Hello, World'.length() # compared with English text
 12
 ```
 
@@ -145,7 +145,7 @@ allows _interpolation_ into string literals using the `$` character just as can 
 For example:
 
 ```blade-repl
-> 'Sum after addition = ${10 + 15}'
+%> 'Sum after addition = ${10 + 15}'
 'Sum after addition = 25'
 ```
 
@@ -157,7 +157,7 @@ respectively and we want to have them _concatenated_ to our string at some locat
 something like the following:
 
 ```blade-repl
-> 'We have ${x} crates of ${y}'
+%> 'We have ${x} crates of ${y}'
 'We have 20 crates of eggs'
 ```
 
@@ -165,7 +165,7 @@ To write the interpolation expression within a string without interpreting it, w
 with a backslash (`\`) as follows:
 
 ```blade-repl
-> 'Sample interpolation: \${x * y}'
+%> 'Sample interpolation: \${x * y}'
 'Sample interpolation: ${x * y}'
 ```
 
@@ -182,9 +182,9 @@ Characters are also UTF-8 compliant.
 The sample code below shows an example of the clear distinctive use of characters and strings.
 
 ```blade-repl
-> echo ord('A')
+%> echo ord('A')
 65
-> echo ord('AB')
+%> echo ord('AB')
 Unhandled Exception: ord() expects character as argument, string given
   StackTrace:
     File: <repl>, Line: 1, In: <script>
@@ -193,14 +193,14 @@ Unhandled Exception: ord() expects character as argument, string given
 A more complex example that skips a lot into the future of this tutorial is given as below for reference.
 
 ```blade-repl
-> import types
-> types.char('a')
+%> import types
+%> types.char('a')
 true
-> types.char('ab')
+%> types.char('ab')
 false
-> types.char('地')
+%> types.char('地')
 true
-> types.char('地点')
+%> types.char('地点')
 false
 ```
 
@@ -217,11 +217,11 @@ a variable, and a specific string can be repeated by multiplying it with a numbe
 For example:
 
 ```blade-repl
-> 'str' + 'ing'
+%> 'str' + 'ing'
 'string'
-> 'abc' * 4 # repeating 'abc' four times
+%> 'abc' * 4 # repeating 'abc' four times
 'abcabcabcabc'
-> 'hat!' * 4 + 'rick' # and even in a more complex form
+%> 'hat!' * 4 + 'rick' # and even in a more complex form
 'hat!hat!hat!hat!rick'
 ```
 
@@ -231,20 +231,20 @@ to a string.
 For example,
 
 ```blade-repl
-> 5 + 'alive'
+%> 5 + 'alive'
 '5alive'
-> 'Base' + 64
+%> 'Base' + 64
 'Base64'
 ```
 
 Strings can also be checked for equality or inequality as needed. For example:
 
 ```blade-repl
-> "abracadabra" == "xylophone"
+%> "abracadabra" == "xylophone"
 false
-> "Hello, world." != "Goodbye, world."
+%> "Hello, world." != "Goodbye, world."
 true
-> "1 + 2 = 3" == "1 + 2 = ${1 + 2}"
+%> "1 + 2 = 3" == "1 + 2 = ${1 + 2}"
 true
 ```
 
@@ -254,9 +254,9 @@ string indexes are characters.
 For example:
 
 ```blade-repl
-> 'Hello'[0]
+%> 'Hello'[0]
 'H'
-> 'Hello'[3]
+%> 'Hello'[3]
 'l'
 ```
 
@@ -267,9 +267,9 @@ where the first index will be `-1` (since -0 is the same as 0).
 For example:
 
 ```blade-repl
-> 'Hello'[-1]
+%> 'Hello'[-1]
 'o'
-> 'Hello'[-4]
+%> 'Hello'[-4]
 'e'
 ```
 
@@ -279,7 +279,7 @@ will result in an error.
 For example, the following code throws an exception.
 
 ```blade-repl
-> 'Hello'[6]
+%> 'Hello'[6]
 Unhandled Exception: string index 6 out of range
   StackTrace:
     File: <repl>, Line: 1, In: <script>
@@ -290,9 +290,9 @@ In addition to indexing, slicing is also supported. While indexing is used to ob
 For example:
 
 ```blade-repl
-> 'Blade'[0,3] # characters starting from index 0 to index 3 - 1 (2)
+%> 'Blade'[0,3] # characters starting from index 0 to index 3 - 1 (2)
 'Bla'
-> 'Blade'[2,5] # characters from index 2 to index 5 - 1 (4)
+%> 'Blade'[2,5] # characters from index 2 to index 5 - 1 (4)
 'ade'
 ```
 
@@ -311,21 +311,21 @@ returned.
 For example:
 
 ```blade-repl
-> 'Blade'[0,3]  # starting from index 0 to 2
+%> 'Blade'[0,3]  # starting from index 0 to 2
 'Bla'
-> 'Blade'[2,5]  # starting from index 2 to 4
+%> 'Blade'[2,5]  # starting from index 2 to 4
 'ade'
-> 'Blade'[,]   # starting from index 0 to the end
+%> 'Blade'[,]   # starting from index 0 to the end
 'Blade'
-> 'Blade'[,-3]   # starting from index 0 to string length - 3
+%> 'Blade'[,-3]   # starting from index 0 to string length - 3
 'Bl'
-> 'Blade'[3,]  # starting from index 3 to the end
+%> 'Blade'[3,]  # starting from index 3 to the end
 'de'
-> 'Blade'[-1,]  # negative index in lower limit returns an empty string
+%> 'Blade'[-1,]  # negative index in lower limit returns an empty string
 ''
-> 'Blade'[,4]   # starting from index 0 to 3
+%> 'Blade'[,4]   # starting from index 0 to 3
 'Blad'
-> 'Blade'[,3] + 'Blade'[3,]     # in[,i] + in[i,]
+%> 'Blade'[,3] + 'Blade'[3,]     # in[,i] + in[i,]
 'Blade'
 ```
 

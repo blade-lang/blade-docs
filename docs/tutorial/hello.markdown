@@ -38,15 +38,15 @@ You should be presented with a screen looking like the below:
 Blade 0.0.5 (running on BladeVM 0.0.5), REPL/Interactive mode = ON
 Clang 12.0.0, (Build time = Jul 22 2021, 16:03:05)
 Type "exit()" to quit, "help()" or "credits()" for more information
-> 
+%> 
 ```
 
 You might see a few differences depending on your operating system, the build and version you have 
 installed. However, at a minimum, you should see a welcome message and at lease a version number
 as well as tips on how to get more help or exit the REPL.
 
-The Blade REPL prompts for the next command with the greater-than (`>`) sign or a continuation with
-the bar (`|`) sign. You can exit the REPL mode by typing `exit()` and pressing the ENTER key or simply
+The Blade REPL prompts for the next command with the greater-than (`%>`) sign or a continuation with
+the bar (` |`) sign. You can exit the REPL mode by typing `exit()` and pressing the ENTER key or simply
 by pressing the combination `Ctrl`+`D`.
 
 
@@ -57,7 +57,7 @@ Following in the footsteps of legends, we are going to start learning Blade by w
 application. Now, fire up your Blade REPL, type the following and press ENTER.
 
 ```blade-repl
-> echo 'Hello, World'
+%> echo 'Hello, World'
 ```
 
 You should see the text `'Hello, World'` printed immediately after it. Congratulation, you've written your first
@@ -112,13 +112,13 @@ the result for you. This allows us to do many amazing things in the REPL mode.
 Now, let's try a few more commands in the REPL.
 
 ```blade-repl
-> 5 + 20
+%> 5 + 20
 25
-> 4 * 11
+%> 4 * 11
 44
-> 16 - 1 * 4 / 6+3
+%> 16 - 1 * 4 / 6+3
 18.33333333333334
-> 2 ** 5
+%> 2 ** 5
 32
 ```
 
