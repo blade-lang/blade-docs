@@ -601,8 +601,20 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   ```
 
 ^
-{:#index_of} _string_.**index_of**()
-: _Coming soon_
+{:#index_of} _string_.**index_of**(_str_: string)
+: Returns the index position of the first occurrence of the string _`str`_ in the string _`string`_. If
+  the _str_ cannot be found anywhere in _string_, it returns -1.
+
+  For example:
+
+  ```blade-repl
+  > 'hello, world'.index_of(' ')
+  6
+  > 'hello, world'.index_of('e')
+  1
+  > 'hello, world'.index_of('q')
+  -1
+  ```
 
 ^
 {:#starts_with} _string_.**starts_with**()
