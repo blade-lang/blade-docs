@@ -118,7 +118,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     state :string do
       mixin :interpolation
-      rule %r/\\[abfnrtv0$xuU\"\'\\]/, Str::Escape
+      rule %r/\\[abdfnrstvw0$xuU\"\'\\]/, Str::Escape # d,w,s for regex
     end
 
     state :interpolation do

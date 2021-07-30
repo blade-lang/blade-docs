@@ -632,42 +632,148 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
 
 ^
 {:#ends_with} _string_.**ends_with**(_str_: string)
-: _Coming soon_
+: Returns `true` if the string ends with the string or character specified in _str_, otherwise 
+  it returns `false`.
+
+  For example:
+
+  ```blade-repl
+  %> 'gumtree'.ends_with('tree')
+  true
+  %> 'gumtree'.ends_with('mree')
+  false
+  ```
 
 ^
 {:#count} _string_.**count**(_str_: string)
-: _Coming soon_
+: Returns the number of non-overlapping occurrences of the substring _str_ in the string. 
+  
+  _For those coming from Python who may consider this method similar to Python's own, this 
+  method differs in that it does not allow specifying a start and end region for the operation. 
+  Blade considers this unnessary as the same can be accomplished by slicing the string._
+
+  For example:
+
+  ```blade-repl
+  %> 'Hallelujah'.count('l')
+  3
+  %> 'ding dong'.count('ng')
+  2
+  %> 'ding dong'[2,7].count('ng') # setting region to search for counts - 'ng do'
+  1
+  ```
 
 ^
 {:#to_number} _string_.**to_number**()
-: _Coming soon_
+: Returns the first numeric value contained in the string if any exists or `0` if the string
+  contains no numeric value. Floating numbers that have the same value as their integer counterparts
+  will return the integer value.
+
+  For example:
+
+  ```blade-repl
+  %> '123.0 hell'.to_number()
+  123
+  %> '427 and 12'.to_number()
+  427
+  %> '96.3 of 31'.to_number()
+  96.3
+  %> 'error'.to_number()
+  0
+  ```
 
 ^
 {:#to_list} _string_.**to_list**()
-: _Coming soon_
+: Returns a list whose elements consists of every character contained in the string in order of
+  appearance. Characters that repeat in the string will have different entries in the same index
+  as they appear in the string.<br>
+
+  For example:
+
+  ```blade-repl
+  %> 'Blade'.to_list()
+  [B, l, a, d, e]
+  %> 'Plantation'.to_list()
+  [P, l, a, n, t, a, t, i, o, n]
+  ```
 
 ^
 {:#to_bytes} _string_.**to_bytes**()
+: Returns the content of the string as a stream of `bytes`. 
+  
+  > The Blade REPL _may_ trunctuate long bytes data when printing to console/terminal.
+
+  For example:
+
+  ```blade-repl
+  %> 'Blade'.to_bytes()
+  (42 6c 61 64 65)
+  %> 'Plantation'.to_bytes()
+  (50 6c 61 6e 74 61 74 69 6f 6e)
+  ```
+
+^
+{:#lpad} _string_.**lpad**(_width_: number [, _fill_: char])
+: Returns the string left justified in a string of length _width_. Padding is done using the specified 
+  character _fill_ if given of a space (`' '`) if a _fill_ is not specified. The original string is 
+  returned if width is less than _`string.length()`_.
+
+  For example:
+
+  ```blade-repl
+  %> 'cat'.lpad(5)
+  '  cat'
+  %> 'cat'.lpad(5, '-')
+  '--cat'
+  %> 'cat'.lpad(2, '-')
+  'cat'
+  ```
+
+^
+{:#rpad} _string_.**rpad**(_width_: number [, _fill_: char]))
+: Returns the string right justified in a string of length _width_. Padding is done using the specified 
+  character _fill_ if given of a space (`' '`) if a _fill_ is not specified. The original string is 
+  returned if width is less than _`string.length()`_.
+
+  For example:
+
+  ```blade-repl
+  %> 'Hmm'.rpad(6)
+  'Hmm   '
+  %> 'Hmm'.rpad(6, '.')
+  'Hmm...'
+  %> 'Hmm'.rpad(3, '.')
+  'Hmm'
+  ```
+
+^
+{:#match} _string_.**match**(_str_: string | regex)
+: If the string _str_ is a regular string, this method returns `true` if the _string_ contains a
+  substring _str_. Otherwise, it returns `false`.
+
+  If the string _str_ contains a valid [regular expression](#regular-expressions) (we'll get to that shortly below), it 
+  returns `false` if a match for the regex _str_ cannot be found in the string. Otherwise, it 
+  returns a [list](./lists) containing the first matching substring.
+
+  For example:
+
+  ```blade-repl
+  %> 'gorilla'.match('go')      # regular string match
+  true
+  %> 'gorilla'.match('gox')     # regular string non-match
+  false
+  %> 'gorilla'.match('/gox?/')  # regular expression match
+  [go]
+  %> 'gorilla'.match('/gox\d/') # regular expression non-match
+  false
+  ```
+
+^
+{:#matches} _string_.**matches**(_str_: regex)
 : _Coming soon_
 
 ^
-{:#lpad} _string_.**lpad**()
-: _Coming soon_
-
-^
-{:#rpad} _string_.**rpad**()
-: _Coming soon_
-
-^
-{:#match} _string_.**match**()
-: _Coming soon_
-
-^
-{:#matches} _string_.**matches**()
-: _Coming soon_
-
-^
-{:#replace} _string_.**replace**()
+{:#replace} _string_.**replace**(_str_: regex | string, _replacement_: string)
 : _Coming soon_
 
 
