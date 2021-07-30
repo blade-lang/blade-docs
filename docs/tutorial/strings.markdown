@@ -617,15 +617,25 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   ```
 
 ^
-{:#starts_with} _string_.**starts_with**()
+{:#starts_with} _string_.**starts_with**(_str_: string)
+: Returns `true` if the string begins with the string or character specified in _str_, otherwise 
+  it returns `false`.
+
+  For example:
+
+  ```blade-repl
+  %> 'hello, world'.starts_with('hello')
+  true
+  %> 'hello, world'.starts_with('hellios')
+  false
+  ```
+
+^
+{:#ends_with} _string_.**ends_with**(_str_: string)
 : _Coming soon_
 
 ^
-{:#ends_with} _string_.**ends_with**()
-: _Coming soon_
-
-^
-{:#count} _string_.**count**()
+{:#count} _string_.**count**(_str_: string)
 : _Coming soon_
 
 ^
