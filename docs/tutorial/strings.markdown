@@ -441,7 +441,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
 
 ^
 {:#is_number} _string_.**is_number**()
-: Returns `true` if all the characters in the string are all digits and the string is not empty.,
+: Returns `true` if all the characters in the string are all digits and the string is not empty,
   otherwise returns `false`.
 
   For example:
@@ -493,27 +493,112 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
 
 ^
 {:#is_space} _string_.**is_space**()
-: _Coming soon_
+: Returns `true` if there are only whitespace characters in the string and the string is not empty.
+  Otherwise, it returns empty.
+
+  For example:
+
+  ```blade-repl
+  > '.     '.is_space()
+  false
+  > '\r\n'.is_space()
+  true
+  > '\t  '.is_space()
+  true
+  ```
 
 ^
-{:#trim} _string_.**trim**()
-: _Coming soon_
+{:#trim} _string_.**trim**([_chr_: char])
+: Returns a copy of the string with the given character (_`chr`_) removed if it appears at the start or 
+  end of the string. If _`chr`_ is not given, it defaults to a space (`' '`). All matching leading and 
+  trailing characters are removed until a character that doesn't match is encountered. If no match is 
+  found, a copy of the original string is returned.
+
+  For example:
+
+  ```blade-repl
+  > '  example  '.trim()
+  'example'
+  > '  example  '.trim('e')
+  '  example  '
+  > 'example'.trim('e')
+  'xampl'
+  ```
 
 ^
-{:#ltrim} _string_.**ltrim**()
-: _Coming soon_
+{:#ltrim} _string_.**ltrim**([_chr_: char])
+: Similar to the `trim()` method, except that this method only removes characters at the begining of 
+  the string.
+  
+  For example:
+
+  ```blade-repl
+  > '  example  '.ltrim()
+  'example  '
+  > 'example'.ltrim('e')
+  'xample'
+  ```
 
 ^
-{:#rtrim} _string_.**rtrim**()
-: _Coming soon_
+{:#rtrim} _string_.**rtrim**([_chr_: char])
+: Similar to the `trim()` method, except that this method only removes characters at the end of 
+  the string.
+  
+  For example:
+
+  ```blade-repl
+  > '  example  '.rtrim()
+  '  example'
+  > 'example'.rtrim('e')
+  'exampl'
+  ```
 
 ^
-{:#join} _string_.**join**()
-: _Coming soon_
+{:#join} _string_.**join**(_iterable_: string | list | dict)
+: Returns a stringwhich is a concatenation of the items in the iterable using the _string_ as the 
+  separator. If the iterable contains just one item or the _string_ is empty, the original element 
+  is returned. If the _iterable_ contains non-string items, the items are converted to their string 
+  representation before joining.
+  
+  `Bytes` are the only non supported iterables.
+
+  For example:
+
+  ```blade-repl
+  > ','.join(['ok', 1, true])
+  'ok,1,true'
+  > '--'.join('name')
+  'n--a--m--e'
+  > ','.join('a')
+  'a'
+  ```
 
 ^
-{:#split} _string_.**split**()
-: _Coming soon_
+{:#split} _string_.**split**(_delimiter_: string)
+: Returns a list of words or characters in a string after separating the content of the string at every
+  point where the _delimiter_ is found. 
+  
+  If the _delimiter_ is an empty string, the resultant list will contain the individual characters of 
+  the string in the order in which they appear in the original string. Consecutive delimiters are not 
+  grouped together and are deemed to delimit empty strings. Splitting an empty string with a specified 
+  separator returns an empty list.
+
+  This method has full UTF-8 support.
+
+  For example:
+
+  ```blade-repl
+  > 'name'.split('')
+  [n, a, m, e]
+  > '1<>2<>3'.split('<>')
+  [1, , 2, , 3]
+  > '1,2,3'.split(',')
+  [1, 2, 3]
+  > ''.split(',')
+  []
+  > '地点'.split('')
+  [地, 点]
+  ```
 
 ^
 {:#index_of} _string_.**index_of**()
