@@ -820,6 +820,53 @@ the library's capabilites.
 
 In simple words, Blade's _regex_ is PCRE compatible.
 
+To create a valid _regex_ in Blade, **your regex pattern must be surrounded by identical non-word characters**.
+
+For example, `/\d+/`. Note here how we surround our pattern `\d+` with forward slashes (`/`).
+
+This tutorial will not attempt to teach regular expressions as there are many wonderful texts already
+written on that topic as well as many online tools for learning them in greater depths than we can cover 
+in this tutorial. Majority of them based on the same engine we are using. So here's 
+[one of them](https://regexr.com/){:target="_blank"} for your reference.
+
+Most languages support different modifiers for regular expressions, and Blade has some too. Modifiers
+are placed after a valid regex to control how the pattern is executed by the language. For example, in
+Blade, the pattern `/[a-z]/i` is a pattern modified with the `i` modifier telling the interpreter to
+make sure the matching is done case insensitive.
+
+The following table lists Blade modifiers.
+
+| Modifier | Definition |
+|----------|------------|
+| `i` | Case insensitive matching |
+| `m` | Multi-line. This mode cases `^` and `$` to match newlines. |
+| `s` | Dot (`.`) matches all |
+| `x` | Extended matching (Ignore whitespace and `#` comments) |
+| `A` | Force pattern anchoring |
+| `D` | Do not match newline at the end. In this mode, `$` will be the only valid line terminator. |
+| `U` | Ungreedy match. |
+| `u` | Treat pattern and subjects as UTF strings and use Unicode properties for \d, \w, etc. |
+| `J` | Allow duplicate names for subpatterns |
+
+
+
+Modifiers can be joined together to form a more powerful modification instruction. For example, you
+can perform a multi-line and case-insensitive modification for our former sample as `/[a-z]/mi`.
+
+For example:
+
+```blade-repl
+%> 'The side bar includes a Cheatsheet'.matches('/([A-Z])\w+/')
+{0: [The, Cheatsheet], 1: [T, C]}
+```
+
+Or with modifiers,
+
+```blade-repl
+%> 'The side bar includes a Cheatsheet'.matches('/([A-Z])\w+/sim')
+{0: [The, side, bar, includes, Cheatsheet], 1: [T, s, b, i, C]}
+```
+
 
 <br><br>
 
