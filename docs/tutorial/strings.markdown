@@ -751,9 +751,8 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
 : If the string _str_ is a regular string, this method returns `true` if the _string_ contains a
   substring _str_. Otherwise, it returns `false`.
 
-  If the string _str_ contains a valid [regular expression](#regular-expressions) (we'll get to that shortly below), it 
-  returns `false` if a match for the regex _str_ cannot be found in the string. Otherwise, it 
-  returns a [list](./lists) containing the first matching substring.
+  If the string _str_ contains a valid [regular expression](#regular-expressions) (we'll get to that shortly below), it returns `false` if a match for the regex _str_ cannot be found in the string. Otherwise, it 
+  returns a [dictionary](./dictionaries) containing all first matching substring.
 
   For example:
 
@@ -763,22 +762,63 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   %> 'gorilla'.match('gox')     # regular string non-match
   false
   %> 'gorilla'.match('/gox?/')  # regular expression match
-  [go]
+  {0: go}
   %> 'gorilla'.match('/gox\d/') # regular expression non-match
   false
   ```
 
 ^
-{:#matches} _string_.**matches**(_str_: regex)
-: _Coming soon_
+{:#matches} _string_.**matches**(_reg_: regex)
+: Returns a dictionary containing every match of the given regular expression _reg_ in the source string.
+  If no match is found, an empty [dictionary](./dictionaries) is returned.
+
+  For example:
+
+  ```blade-repl
+  %> '123 dollars'.matches('/[a-z]+|\d+/')
+  {0: [123, dollars]}
+  %> 'who is in the garden'.matches('/\w+/')
+  {0: [who, is, in, the, garden]}
+  ```
 
 ^
 {:#replace} _string_.**replace**(_str_: regex | string, _replacement_: string)
-: _Coming soon_
+: Returns a copy of the string with all occurrences or matches of _str_ replaced by the _replacement_
+  string.
 
+  In the _replacement_ string, if _str_ is a regular expression, then capture groups can be referenced
+  using the syntax `$index`. Taking as an example, capture group `0` contains the entire match and 
+  can be used in the _replacement_ string as `$0`.
+
+  > To escape the `$` sign in the _replacement_ string, use the double backslashed (`\\`).
+
+  For example:
+
+  ```blade-repl
+  %> 'lady friend'.replace('d', 'z')  # non-regex
+  'lazy frienz'
+  %> 'John is 26 years old'.replace('/(\d+)/', '1$1') # regex example
+  'John is 126 years old'
+  %> 'John is 26 years old'.replace('/(\d+)/', '1\\$2')
+  'John is 1$2 years old'
+  ```
+
+Apart from the above listed methods, String also implements the _[Iterable Decorators](./class)_ which
+we'll talk about in details under the _[Class](./class)_ lesson.
 
 ## Regular Expressions
 ---
+
+Regular expressions in Blade are simply special patterns expressed in a string following a few guidlines
+that allow them to be distinguished by methods requiring them. We'll be using the term `regex` or `regexes` 
+henceforth for the rest of this tutorial and most likely for the rest of the documentation.
+
+Blade's _regex_ is built on-top the _PCRE2_ library, an excellent library that already powers regular 
+expression in many programming languages and have been around for decades. It feels like a better choice
+for now for Blade to depend on this library rather than invest years building one robust enough to match
+the library's capabilites.
+
+In simple words, Blade's _regex_ is PCRE compatible.
 
 
 <br><br>
