@@ -31,17 +31,15 @@ For example:
 > All Blade strings can span multiple lines whether created using single (`'`) or double (`"`) quotes.
 >
 > For example:
-> ```blade-repl
-> %> 'Hello
->   World'
-> 'Hello
+> ```blade
+> # with single quotes
+> 'Hello...
 > World'
-> %> "I am
->   a living
->   Legend!"
-> 'I am
+> 
+> # same with double quotes
+> "I am
 > a living
-> Legend!'
+> Legend!"
 > ```
 
 In the REPL mode, strings are enclosed in quotes based on the kind of data they contains. If a

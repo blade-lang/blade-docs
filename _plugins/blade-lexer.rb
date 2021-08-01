@@ -17,7 +17,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     keywords = %w(
       as assert break catch class continue default def die echo else finally
-      for if import in iter return parent self try using when while
+      for if import in iter return parent self try using var when while
     )
 
     declarations = %w(

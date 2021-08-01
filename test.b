@@ -16,3 +16,5 @@ def test() {
 }
 
 'We have ${x} crates of ${y}'
+
+var a

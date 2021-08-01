@@ -46,7 +46,7 @@ installed. However, at a minimum, you should see a welcome message and at lease 
 as well as tips on how to get more help or exit the REPL.
 
 The Blade REPL prompts for the next command with the greater-than (`%>`) sign or a continuation with
-the bar (` |`) sign. You can exit the REPL mode by typing `exit()` and pressing the ENTER key or simply
+the bar (`..`) sign. You can exit the REPL mode by typing `exit()` and pressing the ENTER key or simply
 by pressing the combination `Ctrl`+`D`.
 
 

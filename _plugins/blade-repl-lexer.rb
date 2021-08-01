@@ -17,7 +17,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     keywords = %w(
       as assert break catch class continue default def die echo else finally
-      for if import in iter return parent self try using when while
+      for if import in iter return parent self try using var when while
     )
 
     declarations = %w(
@@ -51,7 +51,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
       rule %r/\s+/, Text
       rule %r/(Unhandled [a-zA-Z_]*Exception:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s*File:.*?[\r\n]+)*/m, Error
-      rule %r/^((%>)|( \|)) /, Generic::Prompt
+      rule %r/SyntaxError:\s*[\r\n](\s*((File:)|(Error at)).*?[\r\n]+)*/m, Error
+      rule %r/^((%>)|(\.\.)) /, Generic::Prompt
       rule %r/^(% )?[^>\|].*?$/, Generic::Output
       rule %r(#.*?$), Comment::Single
       rule %r(/\*), Comment::Multiline, :comment
