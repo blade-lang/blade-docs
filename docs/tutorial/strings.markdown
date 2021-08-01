@@ -860,7 +860,7 @@ For example:
 {0: [The, Cheatsheet], 1: [T, C]}
 ```
 
-Or with modifiers,
+Or the same query with modifiers,
 
 ```blade-repl
 %> 'The side bar includes a Cheatsheet'.matches('/([A-Z])\w+/sim')
