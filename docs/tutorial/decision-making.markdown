@@ -96,9 +96,99 @@ Another example that explores using a semi-colon (`;`) as a statement terminator
 ## Tenary Operators
 ---
 
+The tenary (or conditional) operator like in most languages that supports it takes three operands.
 
+1. The condition followed by a question mark (`?`)
+2. An expression to evaluate if the condition is true, followed by a colon (`:`)
+3. An expression to evaluate when the condition is false.
 
+For example:
 
+```blade-repl
+%> 10 ? 'ok' : 'no'
+'ok'
+%> var a = 10 > 5 ? 21 : 19  # used to determine variable value
+%> a
+21
+```
+
+## using Statements
+---
+
+The _using_ statement in Blade is akin to the _switch_ statement in C/C++ (or Java if you insist I 
+mention it). When there are two or more **_predefined_** options to react to or decide on, the 
+`using` statement offers superior speed when compared to multiple/nested _if_ blocks. The emphasis 
+here is on _predefined_. 
+
+`using` statements are simply lookup tables for a predefined set of options and code bound to each 
+option. Each option must be defined using the `when` keyword followed by the option value, then a 
+statement or block of code to execute. Blade will only execute a matching block or do nothing if no 
+match is found.
+
+For example:
+
+```blade-repl
+%> var name = 'Larry'
+%> using name {
+..   when 'James' echo 'My name is James'
+..   when 'Larry' echo 'My name is Larry'
+.. }
+'My name is Larry'
+```
+
+The values given to the `when` keyword must be constants, i.e. expressions such as `2 + 2` or using 
+a variable will raise a syntax error. For example:
+
+```blade-repl
+%> using true {
+..   when (2 * 5) echo 'Bug'
+.. }
+SyntaxError:
+    File: <repl>, Line: 2
+    Error at '(': only constants can be used in when expressions
+```
+
+For those coming from the Java or C++, take notice that there is no use of the `break` keyword. 
+In fact, it is a syntax error to use a break keyword here. For example,
+
+```blade-repl
+%> using 1 {
+..   when 1 break
+.. }
+SyntaxError:
+    File: <repl>, Line: 2
+    Error at 'break': 'break' can only be used in a loop
+```
+
+The using statement also support a `default` case which will be executed if given whenever a match 
+could not be found. For example:
+
+```blade-repl
+%> var a = 25 
+%> using a {
+..   when true echo 'It\'s true'
+..   when false echo 'I don\'t even understand'
+..   default echo 'It\'s 25'
+.. }
+"It's 25"
+```
+
+To have more than one statement in the `when` option, simply use a block. For example:
+
+```blade-repl
+%> var age = 30 
+%> using age {
+..   when 25 {
+..     age++
+..     echo 'Age increased'
+..   }
+..   default {
+..     age--
+..     echo 'Age reduced'
+..   }
+.. }
+'Age reduced'
+```
 
 <br><br>
 
