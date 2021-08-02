@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modules
+title: Modules & Packages
 parent: Tutorial
 nav_order: 19
 permalink: /tutorial/modules

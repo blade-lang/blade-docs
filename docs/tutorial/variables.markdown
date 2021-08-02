@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Variables
+title: Variables & Statements
 parent: Tutorial
 nav_order: 6
 permalink: /tutorial/variables
 ---
 
-# Variables
+# Variables & Statements
 
 Variables are a basic building block in programming and they are basically memorable names associated 
 with values within a codespace that can be used to refer to the said value latter in the code.
@@ -142,6 +142,27 @@ community is adviced but not required to try to comply with the convention.
 > by the language and cannot be altered. For example, to make a method private to a class, the name
 > is _required_ to start with an `_`. Other conventions similar to this exists and are not covered
 > here but under their respective topics.
+
+
+## Statements
+---
+
+A statement is a unit of a code that expresses some actions to be carried out and programs are built on statements. In Blade, statements should be terminated with a new line or a semi-colon (`;`). Most of 
+our examples so far have used new lines and that's what we'll use for most of the documentation. But 
+you should know that statements can also be terminated by semicolons.
+
+For example, we can have multiple variable assignment on the same line as follows:
+
+```blade-repl
+%> var a, b   # this statement is separated from the next one using a newline
+%> a = 20; b = 35  # two statements on a line separated using a semi-colon
+%> a; b
+20
+35
+```
+
+> **Convention:** Terminate statements with a newline. Only use a semi-colon when the respective statements
+> are short and using a semi-colon wouldn't introduce any confusion or illegibility.
 
 
 
