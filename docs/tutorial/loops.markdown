@@ -174,7 +174,7 @@ For example:
 [10, 9, 8, 7, 6]
 ```
 
-Ranges are valid in any director. That is, they can either ascend (end greater than start) or 
+Ranges are valid in any direction. That is, they can either ascend (end greater than start) or 
 descend (start greater than end). They are also evaluated in order. They can also be constructed 
 from variables or a mixture of constant number and variables as desired.
 
