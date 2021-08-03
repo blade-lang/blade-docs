@@ -93,6 +93,22 @@ Another example that explores using a semi-colon (`;`) as a statement terminator
 'User is 93'
 ```
 
+Multiple conditions can be evaluated together using `and` and `or` as applicable to the statement. 
+For example:
+
+```blade-repl
+%> var a = 20
+%> if a > 5 and a <= 20 {
+..   echo 'Both conditions are true'
+.. }
+'Both conditions are true'
+%> if a < 5 or a > 10 {
+..   echo 'One of the condition is true'
+.. }
+'One of the condition is true'
+```
+
+
 ## Tenary Operators
 ---
 

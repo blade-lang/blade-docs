@@ -30,10 +30,8 @@
 #     echo 'Age reduced'
 #   }
 # }
-var start = time()
-
-for i in 0..100000000 {
-    is_string('hello')
+var age = 13
+while age < 18 {
+  echo 'Happy ${age}th birthday'
+  age++
 }
-
-echo '${time() - start} seconds'
