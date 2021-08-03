@@ -193,7 +193,7 @@ Ranges are similar to [Lists](./lists) in all aspects and can be extended, copie
 keep off the long list of operations that can be performed on a range into the [List](./lists) 
 tutorial section. But for now, just consider them as simplified numeric list.
 
-Other examples of iterables are Strings, Ranges, Lists, Dictionaries, Bytes etc.
+Other examples of iterables are [Strings](./strings), [Lists](./lists), [Dictionaries](./dictionaries), [Bytes](/standard/bytes) etc.
 
 
 ## For Loops
