@@ -159,6 +159,7 @@ For example:
 ```
 
 ## Ranges
+---
 
 Ranges are simple numeric iterables. i.e. They are structures that can be iterated/looped through. 
 Ranges are in the format `start..end`. They include a starting number (inclusive) and an ending 
