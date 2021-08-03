@@ -19,14 +19,21 @@
 
 # var a
 
-var age = 30 
-using age {
-  when 25 {
-    age++
-    echo 'Age increased'
-  }
-  default {
-    age--
-    echo 'Age reduced'
-  }
+# var age = 30 
+# using age {
+#   when 25 {
+#     age++
+#     echo 'Age increased'
+#   }
+#   default {
+#     age--
+#     echo 'Age reduced'
+#   }
+# }
+var start = time()
+
+for i in 0..100000000 {
+    is_string('hello')
 }
+
+echo '${time() - start} seconds'
