@@ -169,9 +169,9 @@ For example:
 
 ```blade-repl
 %> 0..10
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+<range 0-10>
 %> 10..5
-[10, 9, 8, 7, 6]
+<range 10-5>
 ```
 
 Ranges are valid in any direction. That is, they can either ascend (end greater than start) or 
@@ -181,17 +181,13 @@ from variables or a mixture of constant number and variables as desired.
 ```blade-repl
 %> var a = 20
 %> 5..a
-[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+<range 5-20>
 %> a..10
-[20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
+<range 20-10>
 %> var b = 16
 %> a..b
-[20, 19, 18, 17]
+<range 20-16>
 ```
-
-Ranges are similar to [Lists](./lists) in all aspects and can be extended, copied etc. so we'll 
-keep off the long list of operations that can be performed on a range into the [List](./lists) 
-tutorial section. But for now, just consider them as simplified numeric list.
 
 Other examples of iterables are [Strings](./strings), [Lists](./lists), [Dictionaries](./dictionaries), [Bytes](/standard/bytes) etc.
 

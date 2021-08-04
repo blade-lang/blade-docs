@@ -30,8 +30,24 @@
 #     echo 'Age reduced'
 #   }
 # }
-var age = 13
-while age < 18 {
-  echo 'Happy ${age}th birthday'
-  age++
+# var age = 13
+# while age < 18 {
+#   echo 'Happy ${age}th birthday'
+#   age++
+# }
+
+var start = time()
+
+var total = 10000000
+
+iter var i = 0; i < total; i++ {
 }
+
+echo 'Iter = ${time() - start}'
+
+start = time()
+
+for i in 0..total {
+}
+
+echo 'For = ${time() - start}'
