@@ -189,6 +189,30 @@ from variables or a mixture of constant number and variables as desired.
 <range 20-16>
 ```
 
+Ranges also have a few methods.
+
+{:#range-lower} _range_.**lower()**
+: Returns the lower limit of the range. 
+  For example:
+
+  ```blade-repl
+  %> (10..100).lower()
+  10
+  ```
+^
+{:#range-upper} _range_.**upper()**
+: Returns the upper limit of the range. 
+  For example:
+
+  ```blade-repl
+  %> (20..30).upper()
+  30
+  ```
+
+> **NOTE:** The parenthesis (`()`) around the range in our example is important to make sure that 
+> the upper limit of the range is not interpreter as a number since the range was not assigned to 
+> a variable.
+
 Other examples of iterables are [Strings](./strings), [Lists](./lists), [Dictionaries](./dictionaries), [Bytes](/standard/bytes) etc.
 
 
