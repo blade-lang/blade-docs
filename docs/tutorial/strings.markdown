@@ -512,6 +512,9 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   trailing characters are removed until a character that doesn't match is encountered. If no match is 
   found, a copy of the original string is returned.
 
+  > The square brackets (`[]`) around the _`chr: char`_ in the method definition indicates that the 
+  > parameter is optional and does not mean you have to type the square brackets.
+
   For example:
 
   ```blade-repl
