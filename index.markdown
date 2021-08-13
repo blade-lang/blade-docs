@@ -65,7 +65,7 @@ Something like this:
 $ blade
 Blade 0.0.5 (running on BladeVM 0.0.5), REPL/Interactive mode = ON
 Clang 12.0.0, (Build time = Jul 14 2021, 14:30:16)
-Type "exit()" to quit, "help()" or "credits()" for more information
+Type "exit()" to quit or "credits()" for more information
 %> echo 'Hello, World'
 'Hello, World'
 %> 
