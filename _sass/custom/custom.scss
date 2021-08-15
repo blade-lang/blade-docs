@@ -190,7 +190,12 @@ blockquote {
 }
 
 .language-blade-repl {
-  position: relative;
+  position: relative !important;
+  overflow-x: unset !important;
+
+  .highlight {
+    overflow-x: auto;
+  }
 
   &::after {
     content: "REPL";
@@ -199,8 +204,9 @@ blockquote {
     right: 0;
     font-size: 78%;
     padding: 0 .75em;
-    border: 1px solid #ffffff4d;
+    border: 1px solid #c9c9c9ab;
     border-bottom-left-radius: .25em;
+    border-top-right-radius: .25em;
   }
 
   &.off{

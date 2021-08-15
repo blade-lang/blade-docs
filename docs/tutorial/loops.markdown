@@ -210,7 +210,7 @@ Ranges also have a few methods.
   ```
 
 > **NOTE:** The parenthesis (`()`) around the range in our example is important to make sure that 
-> the upper limit of the range is not interpreter as a number since the range was not assigned to 
+> the upper limit of the range is not interpreted as a number since the range was not assigned to 
 > a variable.
 
 Other examples of iterables are [Strings](./strings), [Lists](./lists), [Dictionaries](./dictionaries), [Bytes](/standard/bytes) etc.
