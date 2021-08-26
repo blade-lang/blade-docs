@@ -20,11 +20,9 @@ Welcome! This is the official documentation for Blade 0.0.5.
 
 ## What is Blade?
 ---
-Blade is an interpreted high-level general-purpose multi-paradigm 
-programming language with an emphasis on simplicity, flexibility 
-and expressiveness (the core pillars). It aims to maintain the 
-core pillars of the language while still being powerful enough to
-do anything.
+Blade is a simple, fast, clean and dynamic language that allows you to develop complex applications 
+quickly. Blade emphasises algorithm over syntax and for this reason, it has a very small but powerful 
+syntax set with a very natural feel.
 
 Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics vampire slayer &mdash; Blade.
 

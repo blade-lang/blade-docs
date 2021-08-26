@@ -197,33 +197,33 @@ built in functions followed by their respective documentations.
 
 ^
 {:#to_bool} **to_bool**(_x_: any)
-: Converts the given value into a boolean. If _x_ is an object and _x_ defines `@to_bool()` 
-  decorator, returns `x.@to_bool()`.
+: Converts the given value into a boolean. If _x_ is an instance of class _y_ and _y_ defines 
+  `@to_bool()` decorator, returns `x.@to_bool()`.
 
 ^
 {:#to_dict} **to_dict**(_x_: any)
-: Converts the given value into a dictionary. If _x_ is an object and _x_ defines `@to_dict())` 
-  decorator, returns `x.@to_dict()`.
+: Converts the given value into a dictionary. If _x_ is an instance of class _y_ and _y_ defines 
+  `@to_dict())` decorator, returns `x.@to_dict()`.
 
 ^
 {:#to_int} **to_int**(_x_: number | instance)
 : If _x_ is a number, converts the given value into an integer and returns the integer. If _x_ is 
-  an instance of a object and the object class defines `@to_int()` decorator, returns `x.@to_int()`.
+  an instance of a class and the class defines `@to_int()` decorator, returns `x.@to_int()`.
 
 ^
 {:#to_list} **to_list**(_x_: any)
-: Converts the given value into a list. If _x_ is an object and _x_ defines `@to_list()` 
-  decorator, returns `x.@to_list()`.
+: Converts the given value into a list. If _x_ is an instance of class _y_ and _y_ defines 
+  `@to_list()` decorator, returns `x.@to_list()`.
 
 ^
 {:#to_number} **to_number**(_x_: any)
-: Converts the given value into a number. If _x_ is an object and _x_ defines `@to_number()` 
-  decorator, returns `x.@to_number()`.
+: Converts the given value into a number. If _x_ is an instance of class _y_ and _y_ defines 
+  `@to_number()` decorator, returns `x.@to_number()`.
 
 ^
 {:#to_string} **to_string**(_x_: any)
-: Converts the given value into a string. If _x_ is an object and _x_ defines `@to_string()` 
-  decorator, returns `x.@to_string()`.
+: Converts the given value into a string. If _x_ is an instance of class _y_ and _y_ defines 
+  `@to_string()` decorator, returns `x.@to_string()`.
 
 ^
 {:#typeof} **typeof**(_x_: any)
