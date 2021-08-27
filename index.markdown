@@ -22,7 +22,7 @@ Welcome! This is the official documentation for Blade 0.0.5.
 <span class="fs-8">
 [Installation &darr;](#installing-blade){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Quick Language Overview](./quick-learn){: .btn .btn-red .fs-5 .mb-4 .mb-md-0 .mr-2 }
-<!-- [Learn by Example](./examples){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 } -->
+[Learn by Example](./examples){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
 </span>
 
 ---
