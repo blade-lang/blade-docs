@@ -40,7 +40,7 @@ For example:
 'Happy 17th birthday'
 ```
 
-> **NOTE:** In a while loop, the user has the responsibility to evaluate the condition to false. In 
+> **_@note:_** In a while loop, the user has the responsibility to evaluate the condition to false. In 
 > our example, we incremented the value of `age` before we end the loop so that `age` can finally reach 
 > a value at which the loops condition evaluation returns false.
 
@@ -128,7 +128,7 @@ Unless you have a `break` statement somewhere in your code.
 5
 ```
 
-> **NOTE:** `break` and `continue` are statements in Blade not expressions.
+> **_@note:_** `break` and `continue` are statements in Blade not expressions.
 
 A simple way to write an infinite loop that runs until you decide to end it within the block is 
 like this.
@@ -209,7 +209,7 @@ Ranges also have a few methods.
   30
   ```
 
-> **NOTE:** The parenthesis (`()`) around the range in our example is important to make sure that 
+> **_@note:_** The parenthesis (`()`) around the range in our example is important to make sure that 
 > the upper limit of the range is not interpreted as a number since the range was not assigned to 
 > a variable.
 

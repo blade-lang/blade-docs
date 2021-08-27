@@ -36,18 +36,18 @@
 #   age++
 # }
 
-var start = time()
+# var start = time()
 
-var total = 10000000
+# var total = 10000000
 
-iter var i = 0; i < total; i++ {
-}
+# iter var i = 0; i < total; i++ {
+# }
 
-echo 'Iter = ${time() - start}'
+# echo 'Iter = ${time() - start}'
 
-start = time()
+# start = time()
 
-for i in 0..total {
-}
+# for i in 0..total {
+# }
 
-echo 'For = ${time() - start}'
+# echo 'For = ${time() - start}'

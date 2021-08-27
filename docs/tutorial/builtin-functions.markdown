@@ -37,7 +37,7 @@ built in functions followed by their respective documentations.
   it's bytes set to `0x0`. If _x_ is a list, it returns a new `bytes` object whose contents are 
   the bytes specified in the list.
 
-  > **NOTE:** If _x_ is a list, then the list must only contain valid bytes which can be any 
+  > **_@_@note:__** If _x_ is a list, then the list must only contain valid bytes which can be any 
   > number between 0 and 255.
 
 ^

@@ -4,7 +4,7 @@
 
 layout: home
 title: Introduction
-nav_order: 1
+nav_order: 0
 description: Welcome! This is the official documentation for Blade 0.0.5.
 ---
 
@@ -14,8 +14,20 @@ description: Welcome! This is the official documentation for Blade 0.0.5.
 Welcome! This is the official documentation for Blade 0.0.5.
 {: .fs-6 .fw-300 }
 
-![code analysis](https://github.com/blade-lang/blade/actions/workflows/codeql.yml/badge.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+<img src="https://github.com/blade-lang/blade/actions/workflows/codeql.yml/badge.svg" style="height: 27px" />
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="height: 27px" />
+<a class="github-button" href="https://github.com/blade-lang/blade" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star blade-lang/blade on GitHub">Star</a>
+<a class="github-button" href="https://github.com/blade-lang" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @blade-lang on GitHub">Follow @blade-lang</a>
+
+<span class="fs-8">
+[Installation &darr;](#installing-blade){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Quick Language Overview](./quick-learn){: .btn .btn-red .fs-5 .mb-4 .mb-md-0 .mr-2 }
+<!-- [Learn by Example](./examples){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 } -->
+</span>
+
+---
+
+<br>
 
 
 ## What is Blade?
@@ -168,3 +180,6 @@ You can also just mail your issues to [Ore Richard Muyiwa](mailto:eqliqandfriend
   </li>
 {% endfor %}
 </ul>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>

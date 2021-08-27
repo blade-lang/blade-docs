@@ -161,7 +161,7 @@ For example, we can have multiple variable assignment on the same line as follow
 35
 ```
 
-> **Convention:** Terminate statements with a newline. Only use a semi-colon when the respective statements
+> **_@convention:_** Terminate statements with a newline. Only use a semi-colon when the respective statements
 > are short and using a semi-colon wouldn't introduce any confusion or illegibility.
 
 

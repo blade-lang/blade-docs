@@ -173,7 +173,7 @@ detailed below.
   {name: New Blade, version: 1}
   ```
 
-  > **NOTE:** `dict.set(x, y)` is equivalent to the following Blade code.
+  > **_@note_:** `dict.set(x, y)` is equivalent to the following Blade code.
   > ```blade-repl
   > %> if dict.contains(x) {
   > ..   dict[x] = 1

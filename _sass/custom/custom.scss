@@ -50,6 +50,30 @@ a:not([class]):hover {
   background: #6c9fec;
 }
 
+.btn {
+  &.btn-primary {
+    background: #006dc3 !important;
+  }
+
+  &.btn-red {
+    background: #ee3a3a;
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &.btn-green {
+    background: #44ad34;
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 /* div.highlighter-rouge {
   background-color: #1E1E1E;
   color: #D4D4D4;

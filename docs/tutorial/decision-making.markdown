@@ -46,7 +46,7 @@ For example, we can rewrite the above _if_ statement as follows:
 .. }
 ```
 
-> **Convention:** Omit the parenthesis unless it make the expression clearer.
+> **_@convention:_** Omit the parenthesis unless it make the expression clearer.
 
 The `if` statement also support an `else` statement that must follow after it, which will execute when 
 the condition in the `if` statement is not true. 
