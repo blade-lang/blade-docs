@@ -27,6 +27,8 @@ Welcome! This is the official documentation for Blade 0.0.5.
 
 ---
 
+> **_THIS DOCUMENTATION IS A WORK IN PROGRESS_**
+
 <br>
 
 
