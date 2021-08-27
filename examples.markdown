@@ -5,5 +5,12 @@
 layout: home
 title: Learn by Examples
 nav_order: 7
+has_children: true
 description: Check out sample Blade codes and try them out to get a feel of how Blade works.
 ---
+
+# Learn by Examples
+{: .fs-9 }
+
+Check out sample Blade codes and try them out to get a feel of how Blade works.
+{: .fs-6 .fw-300 }
