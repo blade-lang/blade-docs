@@ -105,7 +105,7 @@ Did you notice how the filename ends with a `.b`? Blade program files should mak
 
 It is important to remember that:
 
-> While Blade may not enforce the `.b` extension for all scripts, it is a _requirement_ for a scipt that is meant to be imported as a module into another program.
+> While Blade may not enforce the `.b` extension for all scripts, it is a _requirement_ for a script that is meant to be imported as a module into another program.
 
 
 ## Editor Support
