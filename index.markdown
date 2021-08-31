@@ -18,6 +18,7 @@ Welcome! This is the official documentation for Blade 0.0.5.
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="height: 27px" />
 <a class="github-button" href="https://github.com/blade-lang/blade" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star blade-lang/blade on GitHub">Star</a>
 <a class="github-button" href="https://github.com/blade-lang" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @blade-lang on GitHub">Follow @blade-lang</a>
+<img src="https://badges.gitter.im/blade-lang/community.svg)](https://gitter.im/blade-lang/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
 
 <span class="fs-8">
 [Installation &darr;](#installing-blade){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -47,7 +48,7 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 Blade currently supports and have been tested on the Linux, OSX and Windows operating system. To install Blade, you need to have [CMake](https://cmake.org/download/) and a C/C++ compiler toolchain/IDE installed on your computer.
 
 > **On Windows:**
-> 1. Only Visual Studio (MSVC compiler) have been tested and is currently guaranted to build Blade. While other compilers such as Mingw32/64 and/or Cygwin may build it, they are not currently recommended.
+> 1. Only MSVC, MinGW64 and TDM-GCC compiler have been tested and is currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
 > 2. A minimum of Windows SDK version 10.0.18362 is recommended. This will be readily available from Visual studio 2017 on Windows 10 and above.
 
 To install Blade, fire up your favorite terminal and run the following commands.
@@ -64,6 +65,8 @@ This will build and install Blade into a new directory called `blade` within the
 To make Blade (`blade`) available from your terminal, you'll need to add the generated `blade` directory to your computer paths.
 
 See [this](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path), [this](https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh) or [this](https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho) Stack overflow questions for information on adding Blade installation directory to path.
+
+**_See [BUILDING](https://github.com/blade-lang/blade/blob/main/BUILDING.md) for more details._**
 
 
 ## Running the Blade REPL
