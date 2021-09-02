@@ -18,7 +18,9 @@ Welcome! This is the official documentation for Blade 0.0.5.
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="height: 27px" />
 <a class="github-button" href="https://github.com/blade-lang/blade" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star blade-lang/blade on GitHub">Star</a>
 <a class="github-button" href="https://github.com/blade-lang" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @blade-lang on GitHub">Follow @blade-lang</a>
-<img src="https://gitter.im/blade-lang/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
+<a href="https://gitter.im/blade-lang/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
+<img src="https://badges.gitter.im/blade-lang/community.svg">
+</a>
 
 <span class="fs-8">
 [Installation &darr;](#installing-blade){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
