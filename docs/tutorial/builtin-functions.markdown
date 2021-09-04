@@ -234,4 +234,4 @@ built in functions followed by their respective documentations.
 
 <br><br>
 
-[Previous Topic](./functions) | [Next Topic](./type-casting)
+[Previous Topic](./functions) | [Next Topic](./class)
