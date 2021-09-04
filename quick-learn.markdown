@@ -50,7 +50,7 @@ You can use the `echo` keyword to print any object to standard output or use the
 ```blade-repl
 %> echo 'Hello, World'     # using echo keyword
 'Hello, World'
-%> print('Hello,', 'World')   # using the print function
+%> print('Hello,', 'World\n')   # using the print function
 Hello, World
 ```
 
