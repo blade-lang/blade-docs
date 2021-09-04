@@ -49,11 +49,17 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 
 Blade currently supports and have been tested on the Linux, OSX and Windows operating system. To install Blade, you need to have [CMake](https://cmake.org/download/) and a C/C++ compiler toolchain/IDE installed on your computer.
 
-> **On Windows:**
-> 1. Only MSVC, MinGW64 and TDM-GCC compiler have been tested and is currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
-> 2. A minimum of Windows SDK version 10.0.18362 is recommended. This will be readily available from Visual studio 2017 on Windows 10 and above.
+If you are on a Unix, OSX or Linux machine, you can use the automated install tool by running the command below in your favorite terminal.
 
-To install Blade, fire up your favorite terminal and run the following commands.
+```terminal
+$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall.sh)
+```
+
+For environments without an autoinstall and the adventurous ones, to install Blade, fire up your favorite terminal and run the following commands.
+
+> **On Windows:**
+> 1. Only MSVC, MinGW64 and TDM-GCC compiler have been tested and are currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
+> 2. For MSVC, a minimum of Windows SDK version 10.0.18362 is recommended. This will be readily available from Visual studio 2017 on Windows 10 and above.
 
 ```terminal
 $ git clone https://github.com/blade-lang/blade.git
