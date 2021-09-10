@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Math
+title: math
 parent: Standard Library
 nav_order: 9
 permalink: /standard/math

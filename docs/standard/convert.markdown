@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Convert
+title: convert
 parent: Standard Library
 nav_order: 3
 permalink: /standard/convert

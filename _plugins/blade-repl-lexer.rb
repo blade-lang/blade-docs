@@ -17,12 +17,16 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     keywords = %w(
       and as assert break catch class continue def default die echo 
-      else false finally for if import in iter nil or parent return 
-      self static true try using var when while
+      else finally for if import in iter or return 
+      static try using var when while
+    )
+
+    keywords_constant = %w(
+      nil parent self true false
     )
 
     declarations = %w(
-      def class static var
+      def static var
     )
 
     imports = %w(import)
@@ -66,8 +70,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/#{id}(?=\()/, Name::Function
       rule %r/(?:#{keywords.join('|')})\b/, Keyword
       rule %r/(?:#{declarations.join('|')})\b/, Keyword::Declaration
-      rule %r/(?:true|false|nil)\b/, Keyword::Constant
-      rule %r/(?:class|def)\b/, Keyword::Declaration, :class
+      rule %r/(?:#{keywords_constant.join('|')})\b/, Keyword::Constant
+      rule %r/(?:class)\b/, Keyword::Declaration, :class
       rule %r/(?:#{imports.join('|')})\b/, Keyword::Namespace
       rule %r/(\.)(#{id})/ do
         groups Operator, Name::Attribute

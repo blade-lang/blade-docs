@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CLib
+title: clib
 parent: Standard Library
 nav_order: 15
 permalink: /standard/clib

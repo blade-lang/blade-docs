@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Types
+title: types
 parent: Standard Library
 nav_order: 13
 permalink: /standard/types

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Date
+title: date
 parent: Standard Library
 nav_order: 4
 permalink: /standard/date

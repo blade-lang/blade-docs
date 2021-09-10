@@ -1,6 +1,6 @@
 ---
 layout: default
-title: IO
+title: io
 parent: Standard Library
 nav_order: 8
 permalink: /standard/io

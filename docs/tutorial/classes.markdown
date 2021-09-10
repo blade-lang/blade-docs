@@ -150,7 +150,7 @@ For example:
 'I am a class'
 ```
 
-One can easily check if a class is derived from another using the [`is_instance()`](http://localhost:4000/tutorial/builtin-functions#is_instance) function. For example:
+One can easily check if a class is derived from another using the [`is_instance()`](./builtin-functions#is_instance) function. For example:
 
 ```blade-repl
 %> var derived = Derived()
@@ -235,11 +235,11 @@ For example:
 
 ```blade-repl
 %> class HasPrivate {
-..  var _value = 31
+..   var _value = 31
 .. 
-..  get_value() {
-..   return self._value
-..  }
+..   get_value() {
+..    return self._value
+..   }
 .. }
 %> 
 %> var private = HasPrivate()
@@ -259,11 +259,11 @@ For example:
 
 ```blade-repl
 %> class HasStatic {
-..  static var my_static_field 
+..   static var my_static_field 
 .. 
-..  static my_static_method() {
-..   return HasStatic.my_static_field
-..  }
+..   static my_static_method() {
+..     return HasStatic.my_static_field
+..   }
 .. }
 %> 
 %> HasStatic.my_static_field
@@ -278,20 +278,153 @@ Unhandled Exception: undefined property 'my_static_field'
 nil
 ```
 
+
 ## Decorators
 ---
+
+Blade _decorators_ are special syntaxed functions that is used to provide details on how to interope a function with other 
+language features. 
+
+Along this course of this tutorial, we have seen how a for statement can be used loop through iterables and have defined a few 
+iterables such as [strings](./strings), [lists](./lists), [dictionaries](./dictionaries) etc. 
+
+Why are these objects iterables?
+
+The answer is simple. Because the implement certain _decorators_ that tells Blade how to use them in a for loop, namely 
+&mdash; `@iter()` and `@itern()`. This is also the same technique empolyed by almost all native functions that allows users 
+to override/alter how they behave (e.g. `@to_string()` overrides `to_string()`).
+
+Blade allows users to define decorators as desired. This gives library implementers a sleek way to offer streamlined features 
+from their package/modules by offering custom behaviors defined by decorators.
+
+Decorators are regular class methods except that their name starts with the `@` sign. 
+
+For example:
+
+```blade-repl
+%> class DecoratorTest {
+..   @my_decor() {
+..     return 1
+..   }
+.. }
+```
+
+Decorators cannot be called directly in code, but they can be accessed via the `getprop()` features. Infact, the `getprop()`, 
+`setprop()` and `hasprop()` were created specifically for decorators but of course, they can be used as deem fit for the 
+problems you may want to solve.
+
+Let's look at the following brilliant use of decorators as an example:
+
+```blade-repl
+%> def show_docs(obj) {
+..   var doc = getprop(obj, '@doc')
+..   if doc {
+..     echo doc()
+..   }
+.. }
+%> 
+%> class MyLibraryImplementation {
+..   @doc() {
+..     return 'This docs will be shown only in my library'
+..   }
+.. }
+%> 
+%> # note that you cannot call this method yourself
+%> # or from any blade scipt
+%> MyLibraryImplementation().@docs()
+SyntaxError:
+    File: <repl>, Line: 1
+    Error at '@docs': expected property name after '.'
+%> 
+%> # but our library's show_docs() function can print that documenation
+%> show_docs(MyLibraryImplementation())
+'This docs will be shown only in my library'
+```
+
+Decorators open an endless possibility for libraries to implement beautiful features.
 
 
 ## Iterable Classes
 ---
 
+In Blade, any class can be converted into an iterable provided that the class implements the following iterators:
+
+- `@itern(x)` also known as the `iterator index decorator` which accepts a single value that is equal to the value returned by 
+  the last call to `@itern()` or `nil` if there was no previous call to `@itern()` and returns a value equal to the current index or key in a consistent iteration of the object.
+- `@iter(x)` also known as the `iterator value decorator` which accepts a single value equal to the value returned by the last 
+  call to `@itern()` and returns the value at the key/index returned by the last call to `@itern()`.
+
+For example,
+
+```blade-repl
+%> class Iterable {
+..   var items = ['Richard', 'Alex', 'Justina']
+.. 
+..   @iter(x) {
+..     return self.items[x]
+..   }
+.. 
+..   @itern(x) {
+..     if x == nil return 0
+.. 
+..     if x < self.items.length() - 1
+..       return x + 1
+..     return false
+..   }
+.. }
+%> 
+%> for it in Iterable() {
+..   echo it
+.. }
+'Richard'
+'Alex'
+'Justina'
+```
+
 
 ## Overriding built-in functions
 ---
+
+As previously discussed, the result of most built-in functions with a general exception for all methods with names in 
+the format `is_...` support overrides from classes via decorators in the format `@to_[method name]`. For example, the 
+[`abs()`](./builtin-functions#abs) method can be overriden by implementing the decorator `@to_abs()`. The exception to this 
+naming convenction are methods whose name are in the form `to_...` in which case the `to_` prepend will be omitted.
+
+For example:
+
+```blade-repl
+%> to_string(200)
+'200'
+%> 
+%> # without override
+%> class Person {
+..  var name = 'Kelvin'
+.. }
+%> to_string(Person())
+Unhandled Exception: undefined method '@to_string' in Person
+  StackTrace:
+    File: <repl>, Line: 1, In: <script>
+%> 
+%> # with override
+%> class Person {
+..   var name = 'Kelvin'
+..   @to_string() {
+..     return '<Person ${self.name}>'
+..   }
+.. }
+%> to_string(Person())
+'<Person Kelvin>'
+```
+
+The overriding decorator must accept `n - 1` arguments, where `n` is the number of arguments of the original built-in 
+functions. For example, the `to_string()` function accepts 1 parameter and the override `@to_string()` above accepts `1 - 1 = 0` arguments.
+
+Check the [builtin functions](./builtin-functions) documentation for more information on the functions that support value 
+overriding and those that do not.
 
 
 
 
 <br><br>
 
-[Previous Topic](./builtin-functions) | [Next Topic](./type-casting)
+[Previous Topic](./builtin-functions) | [Next Topic](./working-with-files)

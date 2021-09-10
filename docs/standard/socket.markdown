@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Socket
+title: socket
 parent: Standard Library
 nav_order: 12
 permalink: /standard/socket
