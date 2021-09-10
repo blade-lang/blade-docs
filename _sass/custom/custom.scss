@@ -268,4 +268,12 @@ blockquote {
     display: block;
     margin-left: 2em;
   }
+
+  blockquote {
+    &.pop {
+      background: #fff2be; 
+      padding-top: .5em; 
+      padding-bottom: .5em
+    }
+  }
 }

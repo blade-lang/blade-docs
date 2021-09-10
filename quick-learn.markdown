@@ -465,7 +465,6 @@ Class fields or methods whose name starts with an underscore (`_`) are private a
 
 ```blade-repl
 %> class Class {
-%> class Class {
 ..   var _number_of_desks = 10
 .. 
 ..   _get_desks() {
