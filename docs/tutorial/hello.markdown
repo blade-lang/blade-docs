@@ -70,8 +70,10 @@ Create a file somewhere on your computer and name it `hello.b`. Now, the followi
 save it. 
 
 ```blade
-print('Hello, World')
+print('Hello, World\n')
 ```
+
+> Note that `print` does not add a newline by default
 
 Have you done that? Ok. Now, navigate to the folder/directory containing your file in 
 your preferred terminal (Err... is that Windows? Open the command prompt). Are you there? Now type the 
