@@ -51,18 +51,7 @@ built in functions followed by their respective documentations.
 ^
 {:#file} **file**(_path_: string [, _mode_: string])
 : Returns an open file handle to the file specified in the path in the specified mode. If the 
-  mode is not specified, the file will be opened in the _read only_ mode. Below is a list of 
-  supported modes.
-
-  | Mode | Name          | Description |
-  |:----:| --------------|-------------|
-  | `r`  | Read          | Opens the file for reading it's content. The file must exist.  |
-  | `w`  | Write         | Opens the file for writing to it. Creates file it does not exist. |
-  | `a`  | Append        | Opens a file for writing to it starting from the end. This mode ignores any previous mode to `seek()`. Creates file if it does not exist.  |
-  | `r+` | Read/Update   | Opens a file for update. The file must exist. |
-  | `w+` | Write/Update  | Opens a file for update. If the file does not exits, it creates it. Unlike in C and Python, if the file exists, this method does not truncate the file. |
-  | `a+` | Append/Update | Opens a file for updating starting from the end. This mode ignores any previous mode to `seek()` for outputs, but it's input will respect any previous call to `seek()`. Creates file if it does not exist. |
-
+  mode is not specified, the file will be opened in the _read only_ mode.
 
 ^
 {:#getprop} **getprop**(_object_: instance, _name_: string)

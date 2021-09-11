@@ -25,7 +25,10 @@ a:not([class]):hover {
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link.active {
   background-image: none;
-  border-right: 4px solid #5c5962;
+}
+
+.nav-list-link.active {
+  border-right: 4px solid #adadad;
 }
 
 .site-button {
@@ -189,12 +192,12 @@ blockquote {
   .nav-list .nav-list-item {
 
     .nav-list-link:hover {
-      background: #e3e3e3;
+      background: #ececec;
     }
 
     .nav-list-link.active {
-      background: #424242;
-      color: #fff !important;
+      background: #dddddd;
+      // color: #fff !important;
     }
   }
 }
