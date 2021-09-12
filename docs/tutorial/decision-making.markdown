@@ -208,4 +208,4 @@ To have more than one statement in the `when` option, simply use a block. For ex
 
 <br><br>
 
-[Previous Topic](./reserved) | [Next Topic](./loops)
+[Previous Topic](./reserved) | [Next Topic](./loops){:class="float-right"}

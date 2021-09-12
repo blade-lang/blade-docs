@@ -29,4 +29,4 @@ as shown here.
 
 <br><br>
 
-[Previous Topic](./variables) | [Next Topic](./decision-making)
+[Previous Topic](./variables) | [Next Topic](./decision-making){:class="float-right"}

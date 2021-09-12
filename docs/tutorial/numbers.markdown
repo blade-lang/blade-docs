@@ -197,4 +197,4 @@ enough that this legends will be sure to not need another lesson on how to use t
 
 <br><br>
 
-[Previous Topic](./comments) | [Next Topic](./strings)
+[Previous Topic](./comments) | [Next Topic](./strings){:class="float-right"}

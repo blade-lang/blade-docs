@@ -269,4 +269,4 @@ you can convert any [class](./class) into an iterable simply by implementing two
 
 <br><br>
 
-[Previous Topic](./decision-making) | [Next Topic](./lists)
+[Previous Topic](./decision-making) | [Next Topic](./lists){:class="float-right"}

@@ -14,4 +14,4 @@ permalink: /tutorial/asserts
 
 <br><br>
 
-[Previous Topic](./error-handling) | [Next Topic](./modules)
+[Previous Topic](./error-handling) | [Next Topic](./modules){:class="float-right"}

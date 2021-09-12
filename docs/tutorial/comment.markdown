@@ -86,4 +86,4 @@ another block comment
 
 <br><br>
 
-[Previous Topic](./hello) | [Next Topic](./numbers)
+[Previous Topic](./hello) | [Next Topic](./numbers){:class="float-right"}

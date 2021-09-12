@@ -871,4 +871,4 @@ Or the same query with modifiers,
 
 <br><br>
 
-[Previous Topic](./numbers) | [Next Topic](./variables)
+[Previous Topic](./numbers) | [Next Topic](./variables){:class="float-right"}

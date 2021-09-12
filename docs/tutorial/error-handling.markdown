@@ -13,4 +13,4 @@ permalink: /tutorial/error-handling
 
 <br><br>
 
-[Previous Topic](./working-with-files) | [Next Topic](./asserts)
+[Previous Topic](./working-with-files) | [Next Topic](./asserts){:class="float-right"}

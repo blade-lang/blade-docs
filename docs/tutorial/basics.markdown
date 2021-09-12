@@ -46,4 +46,4 @@ scientific, academic and research engineering to mention a few.
 _Now, lets get started!_
 
 
-[Next Topic](./hello)
+[Next Topic](./hello){:class="float-right"}

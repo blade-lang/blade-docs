@@ -311,4 +311,4 @@ SyntaxError:
 
 <br><br>
 
-[Previous Topic](./dictionaries) | [Next Topic](./builtin-functions)
+[Previous Topic](./dictionaries) | [Next Topic](./builtin-functions){:class="float-right"}

@@ -168,4 +168,4 @@ For example, we can have multiple variable assignment on the same line as follow
 
 <br><br>
 
-[Previous Topic](./strings) | [Next Topic](./reserved)
+[Previous Topic](./strings) | [Next Topic](./reserved){:class="float-right"}

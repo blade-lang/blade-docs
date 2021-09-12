@@ -575,4 +575,4 @@ Lists support methods operations too. Here are a list of all the methods support
 
 <br><br>
 
-[Previous Topic](./loops) | [Next Topic](./dictionaries)
+[Previous Topic](./loops) | [Next Topic](./dictionaries){:class="float-right"}

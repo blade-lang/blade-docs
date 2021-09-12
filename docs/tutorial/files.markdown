@@ -236,8 +236,7 @@ The file object contains the following methods:
 : Deletes a file. 
   
   > **_@note:_** If the file is opened by one or more processes or threads outside of the current process or thread, 
-  > the file will not be deleted until the last process frees it.
-  >
+  > the file will not be deleted until the last process frees it.<br>
   > **_@note:_** This method throws Exception on failure.
 
   For example:
@@ -249,10 +248,10 @@ The file object contains the following methods:
 
 ^
 {:#file-rename} _file_.**rename**(_new_name_: string)
-: Renames a file to to `new_name`. The new name can be a full path in another location in which case the file will be moved.
+: Renames a file to to `new_name`. The new name can be a full path in another location in which case the file will 
+  be moved.<br>
 
-  > **_@note:_** The new name cannot be empty
-  >
+  > **_@note:_** The new name cannot be empty<br>
   > **_@note:_** This method throws Exception on failure.
 
   For example:
@@ -310,7 +309,7 @@ The file object contains the following methods:
 
 ^
 {:#file-chmod} _file_.**chmod**(_mode_: number)
-: Changes the permission on the file to the one specified in the number given.
+: Changes the permission on the file to the one specified in the number given.<br>
 
   > **_@note:_** The number is required to be an octal number. e.g. 0c755
 
@@ -324,21 +323,31 @@ The file object contains the following methods:
 
 ^
 {:#file-set_times} _file_.**set_times**(_atime_: number, _mtime_: number)
-: Sets the last access time and last modified time of the file.
+: Sets the last access time and last modified time of the file.<br>
 
-  > **_@note:_** Time is expected in UTC seconds
-  >
+  > **_@note:_** Time is expected in UTC seconds<br>
   > **_@note:_** set argument -1 to leave the current value.
 
   For example:
 
   ```blade-repl
+  %> file('sample.txt').set_times(time(), time())
+  true
+  %> file('sample.txt').stats()
+  {is_readable: true, is_writable: true, is_executable: true, is_symbolic: false, size: 72, mode: 33261, dev: 16777230, ino: 4865113, nlink: 1, uid: 501, gid: 20, mtime: 1631477099, atime: 1631477100, ctime: 1631477099, blocks: 8, blksize: 4096}
   ```
 
 ^
 {:#file-seek} _file_.**seek**(_position_: number, _seek_type_: number)
 : Sets the position of a file reader or writer in a file. The position must be within the range of the file size. 
   _seek_type_ must be on of `SEEK_SET`, `SEEK_CUR` or `SEEK_END` from the `io` package.<br>
+
+  For example:
+
+  ```blade-repl
+  %> f.seek(5, io.SEEK_SET)
+  true
+  ```
 
 ^
 {:#file-tell} _file_.**tell**()
@@ -383,4 +392,4 @@ The file object contains the following methods:
 
 <br><br>
 
-[Previous Topic](./class) | [Next Topic](./error-handling){:class="align-item-right"}
+[Previous Topic](./class) | [Next Topic](./error-handling){:class="float-right"}

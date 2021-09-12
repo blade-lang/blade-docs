@@ -360,4 +360,4 @@ detailed below.
 
 <br><br>
 
-[Previous Topic](./lists) | [Next Topic](./functions)
+[Previous Topic](./lists) | [Next Topic](./functions){:class="float-right"}
