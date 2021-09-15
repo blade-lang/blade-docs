@@ -51,8 +51,16 @@ Blade currently supports and have been tested on the Linux, OSX and Windows oper
 
 If you are on a Unix, OSX or Linux machine, you can use the automated install tool by running the command below in your favorite terminal.
 
+### For Linux
+
 ```terminal
-$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall-linux.sh)
+```
+
+### For OSX
+
+```terminal
+$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall-osx.sh)
 ```
 
 For environments without an autoinstall and the adventurous ones, to install Blade, fire up your favorite terminal and run the following commands.
