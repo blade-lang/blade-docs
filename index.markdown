@@ -42,10 +42,10 @@ def sum(numbers) {
         result += num
     }
 
-    echo result
+    echo 'the sum is ${result}'
 }
 
-sum([1, 2, 3, 4]) # this will print "10"
+sum([1, 2, 3, 4]) # this prints "the sum is 10"
 ```
 _A simple Blade program to sum a list of numbers by [@BenStigsen](https://github.com/BenStigsen)._{: .fs-2 .text-grey-dk-000 target="_blank" }
 
