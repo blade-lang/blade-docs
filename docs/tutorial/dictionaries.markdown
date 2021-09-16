@@ -149,7 +149,6 @@ detailed below.
   ```blade-repl
   %> var dict = {}
   %> dict.add('name', 'Blade')
-  nil
   %> dict
   {name: Blade}
   ```
@@ -164,11 +163,9 @@ detailed below.
 
   ```blade-repl
   %> dict.set('name', 'New Blade')
-  nil
   %> dict
   {name: New Blade}
   %> dict.set('version', 1)
-  nil
   %> dict
   {name: New Blade, version: 1}
   ```
@@ -194,7 +191,6 @@ detailed below.
   %> a
   {name: Blade}
   %> a.clear()
-  nil
   %> a
   {}
   ```
@@ -250,7 +246,6 @@ detailed below.
   ```blade-repl
   %> var dict = {name: 'Blade'}
   %> dict.extend({version: 1})
-  nil
   %> dict
   {name: Blade, version: 1}
   ```
@@ -268,7 +263,6 @@ detailed below.
   %> dict.get('version')   # value exists
   1
   %> dict.get('age')   # value does not exist
-  nil
   %> dict.get('age', 6)   # value does not exist, but default is given
   6
   %> dict.get('version', 1.1)   # value exists and default is given
@@ -340,7 +334,6 @@ detailed below.
   %> dict.find_key('james')
   'username'
   %> dict.find_key('camel')
-  nil
   ```
 
 

@@ -326,10 +326,8 @@ Use the `def` keyword to define a function.
 %> 
 %> say_hello('Parker')
 'Hi, Parker'
-nil
 %> say_hello() # name will default to nil
 'Hi, '
-nil
 %> 
 %> def add(a, b) {
 ..   return a + b
@@ -519,11 +517,9 @@ Unhandled Exception: cannot call private property '_number_of_desks' from instan
 %> var dog = Dog('Bingo')
 %> dog.greet()
 'Hello Bingo'
-nil
 %> dog.call()
 'Come here Bingo'
 'Whats up?'
-nil
 ```
 [More](./tutorial/classes)
 
@@ -622,7 +618,6 @@ To convert a class into an iterable, simply implement the `@iter()` and `@itern(
 %> var f = file('test.txt', 'w')
 %> var written = f.write('It works!')
 %> f.close()
-nil
 %> 
 %> if written echo 'File created successfully!'
 'File created successfully!'
