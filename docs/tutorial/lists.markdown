@@ -152,7 +152,6 @@ Lists support methods operations too. Here are a list of all the methods support
   ```blade-repl
   %> var a = [1,2,3]
   %> a.append(4)
-  nil
   %> a
   [1, 2, 3, 4]
   ```
@@ -169,7 +168,6 @@ Lists support methods operations too. Here are a list of all the methods support
   %> a
   [1, 2, 3, 4, 5]
   %> a.clear()
-  nil
   %> a
   []
   ```
@@ -186,7 +184,6 @@ Lists support methods operations too. Here are a list of all the methods support
   %> var a = [1, 2, 3]
   %> var b = a.clone()
   %> a.append(4)
-  nil
   %> a
   [1, 2, 3, 4]
   %> b
@@ -217,7 +214,6 @@ Lists support methods operations too. Here are a list of all the methods support
   %> var a = [1, 2, 3]
   %> var b = [4, 5, 6]
   %> a.extend(b)
-  nil
   %> a
   [1, 2, 3, 4, 5, 6]
   %> b
@@ -252,19 +248,15 @@ Lists support methods operations too. Here are a list of all the methods support
   ```blade-repl
   %> var a = [1,2,3]
   %> a.insert(4, 0)
-  nil
   %> a
   [4, 1, 2, 3]
   %> a.insert(5, a.length())
-  nil
   %> a
   [4, 1, 2, 3, 5]
   %> a.insert(6, 3)
-  nil
   %> a
   [4, 1, 2, 6, 3, 5]
   %> a.insert(7, 11)
-  nil
   %> a
   [4, 1, 2, 6, 3, 5, nil, nil, nil, nil, nil, 7]
   ```
@@ -310,7 +302,6 @@ Lists support methods operations too. Here are a list of all the methods support
   %> a
   [5, 4, 3, 2, 1, 0]
   %> a.shift(10)
-  nil
   %> a
   []
   ```
@@ -349,7 +340,6 @@ Lists support methods operations too. Here are a list of all the methods support
   ```blade-repl
   %> var a = ['Kirk', 'Tasha', 'Emily', 'Kirk']
   %> a.remove('Kirk')
-  nil
   %> a
   [Tasha, Emily, Kirk]
   ```
@@ -387,7 +377,6 @@ Lists support methods operations too. Here are a list of all the methods support
   ```blade-repl
   %> var a  = ['A', 5, false, nil, [21, 13, 46]]
   %> a.sort()
-  nil
   %> a
   [nil, false, 5, A, [13, 21, 46]]
   ```

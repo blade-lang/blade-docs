@@ -112,7 +112,6 @@ The file object contains the following methods:
   ```blade-repl
   %> var f = file('sample.txt')
   %> f.close()
-  nil
   ```
 
 ^
@@ -125,7 +124,6 @@ The file object contains the following methods:
 
   ```blade-repl
   %> f.open()
-  nil
   ```
 
 ^
@@ -206,7 +204,6 @@ The file object contains the following methods:
 
   ```blade-repl
   %> w.flush()
-  nil
   ```
 
 ^

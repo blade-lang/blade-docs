@@ -20,7 +20,6 @@ For example:
 ```blade-repl
 %> var a 
 %> a
-nil
 ```
 
 To assign or reassign/overwrite the value of a declared variable, you can simply use the `=` operator. 
@@ -52,9 +51,7 @@ For example:
 ```blade-repl
 %> var animal, food   # declaration without assignment
 %> animal
-nil
 %> food
-nil
 %> 
 %> var name = 'Joe', age = 31, is_adult = true  # declaration with assignment
 %> name

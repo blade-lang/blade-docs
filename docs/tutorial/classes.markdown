@@ -218,11 +218,9 @@ For example:
 'Called the derived class'
 %> derived.run()
 'Called base class again'
-nil
 %> derived.run_again()
 'Called base class again'
 'Called the derived class again'
-nil
 ```
 
 > **_@note_** The `parent()` function is only valid in a constructor and elsewhere will be a syntax error.
@@ -267,7 +265,6 @@ For example:
 .. }
 %> 
 %> HasStatic.my_static_field
-nil
 %> 
 %> HasStatic().my_static_field
 Unhandled Exception: undefined property 'my_static_field'
@@ -275,7 +272,6 @@ Unhandled Exception: undefined property 'my_static_field'
     File: <repl>, Line: 1, In: <script>
 %> 
 %> HasStatic.my_static_method()
-nil
 ```
 
 

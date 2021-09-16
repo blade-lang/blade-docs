@@ -31,7 +31,6 @@ For example:
 ```blade-repl
 %> fn()   # calling the fn function declared above
 'Hello, World'
-nil
 ```
 
 Below is another example with a function accepting arguments and how it can be called.
@@ -42,7 +41,6 @@ Below is another example with a function accepting arguments and how it can be c
 .. }
 %> print_info('Varun', 39)
 'Varun is 39 years old'
-nil
 ```
 
 > A function can only accept a maximum of 255 named parameters and cannot declare more than 65,535 
@@ -60,17 +58,14 @@ For example:
 ..   echo 'Author name = ${author}'
 .. }
 %> show()   # calling show() without any parameter make book and author nil
-'Book name = nil'
-'Author name = nil'
-nil
+'Book name = '
+'Author name = '
 %> show('Jaws')  # calling show() with only book name makes author nil
 'Book name = Jaws'
-'Author name = nil'
-nil
+'Author name = '
 %> show('Jaws', 'Andrea')   # calling with both parameters
 'Book name = Jaws'
 'Author name = Andrea'
-nil
 ```
 
 In Blade, functions are first-class objects and can be use like any other value. Functions can be 
@@ -85,19 +80,14 @@ For example:
 %> var fn = example
 %> fn()
 'It works!'
-nil
 ```
 
 
 ## Returning Values
 ---
 
-Did you notice that extra `nil` printed after some function calls when you run Blade in the REPL 
-mode, I'm sure you've seen it a couple of times in this tutorial and been wandering what exactly it 
-is. This is because every Blade function returns a value and by default, that value is `nil`.
-
-To return something else other than `nil`, the `return` keyword can be called anywhere in a function 
-to halt the function and return the specified value.
+The `return` keyword can be called anywhere in a function to halt the function and return the specified value back 
+to the calling function or script. However, Blade does not require that a value must be returned from a function.
 
 For example:
 
@@ -108,9 +98,8 @@ For example:
 %> return_a_number()
 775
 %> 
-%> def return_nil() {}  # `return nil` is never necessary
-%> return_nil()
-nil
+%> def return_nothing() {}  # `return` is never necessary
+%> return_nothing()
 ```
 
 ## Anonymous Fuctions
@@ -152,7 +141,6 @@ or assigned to variable,
 .. }
 %> get_info('Casandra', 11)
 'Casandra is 11 years old'
-nil
 ```
 
 and passed as argument to functions.
@@ -187,7 +175,6 @@ For example:
 .. }
 %> init()
 'Blade'
-nil
 ```
 
 While Blade is lexically scoped, inner functions in Blade have access to variables declared in 
@@ -205,7 +192,6 @@ in the parent survives until the inner function even after the outer function is
 %> var fn = make_fn()
 %> fn()
 'Blade'
-nil
 ```
 
 Once `make_fn()` finishes executing, you might expect that the name variable would no longer be 
@@ -290,7 +276,6 @@ parameter in the function.
 'Richard'
 20
 [James]
-nil
 ```
 
 Trying to add another parameter after the tridot operator (`...`) will result in a syntax error.
