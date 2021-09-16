@@ -34,6 +34,21 @@ Welcome! This is the official documentation for Blade 0.0.5.
 
 <br>
 
+```blade
+def sum(numbers) {
+    var result = 0
+
+    for num in numbers {
+        result += num
+    }
+
+    print(result)
+}
+
+sum([1, 2, 3, 4]) # this will print "10"
+```
+_A simple Blade program to sum a list of numbers by [@BenStigsen](https://github.com/BenStigsen)._{: .fs-2 .text-grey-dk-000 target="_blank" }
+
 
 ## What is Blade?
 ---
