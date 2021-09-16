@@ -12,12 +12,13 @@ Blade comes with an array of optimized built-in function for simple tasks. Below
 built in functions followed by their respective documentations.
 
 | [abs](#abs) |  [bin](#bin) |  [bytes](#bytes) |  [chr](#chr) |  [delprop](#delprop) |  [file](#file) |
-|  [getprop](#getprop) | [hasprop](#hasprop) |  [hex](#hex) |  [id](#id) |  [int](#int) |  [is_bool](#is_bool) |
-|  [is_callable](#is_callable) |  [is_class](#is_class) | [is_dict](#is_dict) |  [is_function](#is_function) |  [is_instance](#is_instance) |  [is_int](#is_int) |
-|  [is_list](#is_list) |  [is_number](#is_number) |  [is_object](#is_object) | [is_string](#is_string) |  [is_bytes](#is_bytes) |  [is_file](#is_file) |
-|  [is_iterable](#is_iterable) |  [max](#max) |  [microtime](#microtime) |  [min](#min) | [oct](#oct) |  [ord](#ord) |
-|  [print](#print) |  [rand](#rand) |  [setprop](#setprop) |  [sum](#sum) |  [time](#time) | [to_bool](#to_bool) |
-|  [to_dict](#to_dict) |  [to_int](#to_int) |  [to_list](#to_list) |  [to_number](#to_number) |  [to_string](#to_string) | [typeof](#typeof) |
+|  [getprop](#getprop) | [hasprop](#hasprop) |  [hex](#hex) |  [id](#id) | [instance_of](#instance_of) |  [int](#int) |
+|  [is_bool](#is_bool) | [is_callable](#is_callable) |  [is_class](#is_class) | [is_dict](#is_dict) |  [is_function](#is_function) |  [is_instance](#is_instance) |
+|  [is_int](#is_int) | [is_list](#is_list) |  [is_number](#is_number) |  [is_object](#is_object) | [is_string](#is_string) |  [is_bytes](#is_bytes) |
+|  [is_file](#is_file) | [is_iterable](#is_iterable) |  [max](#max) |  [microtime](#microtime) |  [min](#min) | [oct](#oct) |
+|  [ord](#ord) | [print](#print) |  [rand](#rand) |  [setprop](#setprop) |  [sum](#sum) |  [time](#time) |
+| [to_bool](#to_bool) | [to_dict](#to_dict) |  [to_int](#to_int) |  [to_list](#to_list) |  [to_number](#to_number) |
+|  [to_string](#to_string) | [typeof](#typeof) |
 
 
 {:#abs} **abs**(_x_: number | instance)
@@ -72,6 +73,10 @@ built in functions followed by their respective documentations.
 {:#id} **id**(_x_: any)
 : Returns the unique identifier of value _x_ within the system. This value is also equivalent to 
   the current address of object _x_ in memory.
+
+^
+{:#instance_of} **instance_of**(_x_: any, _y_: class)
+: Returns `true` if _x_ is an instance of the given class _y_ or `false` otherwise.
 
 ^
 {:#int} **int**([_x_: number | instance])
