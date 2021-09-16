@@ -42,7 +42,7 @@ def sum(numbers) {
         result += num
     }
 
-    print(result)
+    echo result
 }
 
 sum([1, 2, 3, 4]) # this will print "10"
