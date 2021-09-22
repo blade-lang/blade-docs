@@ -177,7 +177,7 @@ Simple expression time decisions are supported via ternary operators
 
 ### `using` statements
 
-This statement takes a value a matches it against a set of constants to run the piece of code associated with it.
+This statement takes a value and matches it against a set of constants to run the piece of code associated with it.
 
 ```blade-repl
 %> var name = 'james'
