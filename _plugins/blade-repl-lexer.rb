@@ -9,7 +9,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
     tag 'blade-repl'
     filenames '*.br'
-    mimetypes 'text/x-blade-repl'
+    mimetypes 'application/x-blade-repl'
 
     def self.detect?(text)
       return 1 if text.shebang?('blade-repl')
