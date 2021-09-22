@@ -188,10 +188,10 @@ This statement takes a value a matches it against a set of constants to run the 
 ..     echo 'My name is true'
 ..     echo 'Yes, true is a constant!'
 ..   }
-..   when 'james' echo 'My name is James
+..   when 'james' echo 'My name is James'
 ..   default echo "I don't know my name"
 .. }
-'My name is James
+'My name is James'
 ```
 [More](./tutorial/decision-making)
 
