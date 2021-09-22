@@ -5,14 +5,14 @@
 layout: home
 title: Quick Language Overview
 nav_order: 1
-description: A single page introduction to the Blade programming language. For the advanced and experienced ones.
+description: A single-page introduction to the Blade programming language. For the advanced and experienced ones.
 ---
 
 # Quick Language Overview
 {: .fs-9 }
 
 For those with good programming experience, reading through tons of pages of documentation may look
-like a waste of time since they'll already be equiped enough to pick of new stuffs fast. If you are
+like a waste of time since they'll already be equipped enough to pick off new stuff fast. If you are
 one of them &mdash; this is for you!
 
 > Click the `REPL` box to toggle the REPL mode on and off.
@@ -25,7 +25,7 @@ Simple type `blade` in your terminal to launch REPL mode
 
 ```terminal
 $ blade
-Blade 0.0.5 (running on BladeVM 0.0.5), REPL/Interactive mode = ON
+Blade 0.0.6 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 12.0.5, (Build time = Aug 26 2021, 02:58:34)
 Type "exit()" to quit or "credits()" for more information
 %> 
@@ -35,7 +35,7 @@ Type "exit()" to quit or "credits()" for more information
 ---
 
 Type `blade` followed by the path to the file in the terminal. <br>
-Blade scipts use the `.b` extension.
+Blade scripts use the `.b` extension.
 
 ```terminal
 $ blade /path/to/file.b
@@ -114,7 +114,7 @@ Single line comments begin with an `#`, multiline comments are wrapped in `/*` a
 ## String interpolation
 ---
 
-Blade strings allow you to evaluate expressions within the string using the interpolation syntax `${expression...}`.
+Blade strings allow you to evaluate expressions within strings using the interpolation syntax `${expression...}`.
 
 > **_@note_:** Blade strings always support interpolation and can span multiple lines whether wrapped in `''` or `""`
 
@@ -129,7 +129,7 @@ Blade strings allow you to evaluate expressions within the string using the inte
 %> '${b.replace("is", "was")}, but is now ${a}'
 'a was 93, but is now 107'
 ```
-The arguments to replace could have used `''` pairs too, we only used `""` for clarity.<br>
+The arguments to _replace_ could have used `''` pairs too. We only used `""` for clarity.<br>
 [More](./tutorial/strings)
 
 
@@ -162,10 +162,10 @@ else echo 'a is not 20'
 [More](./tutorial/decision-making)
 
 
-## Tenary operators `?:`
+## Ternary operators `?:`
 ---
 
-Simple expression time decisions are supported via tenary operators
+Simple expression time decisions are supported via ternary operators
 
 ```blade-repl
 %> var a = 10
@@ -177,7 +177,7 @@ Simple expression time decisions are supported via tenary operators
 
 ### `using` statements
 
-This statement takes a value a matches it against a sets of constants to run the piece of code associated with it.
+This statement takes a value a matches it against a set of constants to run the piece of code associated with it.
 
 ```blade-repl
 %> var name = 'james'
@@ -188,10 +188,10 @@ This statement takes a value a matches it against a sets of constants to run the
 ..     echo 'My name is true'
 ..     echo 'Yes, true is a constant!'
 ..   }
-..   when 'james' echo 'My name is james'
+..   when 'james' echo 'My name is James
 ..   default echo "I don't know my name"
 .. }
-'My name is james'
+'My name is James
 ```
 [More](./tutorial/decision-making)
 
@@ -200,7 +200,7 @@ This statement takes a value a matches it against a sets of constants to run the
 ---
 
 ```blade-repl
-%> var items = ['Apple', 'Mango', 'Bannana', 'Peach']
+%> var items = ['Apple', 'Mango', 'Banana', 'Peach']
 %> var index = 0
 %> 
 %> while index < items.length() {
@@ -209,7 +209,7 @@ This statement takes a value a matches it against a sets of constants to run the
 .. }
 'Item at 0 is Apple'
 'Item at 1 is Mango'
-'Item at 2 is Bannana'
+'Item at 2 is Banana
 'Item at 3 is Peach'
 ```
 [More](./tutorial/loops)
@@ -218,7 +218,7 @@ This statement takes a value a matches it against a sets of constants to run the
 ## `iter` loop
 ---
 
-Blade's own version of C/JavaScript's for loop. See [here](./) for why we didn't call it a for loop.
+Blade's version of C/JavaScript's _for_ loops. See [here](./) for why we didn't call it a for loop.
 
 ```blade-repl
 %> iter var i = 0; i < 5; i++ {
@@ -236,7 +236,7 @@ Blade's own version of C/JavaScript's for loop. See [here](./) for why we didn't
 ## Ranges
 ---
 
-You can define number over a range using Blade's range operator `..` and they can be used with loops very easily.
+You can define numbers over a range using Blade's range operator `..` and they can be used with loops very easily.
 
 ```blade-repl
 %> 0..5
@@ -276,11 +276,11 @@ You can define number over a range using Blade's range operator `..` and they ca
 ## Iterables
 ---
 
-Blade comes with builtin support for strings, ranges, bytes, lists and dictionaries as it's primary iterables and they support all common operations such as indexing and slicing. The concepts shown below applies to all iterables with the exception that strings are immutable.
+Blade comes with built-in support for strings, ranges, bytes, lists, and dictionaries as its primary iterables and they support all common operations such as indexing and slicing. The concepts shown below apply to all iterables with the exception that strings are immutable.
 
 ```blade-repl
 %> var list = [1, 'game', false]  # any data type can fit in...
-%> var dictionary = {name: 'Blade', version: '0.0.5'}
+%> var dictionary = {name: 'Blade', version: '0.0.6'}
 %> var byte_array = bytes([104, 101, 108, 108, 111])  # hello
 %> var sized_bytes = bytes(10)   # a byte array of size 10 with all entries as 0x0
 %> 
@@ -292,11 +292,11 @@ Blade comes with builtin support for strings, ranges, bytes, lists and dictionar
 [game]
 %> 
 %> # update value (string values cannot be updated as they are immutable)
-%> dictionary['version'] = 'version 0.0.5'
+%> dictionary['version'] = 'version 0.0.6'
 %> list[0]++
 %> 
 %> echo dictionary
-{name: Blade, version: version 0.0.5}
+{name: Blade, version: version 0.0.6}
 %> echo list
 [2, game, false]
 %> 
@@ -353,7 +353,7 @@ Use the `def` keyword to define a function.
 ## Type check and conversions
 ---
 
-You can check if a value is a type by calling the related builtin function all named as `is_...` or convert to that type calling the builtin `to_...` functions. E.g.
+You can check if a value is a type by calling the related built-in function all named as `is_...` or convert to that type by calling the built-in `to_...` functions. E.g.
 
 ```blade-repl
 %> is_string('hello')
@@ -526,7 +526,7 @@ Unhandled Exception: cannot call private property '_number_of_desks' from instan
 
 ## Class decorator
 
-This are methods meant to provide information on how to use the class. They cannot be called directly.
+These are methods meant to provide information on how to use the class and they cannot be called directly by instances of the said class.
 
 ```blade-repl
 %> class Class {
@@ -609,7 +609,7 @@ To convert a class into an iterable, simply implement the `@iter()` and `@itern(
 [More](./tutorial/classes)
 
 
-## Reading and Writing files
+## Reading and Writing Files
 ---
 
 ### Writing/Creating a file
@@ -635,7 +635,7 @@ To convert a class into an iterable, simply implement the `@iter()` and `@itern(
 ## Throwing exceptions
 ---
 
-Blade comes with builtin class `Exception` and all exceptions must derive from this class.
+Blade comes with the built-in class `Exception` and all exceptions must derive from this class.
 
 ```blade-repl
 %> die Exception('I died')
@@ -747,7 +747,7 @@ Unhandled Exception: 'os' is undefined in this scope
 ### Import module/package in relative path
 ```blade
 import .test  # prefix the import path with a dot
-import ..test # prefix path with a range (..) for parent directory.
+import ..test # prefix path with a range (..) for the parent directory.
 ```
 
 > **_@note:_** Every Blade `.b` script is a module.
@@ -759,7 +759,7 @@ import ..test # prefix path with a range (..) for parent directory.
 ## Creating packages
 ---
 
-Create a directory with the name of the package and create an `index.b` file in the directory. That's all...
+Create a directory with the name of the package and create an `index.b` file in the directory. That's all!
 
 ```
 my_package

@@ -5,13 +5,13 @@
 layout: home
 title: Introduction
 nav_order: 0
-description: Welcome! This is the official documentation for Blade 0.0.5.
+description: Welcome! This is the official documentation for Blade 0.0.6.
 ---
 
 # The Blade Language Documentation
 {: .fs-9 }
 
-Welcome! This is the official documentation for Blade 0.0.5.
+Welcome! This is the official documentation for Blade 0.0.6.
 {: .fs-6 .fw-300 }
 
 <img src="https://github.com/blade-lang/blade/actions/workflows/codeql.yml/badge.svg" style="height: 27px" />
@@ -109,7 +109,7 @@ Something like this:
 
 ```terminal
 $ blade
-Blade 0.0.5 (running on BladeVM 0.0.5), REPL/Interactive mode = ON
+Blade 0.0.6 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 12.0.0, (Build time = Jul 14 2021, 14:30:16)
 Type "exit()" to quit or "credits()" for more information
 %> echo 'Hello, World'
@@ -179,7 +179,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.5 (running on BladeVM 0.0.5)
+Blade 0.0.6 (running on BladeVM 0.0.6)
 ```
 
 

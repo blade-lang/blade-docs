@@ -8,8 +8,8 @@ permalink: /tutorial/builtin-functions
 
 # Built-in Functions
 
-Blade comes with an array of optimized built-in function for simple tasks. Below is a list of the 
-built in functions followed by their respective documentations.
+Blade comes with an array of optimized built-in functions for simple tasks. Below is a list of the 
+built-in functions followed by their respective documentations.
 
 | [abs](#abs) |  [bin](#bin) |  [bytes](#bytes) |  [chr](#chr) |  [delprop](#delprop) |  [file](#file) |
 |  [getprop](#getprop) | [hasprop](#hasprop) |  [hex](#hex) |  [id](#id) | [instance_of](#instance_of) |  [int](#int) |
@@ -34,9 +34,8 @@ built in functions followed by their respective documentations.
 
 ^
 {:#bytes} **bytes**(_x_: number | list)
-: If _x_ is a number, this function returns a new `bytes` object with length _x_ having all 
-  it's bytes set to `0x0`. If _x_ is a list, it returns a new `bytes` object whose contents are 
-  the bytes specified in the list.
+: If _x_ is a number, this function returns a new `bytes` object with length _x_ having all its bytes set to `0x0`. 
+  If _x_ is a list, it returns a new `bytes` object whose contents are the bytes specified in the list.
 
   > **_@_@note:__** If _x_ is a list, then the list must only contain valid bytes which can be any 
   > number between 0 and 255.
@@ -51,8 +50,8 @@ built in functions followed by their respective documentations.
 
 ^
 {:#file} **file**(_path_: string [, _mode_: string])
-: Returns an open file handle to the file specified in the path in the specified mode. If the 
-  mode is not specified, the file will be opened in the _read only_ mode.
+: Returns an open file handle to the file specified in the path in the specified mode. If the mode is not specified, 
+  the file will be opened in the _read only_ mode.
 
 ^
 {:#getprop} **getprop**(_object_: instance, _name_: string)
@@ -65,14 +64,14 @@ built in functions followed by their respective documentations.
 
 ^
 {:#hex} **hex**(_x_: number | instance)
-: If _x_ is a number, this function converts number _x_ to it's hexadecimal string and returns the 
+: If _x_ is a number, this function converts number _x_ to its hexadecimal string and returns the 
   value. However, if _x_ is an instance of a class _y_ and _y_ defines `@to_hex()`, then this 
   functions returns `x.@to_hex()`. 
 
 ^
 {:#id} **id**(_x_: any)
-: Returns the unique identifier of value _x_ within the system. This value is also equivalent to 
-  the current address of object _x_ in memory.
+: Returns the unique identifier of value _x_ within the system. This value is also equivalent to the current 
+  address of object _x_ in memory.
 
 ^
 {:#instance_of} **instance_of**(_x_: any, _y_: class)
@@ -178,8 +177,8 @@ built in functions followed by their respective documentations.
 
 ^
 {:#setprop} **setprop**(_object_: instance, _name_: string, _value_: any)
-: Sets the value of the _object_'s property with the matching _name_ to the given _value_. If the 
-  property already exists, it overwrites it and returns `true`, otherwise it returns `false`.
+: Sets the value of the _object_'s property with the matching _name_ to the given _value_. If the property already 
+  exists, it overwrites it and returns `true`, otherwise it returns `false`.
 
 ^
 {:#sum} **sum**(_numbers_...)

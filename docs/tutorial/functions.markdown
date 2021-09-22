@@ -8,9 +8,9 @@ permalink: /tutorial/functions
 
 # Functions
 
-Blade like most high-level programming language allows the creation of reuseable blocks of code
+Blade like most high-level programming languages allows the creation of reuseable blocks of code
 of various kinds, most notable being `functions`. A blade function is declared using the `def` 
-(meaning define) keyword followed by the fuction name and an option list of arguments/parameters 
+(meaning define) keyword followed by the function name and an options list of arguments/parameters
 enclosed within parenthesis `()` and followed by a block of code.
 
 For example:
@@ -21,7 +21,7 @@ For example:
 .. }
 ```
 
-Over this course of this tutorial, we've actually been calling a few functions such ash the built-in 
+Over this course of this tutorial, we've actually been calling a few functions such as the built-in 
 `print()` function. Calling a function is as simple as stating the function name followed by an 
 opening parenthesis `(`, followed by one or more arguments if applicable and a closing parenthesis 
 `)`.
