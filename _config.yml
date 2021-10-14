@@ -87,3 +87,9 @@ sponsors:
   - name: Jetbrains
     image: https://github.com/blade-lang/blade/raw/main/jetbrains.png
     link: https://www.jetbrains.com
+
+defaults:
+  - scope:
+      path: "archives"
+    values:
+      archives: true
