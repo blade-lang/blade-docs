@@ -22,6 +22,24 @@ a:not([class]):hover {
   text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #cc3586;
+}
+
+h4 {
+  text-transform: none !important;
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 4em !important;
+}
+
+p {
+  margin-bottom: .25em;
+}
+
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link.active {
   background-image: none;
@@ -226,6 +244,10 @@ blockquote {
   h2 {
     margin-top: 2em;
   }
+
+  dt {
+    margin-top: 1.5em;
+  }
 }
 
 .language-blade-repl {
@@ -289,5 +311,21 @@ blockquote {
       padding-top: .5em; 
       padding-bottom: .5em
     }
+  }
+}
+
+dt {
+  color: #d33781;
+}
+
+.cite {
+  // background: #fff8dc;
+  font-size: .9em;
+  padding: 0.2em 1em;
+  color: #424242;
+
+  .hint {
+    color: #d73880;
+    font-weight: bold;
   }
 }

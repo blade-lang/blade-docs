@@ -35,8 +35,8 @@ $ blade
 You should be presented with a screen looking like the below:
 
 ```terminal
-Blade 0.0.6 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
-Clang 12.0.0, (Build time = Jul 22 2021, 16:03:05)
+Blade 0.0.7 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type "exit()" to quit or "credits()" for more information
 %> 
 ```
