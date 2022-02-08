@@ -78,17 +78,33 @@ $ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts
 $ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall-osx.sh)
 ```
 
-For environments without an autoinstall and the adventurous ones, to install Blade, fire up your favorite terminal and run the following commands.
 
-> **On Windows:**
-> 1. Only MSVC, MinGW64 and TDM-GCC compiler have been tested and are currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
+### For Windows
+
+> Starting from version `0.0.7`, Blade's officially supported compilers for the Windows environment is now the 
+> TDM-GCC and WinLibs compiler. The decision to change the official compiler from Visual Studio and MSYS2 to TDM-GCC and WinLibs 
+> is to allow a minial configuration effort while installing Blade as well as to allow us to develop Blade faster as trying to 
+> be cross-compatible with Visual Studio has proven to slow down the growth of the language and the ecosystem and setting up 
+> MSYS2 environment to compile Blade is more work than required for either TDM-GCC or WinLibs.
+> 
+> This also allows us to build valid Blade C extensions on Windows with less hassle. 
+> Check out the [blade-ext-demo](https://github.com/blade-lang/blade-ext-demo) or any of the extension in the 
+> [ext](https://github.com/blade-lang/blade/ext) directory for more info on how to write a valid C extension for Blade.
+>
+> #### Important Notice
+> 1. Only TDM-GCC, WinLibs, MinGW64 and MSVC compiler have been tested and are currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
 > 2. For MSVC, a minimum of Windows SDK version 10.0.18362 is recommended. This will be readily available from Visual studio 2017 on Windows 10 and above.
 
-```terminal
-$ git clone https://github.com/blade-lang/blade.git
-$ cd blade
-$ cmake -B ./blade -DCMAKE_BUILD_TYPE=Release
-$ cmake --build ./blade --config Release
+To install Blade with TDM-GCC or WinLibs, install [TDM-GCC](https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe)
+or [WinLibs](https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-9.0.0-msvcrt-r5/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r5.zip) 
+via the given links. Add TDM-GCC or WinLibs `bin` directory to your environment path. TDM-GCC also allows you to add to path during its installation. 
+After this, run the following commands from the root of your Blade clone:
+
+```shell
+git clone https://github.com/blade-lang/blade.git
+cd blade
+cmake -B . -DCMAKE_MAKE_PROGRAM=mingw32-make -G "Unix Makefiles"
+cmake --build .
 ```
 
 This will build and install Blade into a new directory called `blade` within the current directory. You can move this directory to any location on your computer. 
@@ -96,6 +112,19 @@ This will build and install Blade into a new directory called `blade` within the
 To make Blade (`blade`) available from your terminal, you'll need to add the generated `blade` directory to your computer paths.
 
 See [this](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path), [this](https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh) or [this](https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho) Stack overflow questions for information on adding Blade installation directory to path.
+
+### For all other platforms
+
+For environments without an autoinstall and the adventurous ones, to install Blade, so far as you can successfully setup 
+`git`, `cmake` and one of `GCC` or `Clang` based compilers, you can use the following commands to install Blade:
+
+
+```shell
+$ git clone https://github.com/blade-lang/blade.git
+$ cd blade
+$ cmake -B .
+$ cmake --build .
+```
 
 **_See [BUILDING](https://github.com/blade-lang/blade/blob/main/BUILDING.md) for more details._**
 
@@ -109,8 +138,8 @@ Something like this:
 
 ```terminal
 $ blade
-Blade 0.0.6 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
-Clang 12.0.0, (Build time = Jul 14 2021, 14:30:16)
+Blade 0.0.7 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type "exit()" to quit or "credits()" for more information
 %> echo 'Hello, World'
 'Hello, World'

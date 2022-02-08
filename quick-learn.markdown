@@ -25,8 +25,8 @@ Simple type `blade` in your terminal to launch REPL mode
 
 ```terminal
 $ blade
-Blade 0.0.6 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
-Clang 12.0.5, (Build time = Aug 26 2021, 02:58:34)
+Blade 0.0.7 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type "exit()" to quit or "credits()" for more information
 %> 
 ```
