@@ -5,14 +5,16 @@
 layout: home
 title: Introduction
 nav_order: 0
-description: Welcome! This is the official documentation for Blade 0.0.6.
+description: Welcome! This is the official documentation for Blade 0.0.7.
 ---
 
 # The Blade Language Documentation
 {: .fs-9 }
 
-Welcome! This is the official documentation for Blade 0.0.6.
+Welcome! This is the official documentation for Blade 0.0.7.
 {: .fs-6 .fw-300 }
+
+<div style="color:red">This documentation is a work in progress!</div>
 
 <img src="https://github.com/blade-lang/blade/actions/workflows/codeql.yml/badge.svg" style="height: 27px" />
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="height: 27px" />
@@ -22,15 +24,11 @@ Welcome! This is the official documentation for Blade 0.0.6.
 <img src="https://badges.gitter.im/blade-lang/community.svg"  style="height: 27px">
 </a>
 
-<span class="fs-8">
-[Installation &darr;](#installing-blade){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Quick Language Overview](./quick-learn){: .btn .btn-red .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Learn by Example](./examples){: .btn .btn-green .fs-5 .mb-4 .mb-md-0 .mr-2 }
-</span>
-
----
-
-> **_THIS DOCUMENTATION IS A WORK IN PROGRESS_**
+<div class="fs-8">
+<a href="#download" class="btn btn-primary fs-4 mb-4 mb-md-0 mr-2">Installation <i class="fa-regular fa-circle-down"></i></a>
+<a href="./quick-learn" class="btn btn-red fs-4 mb-4 mb-md-0 mr-2">Quick Language Overview</a>
+<a href="./examples" class="btn btn-green fs-4 mb-4 mb-md-0 mr-2">Learn by Example</a>
+</div>
 
 <br>
 
@@ -49,6 +47,8 @@ sum([1, 2, 3, 4]) # this prints "the sum is 10"
 ```
 _A simple Blade program to sum a list of numbers by [@BenStigsen](https://github.com/BenStigsen)._{: .fs-2 .text-grey-dk-000 target="_blank" }
 
+<br><br>
+
 
 ## What is Blade?
 ---
@@ -59,7 +59,19 @@ syntax set with a very natural feel.
 Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics vampire slayer &mdash; Blade.
 
 
-## Installing Blade
+## Download
+---
+
+<span>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.7/blade-windows-v0.0.7.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.7/blade-linux-v0.0.7.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.7/blade-macos-v0.0.7.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
+</span>
+
+> The MacOS build does not support M1 machines. For that, you'll need to build from source
+
+
+## Installing Blade from source
 ---
 
 Blade currently supports and have been tested on the Linux, OSX and Windows operating system. To install Blade, you need to have [CMake](https://cmake.org/download/) and a C/C++ compiler toolchain/IDE installed on your computer.
@@ -114,6 +126,7 @@ To make Blade (`blade`) available from your terminal, you'll need to add the gen
 See [this](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path), [this](https://stackoverflow.com/questions/11530090/adding-a-new-entry-to-the-path-variable-in-zsh) or [this](https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho) Stack overflow questions for information on adding Blade installation directory to path.
 
 ### For all other platforms
+---
 
 For environments without an autoinstall and the adventurous ones, to install Blade, so far as you can successfully setup 
 `git`, `cmake` and one of `GCC` or `Clang` based compilers, you can use the following commands to install Blade:
@@ -208,7 +221,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.6 (running on BladeVM 0.0.6)
+Blade 0.0.7 (running on BladeVM 0.0.6)
 ```
 
 
@@ -222,6 +235,7 @@ testing of Blade features, writing more comprehensive tests, bug detection, code
 PLEASE CONTRIBUTE!
 
 ### Contributing code, fixes and features
+---
 
 The standard. The general workflow is as follows.
 

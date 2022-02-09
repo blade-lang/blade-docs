@@ -87,6 +87,7 @@ SyntaxError:
 ```
 
 ## Variable scopes
+---
 
 Blade variables are scoped to their parent block and do not override or hide variables declared outside the given block. For example:
 
@@ -116,6 +117,7 @@ Scopes are in the following hierarchy in _descending_ order.
 
 
 ## Naming Convention
+---
 
 While Blade as a language does not restrict the user to any particular naming convention, throughout
 this tutorial and the entire documentation, the following conventions will be adhered to. The Blade
