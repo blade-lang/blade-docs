@@ -68,7 +68,9 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 <a href="https://github.com/blade-lang/blade/releases/download/v0.0.7/blade-macos-v0.0.7.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
 </span>
 
-> This downloads only support `x86-64` plaforms. For other platforms, you'll need to install from source (see below for details).
+> - This downloads only support `x86-64` plaforms. 
+> - Apple M1 devices should install `Rosetta 2` to run the downloaded application or install from source.
+> - For other platforms, you'll need to install from source (see below for details).
 
 
 ## Installing Blade from source
