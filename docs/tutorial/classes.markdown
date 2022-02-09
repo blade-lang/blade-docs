@@ -94,7 +94,7 @@ For example,
 > **_@note_** Did you notice that `self` keyword? That's how a member of a class references other members of the class.
 
 
-## Fields
+## Fields/Properties
 ---
 
 Blade classes can have fields (akin to fields in Java). This fields can be anything from a number to a function 
