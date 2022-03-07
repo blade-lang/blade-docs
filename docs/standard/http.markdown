@@ -2,13 +2,66 @@
 layout: default
 title: http
 parent: Standard Library
-nav_order: 9
+nav_order: 11
 permalink: /standard/http
 ---
 
 # http
 
-Provides interfaces for working with Http client requests.
+The `http` module provides a rich library to help in building HTTP 
+clients and servers. The module also provides a few generic abstractions 
+for simple HTTP operations such as a GET request.
+
+### Examples
+
+The example below shows making a GET request to fetch a webpage.
+
+```blade
+import http
+
+echo http.get('http://example.com')
+# <class HttpResponse instance at 0x600002adacd0>
+```
+
+There is a `post()` and `put()` alternative to the `get()` method called 
+above and they are documented below.
+
+For a more controlled HTTP request, you should use the HttpClient class. 
+Below is an example of such implementation that sets the timeout for 
+receiving response back from the server to 30 seconds.
+
+```blade
+import http
+
+var client = http.HttpClient()
+client.receive_timeout = 30000
+var res = client.send_request('http://example/endpoint?query=1', 'GET')
+echo res.body
+```
+
+Creating a server with the `http` module is also a breeze. 
+The example below shows an implementation of an HTTP API server listening on port 
+3000 and simple returns the JSON of the request object itself.
+
+```blade
+import http
+import json
+
+var server = http.server(3000)
+server.on_receive(|request, response| {
+  echo 'Request from ${request.ip} to ${request.path}.'
+  response.headers['Content-Type'] = 'application/json'
+  response.write(json.encode(request))
+})
+
+echo 'Listening on Port 3000...'
+server.listen()
+```
+
+The `http` module does not make any assumption as to the type of data to be sent 
+in request bodies and for this reason, it should not be expected to automatically 
+convert dictionaries into JSON objects or create multipart/form-data request for you. 
+Rather, it gives the tools required to craft any request body of your choice.
 
 
 
@@ -328,6 +381,11 @@ Provides interfaces for working with Http client requests.
 : 599 network connect timeout error
 
 
+^
+{:#http__map} _http._**map**
+: A map of status code to their string representation.
+
+
 
 
 <h2>Functions</h2><hr>
@@ -349,16 +407,244 @@ Provides interfaces for working with Http client requests.
   or throws one of SocketException or Exception if it fails
 
 
+^
+{:#http__server} _http_.**server**(_port_: int, _address_: string, _is_secure_: bool)
+: Creates an new HttpServer instance.
+
+
 
 
 <h2>Classes</h2><hr>
 
 
 
+### _class_ HttpRequest 
+---
+
+Http request handler and object.
+
+
+#### class HttpRequest properties
+---
+
+{:#HttpRequest_HttpRequest_request_uri} _HttpRequest._**request_uri**
+: The original request URL as sent in the raw request.
+
+
+{:#HttpRequest_HttpRequest_path} _HttpRequest._**path**
+: The requested path or file. E.g. if the Request URI is `/users?sort=desc`, 
+  then the path is `/users`.
+
+
+{:#HttpRequest_HttpRequest_method} _HttpRequest._**method**
+: A string corresponding to the HTTP method of the request: GET, POST, PUT, etc.
+
+
+{:#HttpRequest_HttpRequest_host} _HttpRequest._**host**
+: The hostname derived from the `Host` header or the first instance of `X-Forwarded-Host` if set.
+
+
+{:#HttpRequest_HttpRequest_ip} _HttpRequest._**ip**
+: The IP address of the remote client that initiated the request.
+
+
+{:#HttpRequest_HttpRequest_headers} _HttpRequest._**headers**
+: A dictionary containing the headers sent with the request.
+
+
+{:#HttpRequest_HttpRequest_queries} _HttpRequest._**queries**
+: A dictionary containing the entries of the URI query string.
+
+
+{:#HttpRequest_HttpRequest_cookies} _HttpRequest._**cookies**
+: A dictionary containing the cookies sent with the request.
+
+
+{:#HttpRequest_HttpRequest_body} _HttpRequest._**body**
+: A dictionary containing all data submitted in the request body.
+
+
+{:#HttpRequest_HttpRequest_files} _HttpRequest._**files**
+: A dictionary containing the data of all files uploaded in the request.
+
+
+{:#HttpRequest_HttpRequest_http_version} _HttpRequest._**http_version**
+: The HTTP version used for the request.
+
+
+#### class HttpRequest methods
+---
+
+{:#_HttpRequest_parse} **parse**(_raw_data_: string [, _client_: Socket])
+: Parses a raw HTTP request string into a correct HttpRequest
+   <div class="cite"><span class="hint">return</span> <span>boolean</span></div>
+
+
+
+{:#_HttpRequest_send} **send**(_uri_: Url, _method_: string [, _data_: string | bytes [, _options_: dict]])
+:  <div class="cite"><span class="hint">default</span> <span>follow_redirect: true</span></div>
+
+
+
+
+^
+
+
+### _class_ HttpException  < _Exception_
+---
+
+HTTP related Exceptions
+
+
+#### class HttpException methods
+---
+
+{:#_HttpException_HttpException} **HttpException**(_message_: string)
+:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
+
+
+
+^
+
+
+### _class_ HttpServer 
+---
+
+HTTP server
+
+
+#### class HttpServer properties
+---
+
+{:#HttpServer_HttpServer_is_secure} _HttpServer._**is_secure**
+: A boolean value indicating if the server should/will be TLS/SSL secured or not.
+   <div class="cite"><span class="hint">default</span> <span>false</span></div>
+
+
+
+{:#HttpServer_HttpServer_host} _HttpServer._**host**
+: The host address to which this server will be bound
+   <div class="cite"><span class="hint">default</span> <span>socket.IP_LOCAL (127.0.0.1)</span></div>
+
+
+
+{:#HttpServer_HttpServer_port} _HttpServer._**port**
+: The port to which this server will be bound to on the host.
+
+
+{:#HttpServer_HttpServer_socket} _HttpServer._**socket**
+: The working Socket instance for the HttpServer.
+
+
+{:#HttpServer_HttpServer_resuse_address} _HttpServer._**resuse_address**
+: A boolean value indicating whether to reuse socket addresses or not.
+   <div class="cite"><span class="hint">default</span> <span>true</span></div>
+
+
+
+{:#HttpServer_HttpServer_read_timeout} _HttpServer._**read_timeout**
+: The timeout in milliseconds after which an attempt to read clients 
+  request data will be terminated.
+   <div class="cite"><span class="hint">default</span> <span>2000 (2 seconds)</span></div>
+
+
+
+{:#HttpServer_HttpServer_write_timeout} _HttpServer._**write_timeout**
+: The timeout in milliseconds after which an attempt to write response data to 
+  clients will be terminated. 
+  
+  If we cannot send response to a client after the stipulated time, it will be 
+  assumed such clients have disconnected and existing connections for that 
+  client will be closed and their respective sockets will be discarded.
+  
+   <div class="cite"><span class="hint">default</span> <span>2000 (2 seconds)</span></div>
+
+
+
+{:#HttpServer_HttpServer_cert_file} _HttpServer._**cert_file**
+: The SSL/TLS ceritificate file that will be used be used by a secured server for 
+  serving requests.
+  > - do not set a value to it directly. Use `load_certs()` instead.
+
+
+{:#HttpServer_HttpServer_private_key_file} _HttpServer._**private_key_file**
+: The SSL/TLS private key file that will be used be used by a secured server for 
+  serving requests.
+  > - do not set a value to it directly. Use `load_certs()` instead.
+
+
+#### class HttpServer methods
+---
+
+{:#_HttpServer_HttpServer} **HttpServer**(_port_: int [, _host_: string [, _is_secure_: bool]])
+:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
+
+
+{:#_HttpServer_load_certs} **load_certs**(_cert_file_: string | file, _private_key_file_: string | file)
+: loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
+  > - certificates can only be loaded for secure servers.
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_HttpServer_close} **close**()
+: stops the server
+
+
+{:#_HttpServer_on_connect} **on_connect**(_fn_: function)
+: Adds a function to be called when a new client connects.
+  > - Function _fn_ MUST accept at one parameter which will be passed the client Socket object.
+  > - multiple `on_connect()` may be set on a single instance.
+
+
+{:#_HttpServer_on_disconnect} **on_disconnect**(_fn_: function)
+: Adds a function to be called when a new client disconnects.
+  > - Function _fn_ MUST accept at one parameter which will be passed the client information.
+  > - multiple `on_disconnect()` may be set on a single instance.
+
+
+{:#_HttpServer_on_receive} **on_receive**(_fn_: function)
+: Adds a function to be called when the server receives a message from a client.
+  
+  > Function _fn_ MUST accept TWO parameters. First parameter will accept the HttpRequest 
+  > object and the second will accept the HttpResponse object.
+  
+  > - multiple `on_receive()` may be set on a single instance.
+
+
+{:#_HttpServer_on_reply} **on_reply**(_fn_: function)
+: Adds a function to be called when the server sends a reply to a client.
+  
+  > Function _fn_ MUST accept one parameter which will be passed the HttpResponse object.
+  
+  > - multiple `on_sent()` may be set on a single instance.
+
+
+{:#_HttpServer_on_error} **on_error**(_fn_: function)
+: Adds a function to be called when the server encounters an error with a client.
+  
+  > Function _fn_ MUST accept two parameters. The first argument will be passed the 
+  > `Exception` object and the second will be passed the client `Socket` object.
+  
+  > - multiple `on_error()` may be set on a single instance.
+
+
+{:#_HttpServer_listen} **listen**()
+: Binds to the instance port and host and starts listening for incoming 
+  connection from HTTP clients.
+
+
+
+^
+
+
 ### _class_ HttpClient 
 ---
 
 Handles http requests.
+  @note This client do not currently support the compress, deflate and gzip transfer encoding.
 
 
 #### class HttpClient properties
@@ -439,6 +725,8 @@ Handles http requests.
 {:#_HttpClient_send_request} **send_request**(_url_: string, [_method_: string = 'GET', _data_: string])
 : Sends an Http request and returns a HttpResponse.
   
+   <div class="cite"><span class="hint">default</span> <span>method: GET</span></div>
+
    <div class="cite"><span class="hint">return</span> <span>HttpResponse</span></div>
 
    <div class="cite"><span class="hint">throws</span> <span>SocketException, Exception</span></div>
@@ -455,11 +743,51 @@ Handles http requests.
 Represents the response to an Http request
 
 
+#### class HttpResponse properties
+---
+
+{:#HttpResponse_HttpResponse_version} _HttpResponse._**version**
+: The HTTP version of the response
+
+
+{:#HttpResponse_HttpResponse_status} _HttpResponse._**status**
+: The HTTP response status code
+
+
+{:#HttpResponse_HttpResponse_headers} _HttpResponse._**headers**
+: The HTTP response headers
+
+
+{:#HttpResponse_HttpResponse_time_taken} _HttpResponse._**time_taken**
+: Total time taken for the HTTP request that generated this HttpResponse to complete
+
+
+{:#HttpResponse_HttpResponse_redirects} _HttpResponse._**redirects**
+: The number of times the HTTP request that generated this HttpResponse was redirected.
+
+
+{:#HttpResponse_HttpResponse_responder} _HttpResponse._**responder**
+: The final URL that provided the HttpResponse
+  > - This might differ from the original request URI.
+
+
+{:#HttpResponse_HttpResponse_body} _HttpResponse._**body**
+: The content of the HTTP response
+
+
 #### class HttpResponse methods
 ---
 
-{:#_HttpResponse_HttpResponse} **HttpResponse**(body, status, headers, version, time_taken, redirects, responder)
+{:#_HttpResponse_HttpResponse} **HttpResponse**(_body_: string, _status_: int, _headers_: dict, _version_: string, _time_taken_: number, _redirects_: int, _responder_: string)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
+
+
+{:#_HttpResponse_write} **write**(_data_: string)
+: Writes data to the request response. 
+  
+  > This method should be prefered over writing directly to the body 
+  > property to prevent unexpected behaviors.
 
 
 

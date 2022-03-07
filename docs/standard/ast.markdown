@@ -2,7 +2,7 @@
 layout: default
 title: ast
 parent: Standard Library
-nav_order: 4
+nav_order: 5
 permalink: /standard/ast
 ---
 
@@ -554,6 +554,7 @@ Blade source code scanner
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
+
 {:#_Scanner_scan} **scan**()
 : scans the source and returns a list of tokens
    <div class="cite"><span class="hint">return</span> <span>list[Token]</span></div>
@@ -578,6 +579,7 @@ Blade source code token
 
 
 
+
 ^
 
 
@@ -592,6 +594,7 @@ Exception raised for errors during parsing
 
 {:#_ParseException_ParseException} **ParseException**(_token_: Token, _message_: string)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -622,6 +625,7 @@ Echo Stmt representation
 
 
 
+
 ^
 
 
@@ -636,6 +640,7 @@ Expr Stmt representation
 
 {:#_ExprStmt_ExprStmt} **ExprStmt**(expr)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -656,6 +661,7 @@ If Stmt representation
 
 
 
+
 ^
 
 
@@ -670,6 +676,7 @@ Iter Stmt representation
 
 {:#_IterStmt_IterStmt} **IterStmt**(declaration, condition, iterator, body)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -690,6 +697,7 @@ While Stmt representation
 
 
 
+
 ^
 
 
@@ -704,6 +712,7 @@ For Stmt representation
 
 {:#_ForStmt_ForStmt} **ForStmt**(vars, iterable, body)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -744,6 +753,7 @@ Die Stmt representation
 
 
 
+
 ^
 
 
@@ -758,6 +768,7 @@ Return Stmt representation
 
 {:#_ReturnStmt_ReturnStmt} **ReturnStmt**(value)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -778,6 +789,7 @@ Assert Stmt representation
 
 
 
+
 ^
 
 
@@ -792,6 +804,7 @@ Using Stmt representation
 
 {:#_UsingStmt_UsingStmt} **UsingStmt**(expr, cases, default_case)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -812,6 +825,7 @@ Import Stmt representation
 
 
 
+
 ^
 
 
@@ -826,6 +840,7 @@ Catch Stmt representation
 
 {:#_CatchStmt_CatchStmt} **CatchStmt**(type, var_name, body)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -846,6 +861,7 @@ Finally Stmt representation
 
 
 
+
 ^
 
 
@@ -860,6 +876,7 @@ Try Stmt representation
 
 {:#_TryStmt_TryStmt} **TryStmt**(body, catch_stmt, finally_stmt)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -880,6 +897,7 @@ Comment Stmt representation
 
 
 
+
 ^
 
 
@@ -897,6 +915,7 @@ Block Stmt representation
 
 
 
+
 ^
 
 
@@ -911,6 +930,7 @@ Assign Stmt representation
 
 {:#_AssignStmt_AssignStmt} **AssignStmt**(expr, type, value)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -941,6 +961,7 @@ Doc Defn representation
 
 
 
+
 ^
 
 
@@ -955,6 +976,7 @@ Parses raw Blade tokens and produces an Abstract Syntax Tree
 
 {:#_Parser_Parser} **Parser**(_tokens_: []Token)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 {:#_Parser_parse} **parse**()
@@ -993,6 +1015,7 @@ Var Decl representation
 
 
 
+
 ^
 
 
@@ -1007,6 +1030,7 @@ Function Decl representation
 
 {:#_FunctionDecl_FunctionDecl} **FunctionDecl**(name, params, body)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1027,6 +1051,7 @@ Method Decl representation
 
 
 
+
 ^
 
 
@@ -1044,6 +1069,7 @@ Property Decl representation
 
 
 
+
 ^
 
 
@@ -1058,6 +1084,7 @@ Class Decl representation
 
 {:#_ClassDecl_ClassDecl} **ClassDecl**(name, superclass, properties, methods)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1088,6 +1115,7 @@ Binary Expr representation
 
 
 
+
 ^
 
 
@@ -1102,6 +1130,7 @@ Group Expr representation
 
 {:#_GroupExpr_GroupExpr} **GroupExpr**(expression)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1122,6 +1151,7 @@ Literal Expr representation
 
 
 
+
 ^
 
 
@@ -1136,6 +1166,7 @@ Identifier Expr representation
 
 {:#_IdentifierExpr_IdentifierExpr} **IdentifierExpr**(value)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1156,6 +1187,7 @@ Unary Expr representation
 
 
 
+
 ^
 
 
@@ -1170,6 +1202,7 @@ Condition Expr representation
 
 {:#_ConditionExpr_ConditionExpr} **ConditionExpr**(expr, truth, falsy)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1190,6 +1223,7 @@ Call Expr representation
 
 
 
+
 ^
 
 
@@ -1204,6 +1238,7 @@ Get Expr representation
 
 {:#_GetExpr_GetExpr} **GetExpr**(expr, name)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1224,6 +1259,7 @@ Set Expr representation
 
 
 
+
 ^
 
 
@@ -1238,6 +1274,7 @@ Index Expr representation
 
 {:#_IndexExpr_IndexExpr} **IndexExpr**(args)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1258,6 +1295,7 @@ List Expr representation
 
 
 
+
 ^
 
 
@@ -1275,6 +1313,7 @@ Dict Expr representation
 
 
 
+
 ^
 
 
@@ -1289,6 +1328,7 @@ Interpolation Expr representation
 
 {:#_InterpolationExpr_InterpolationExpr} **InterpolationExpr**(data)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 

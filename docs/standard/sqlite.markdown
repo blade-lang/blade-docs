@@ -2,7 +2,7 @@
 layout: default
 title: sqlite
 parent: Standard Library
-nav_order: 17
+nav_order: 20
 permalink: /standard/sqlite
 ---
 
@@ -45,9 +45,9 @@ SQLite3 management class
 ---
 
 {:#_SQLite3_SQLite3} **SQLite3**(_path_: string)
-:  <div class="cite"><span class="hint">note</span> <span>the database doesn't need to exist.</span></div>
-
+: > - the database doesn't need to exist.
    <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 {:#_SQLite3_open} **open**()
@@ -65,8 +65,7 @@ SQLite3 management class
 : executes a query string without and returns `true` if the
   query was executed or `false` otherwise.
   
-   <div class="cite"><span class="hint">note</span> <span>this method does not return a query result</span></div>
-
+  > - this method does not return a query result
    <div class="cite"><span class="hint">return</span> <span>boolean</span></div>
 
 
@@ -83,16 +82,15 @@ SQLite3 management class
 
 {:#_SQLite3_query} **query**(_sql_: string [, _params_: list | dict])
 : executes and sql query and returns the result of the execution
-   <div class="cite"><span class="hint">note</span> <span>pass a list as _params_ if you have unnamed parameterized queries.</span></div>
-
+  > - pass a list as _params_ if you have unnamed parameterized queries.
   
    <div class="cite"><span class="hint">example</span> <span>`sqlite.query('SELECT * FROM users WHERE id = ? AND name = ?', [3, 'James'])`</span></div>
 
-   <div class="cite"><span class="hint">note</span> <span>pass a dictionary as _params_ if you use named paramters</span></div>
-
+  > - pass a dictionary as _params_ if you use named paramters
   
-   <div class="cite"><span class="hint">example</span> <span><pre></span></div>
+   <div class="cite"><span class="hint">example</span> <span></span></div>
 
+  <pre>
   sqlite.query(
     'SELECT * FROM user WHERE id = :id AND name = :name', 
     {':id': 1, ':name': 'James'}
@@ -103,8 +101,7 @@ SQLite3 management class
 {:#_SQLite3_fetch} **fetch**(_sql_: string [, _params_: list | dict])
 : runs an SQL query and returns the result as a list of dictionaries.
   
-   <div class="cite"><span class="hint">note</span> <span>if the result is empty or the query is not a SELECT, it returns an empty list</span></div>
-
+  > - if the result is empty or the query is not a SELECT, it returns an empty list
 
 
 
@@ -146,6 +143,7 @@ A cursor for navigation through sql results
    <div class="cite"><span class="hint">readonly</span> <span></span></div>
 
 
+
 {:#SQLite3Cursor_SQLite3Cursor_modified_count} _SQLite3Cursor._**modified_count**
 : This value hold the number of rows modified, inserted or deleted by the the query that 
   owns this cursor provided the query is one of INSERT, UPDATE or DELETE statement.
@@ -159,10 +157,10 @@ A cursor for navigation through sql results
   The value returned by `modified_count` immediately after an INSERT, UPDATE or DELETE 
   statement run on a view is always zero. Only changes made to real tables are counted.
   
-   <div class="cite"><span class="hint">note</span> <span>If a separate thread makes changes on the same database connection at the exact time the original query was also making a change, the result of this value will become undependable.</span></div>
-
+  > - If a separate thread makes changes on the same database connection at the exact time the original query was also making a change, the result of this value will become undependable.
   
    <div class="cite"><span class="hint">readonly</span> <span></span></div>
+
 
 
 {:#SQLite3Cursor_SQLite3Cursor_columns} _SQLite3Cursor._**columns**
@@ -170,11 +168,13 @@ A cursor for navigation through sql results
    <div class="cite"><span class="hint">readonly</span> <span></span></div>
 
 
+
 #### class SQLite3Cursor methods
 ---
 
 {:#_SQLite3Cursor_SQLite3Cursor} **SQLite3Cursor**(_db_: SQLite3, _cursor_: pointer)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 {:#_SQLite3Cursor_close} **close**()
@@ -191,12 +191,9 @@ A cursor for navigation through sql results
 : returns the value of the column matching the index in the current 
   result set.
   
-   <div class="cite"><span class="hint">note</span> <span>if index is a number, it returns the value in the column at the given index. </span></div>
-
-   <div class="cite"><span class="hint">note</span> <span>that index must be lower than columns.length() in this case.</span></div>
-
-   <div class="cite"><span class="hint">note</span> <span>if index is a string, it returns the value in the column with the given name.</span></div>
-
+  > - if index is a number, it returns the value in the column at the given index. 
+  > - that index must be lower than columns.length() in this case.
+  > - if index is a string, it returns the value in the column with the given name.
    <div class="cite"><span class="hint">throws</span> <span>SQLiteException if no matching column can be found.</span></div>
 
 

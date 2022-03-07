@@ -2,7 +2,7 @@
 layout: default
 title: url
 parent: Standard Library
-nav_order: 19
+nav_order: 23
 permalink: /standard/url
 ---
 
@@ -25,8 +25,7 @@ Provides functionalities for parsing and processing URLs
   percent (%) sign in order to conform with RFC 3986. Otherwise,
   is is encoded with the plus (+) sign in order to align with
   the default encoding used by modern browsers.
-   <div class="cite"><span class="hint">note</span> <span>strict mode is disabled by default</span></div>
-
+  > - strict mode is disabled by default
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
 
@@ -120,6 +119,7 @@ The Url class provides functionalities for parsing and processing URLs
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
+
 {:#_Url_authority} **authority**()
 : returns the url authority
   
@@ -127,8 +127,7 @@ The Url class provides functionalities for parsing and processing URLs
   terminated by the next slash ("/"), question mark ("?"), or number
   sign ("#") character, or by the end of the URI.
  
-   <div class="cite"><span class="hint">note</span> <span>: mailto scheme does not have an authority. For this reason, mailto schemes return an empty string as authority.</span></div>
-
+  > -: mailto scheme does not have an authority. For this reason, mailto schemes return an empty string as authority.
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
 
