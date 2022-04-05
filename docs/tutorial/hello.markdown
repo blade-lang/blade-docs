@@ -37,7 +37,7 @@ You should be presented with a screen looking like the below:
 ```terminal
 Blade 0.0.71 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
-Type "exit()" to quit or "credits()" for more information
+Type ".exit" to quit or ".credits" for more information
 %> 
 ```
 
@@ -46,7 +46,7 @@ installed. However, at a minimum, you should see a welcome message and at lease 
 as well as tips on how to get more help or exit the REPL.
 
 The Blade REPL prompts for the next command with the greater-than (`%>`) sign or a continuation with
-the bar (`..`) sign. You can exit the REPL mode by typing `exit()` and pressing the ENTER key or simply
+the bar (`..`) sign. You can exit the REPL mode by typing `.exit` and pressing the ENTER key or simply
 by pressing the combination `Ctrl`+`D`.
 
 

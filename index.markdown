@@ -155,13 +155,13 @@ Something like this:
 $ blade
 Blade 0.0.71 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
-Type "exit()" to quit or "credits()" for more information
+Type ".exit" to quit or ".credits" for more information
 %> echo 'Hello, World'
 'Hello, World'
 %> 
 ```
 
-To exit the loop, simply type `exit()` and press enter or press the `Ctrl`+`D` combination on your keyboard.
+To exit the loop, simply type `.exit` and press enter or press the `Ctrl`+`D` combination on your keyboard.
 
 We'll be using this mode a lot in this documentation.
 

@@ -27,7 +27,7 @@ Simple type `blade` in your terminal to launch REPL mode
 $ blade
 Blade 0.0.71 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
-Type "exit()" to quit or "credits()" for more information
+Type ".exit" to quit or ".credits" for more information
 %> 
 ```
 
