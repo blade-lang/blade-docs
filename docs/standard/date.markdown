@@ -2,7 +2,7 @@
 layout: default
 title: date
 parent: Standard Library
-nav_order: 9
+nav_order: 10
 permalink: /standard/date
 ---
 
@@ -178,6 +178,9 @@ Date and Time manipulation class
   %> to_string(d)
   '<Date year: 2022, month: 3, day: 5, hour: 19, minute: 25, seconds: 58>'
   ```
+  
+  @serializable
+  @printable
 
 
 #### class Date methods

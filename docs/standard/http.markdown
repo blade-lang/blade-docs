@@ -2,7 +2,7 @@
 layout: default
 title: http
 parent: Standard Library
-nav_order: 11
+nav_order: 12
 permalink: /standard/http
 ---
 
@@ -422,6 +422,8 @@ Rather, it gives the tools required to craft any request body of your choice.
 ---
 
 Http request handler and object.
+  @serializable
+  @printable
 
 
 #### class HttpRequest properties
@@ -441,7 +443,8 @@ Http request handler and object.
 
 
 {:#HttpRequest_HttpRequest_host} _HttpRequest._**host**
-: The hostname derived from the `Host` header or the first instance of `X-Forwarded-Host` if set.
+: The hostname derived from the `Host` header or the first instance of 
+  `X-Forwarded-Host` if set.
 
 
 {:#HttpRequest_HttpRequest_ip} _HttpRequest._**ip**
@@ -494,6 +497,7 @@ Http request handler and object.
 ---
 
 HTTP related Exceptions
+  @printable
 
 
 #### class HttpException methods
@@ -512,6 +516,7 @@ HTTP related Exceptions
 ---
 
 HTTP server
+  @printable
 
 
 #### class HttpServer properties
@@ -579,13 +584,6 @@ HTTP server
 
 {:#_HttpServer_HttpServer} **HttpServer**(_port_: int [, _host_: string [, _is_secure_: bool]])
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
-
-
-
-{:#_HttpServer_load_certs} **load_certs**(_cert_file_: string | file, _private_key_file_: string | file)
-: loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
-  > - certificates can only be loaded for secure servers.
-   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
 
@@ -696,12 +694,6 @@ Handles http requests.
 
 
 
-{:#HttpClient_HttpClient_send_timeout} _HttpClient._**send_timeout**
-: The send timeout duration in milliseconds
-   <div class="cite"><span class="hint">default</span> <span>300s</span></div>
-
-
-
 {:#HttpClient_HttpClient_receive_timeout} _HttpClient._**receive_timeout**
 : The receive timeout duration in milliseconds
    <div class="cite"><span class="hint">default</span> <span>300s</span></div>
@@ -741,6 +733,8 @@ Handles http requests.
 ---
 
 Represents the response to an Http request
+  @serializable
+  @printable
 
 
 #### class HttpResponse properties
@@ -772,7 +766,7 @@ Represents the response to an Http request
 
 
 {:#HttpResponse_HttpResponse_body} _HttpResponse._**body**
-: The content of the HTTP response
+: The content of the HTTP response as bytes
 
 
 #### class HttpResponse methods

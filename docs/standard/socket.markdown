@@ -2,7 +2,7 @@
 layout: default
 title: socket
 parent: Standard Library
-nav_order: 19
+nav_order: 21
 permalink: /standard/socket
 ---
 
@@ -510,6 +510,7 @@ The SocketException class is the general Exception type thrown from sockets
 
 The Socket class provides interface for working with Socket clients
   and servers.
+  @printable
 
 
 #### class Socket properties

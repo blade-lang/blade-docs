@@ -2,7 +2,7 @@
 layout: default
 title: os
 parent: Standard Library
-nav_order: 17
+nav_order: 19
 permalink: /standard/os
 ---
 

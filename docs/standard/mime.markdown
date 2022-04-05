@@ -2,7 +2,7 @@
 layout: default
 title: mime
 parent: Standard Library
-nav_order: 16
+nav_order: 18
 permalink: /standard/mime
 ---
 

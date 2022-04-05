@@ -521,6 +521,8 @@ Provides interface for parsing Blade code into Abstract Syntax Trees
 ---
 
 Represents the result of an ast parse operation
+  @serializable
+  @iterable
 
 
 #### class ParseResult methods
@@ -569,6 +571,8 @@ Blade source code scanner
 ---
 
 Blade source code token
+  @serializable
+  @printable
 
 
 #### class Token methods
@@ -615,6 +619,7 @@ base Stmt class
 ---
 
 Echo Stmt representation
+  @serializable
 
 
 #### class EchoStmt methods
@@ -633,6 +638,7 @@ Echo Stmt representation
 ---
 
 Expr Stmt representation
+  @serializable
 
 
 #### class ExprStmt methods
@@ -651,6 +657,7 @@ Expr Stmt representation
 ---
 
 If Stmt representation
+  @serializable
 
 
 #### class IfStmt methods
@@ -669,6 +676,7 @@ If Stmt representation
 ---
 
 Iter Stmt representation
+  @serializable
 
 
 #### class IterStmt methods
@@ -687,6 +695,7 @@ Iter Stmt representation
 ---
 
 While Stmt representation
+  @serializable
 
 
 #### class WhileStmt methods
@@ -705,6 +714,7 @@ While Stmt representation
 ---
 
 For Stmt representation
+  @serializable
 
 
 #### class ForStmt methods
@@ -723,6 +733,7 @@ For Stmt representation
 ---
 
 Continue Stmt representation
+  @serializable
 
 
 
@@ -733,6 +744,7 @@ Continue Stmt representation
 ---
 
 Break Stmt representation
+  @serializable
 
 
 
@@ -743,6 +755,7 @@ Break Stmt representation
 ---
 
 Die Stmt representation
+  @serializable
 
 
 #### class DieStmt methods
@@ -761,6 +774,7 @@ Die Stmt representation
 ---
 
 Return Stmt representation
+  @serializable
 
 
 #### class ReturnStmt methods
@@ -779,6 +793,7 @@ Return Stmt representation
 ---
 
 Assert Stmt representation
+  @serializable
 
 
 #### class AssertStmt methods
@@ -797,6 +812,7 @@ Assert Stmt representation
 ---
 
 Using Stmt representation
+  @serializable
 
 
 #### class UsingStmt methods
@@ -815,6 +831,7 @@ Using Stmt representation
 ---
 
 Import Stmt representation
+  @serializable
 
 
 #### class ImportStmt methods
@@ -833,6 +850,7 @@ Import Stmt representation
 ---
 
 Catch Stmt representation
+  @serializable
 
 
 #### class CatchStmt methods
@@ -851,6 +869,7 @@ Catch Stmt representation
 ---
 
 Finally Stmt representation
+  @serializable
 
 
 #### class FinallyStmt methods
@@ -869,6 +888,7 @@ Finally Stmt representation
 ---
 
 Try Stmt representation
+  @serializable
 
 
 #### class TryStmt methods
@@ -887,6 +907,7 @@ Try Stmt representation
 ---
 
 Comment Stmt representation
+  @serializable
 
 
 #### class CommentStmt methods
@@ -905,6 +926,7 @@ Comment Stmt representation
 ---
 
 Block Stmt representation
+  @serializable
 
 
 #### class BlockStmt methods
@@ -923,6 +945,7 @@ Block Stmt representation
 ---
 
 Assign Stmt representation
+  @serializable
 
 
 #### class AssignStmt methods
@@ -951,6 +974,7 @@ base Defn class
 ---
 
 Doc Defn representation
+  @serializable
 
 
 #### class DocDefn methods
@@ -1005,6 +1029,7 @@ base Decl class
 ---
 
 Var Decl representation
+  @serializable
 
 
 #### class VarDecl methods
@@ -1023,6 +1048,7 @@ Var Decl representation
 ---
 
 Function Decl representation
+  @serializable
 
 
 #### class FunctionDecl methods
@@ -1041,6 +1067,7 @@ Function Decl representation
 ---
 
 Method Decl representation
+  @serializable
 
 
 #### class MethodDecl methods
@@ -1059,6 +1086,7 @@ Method Decl representation
 ---
 
 Property Decl representation
+  @serializable
 
 
 #### class PropertyDecl methods
@@ -1077,6 +1105,7 @@ Property Decl representation
 ---
 
 Class Decl representation
+  @serializable
 
 
 #### class ClassDecl methods
@@ -1105,6 +1134,7 @@ base Expr class
 ---
 
 Binary Expr representation
+  @serializable
 
 
 #### class BinaryExpr methods
@@ -1123,6 +1153,7 @@ Binary Expr representation
 ---
 
 Group Expr representation
+  @serializable
 
 
 #### class GroupExpr methods
@@ -1141,6 +1172,7 @@ Group Expr representation
 ---
 
 Literal Expr representation
+  @serializable
 
 
 #### class LiteralExpr methods
@@ -1159,6 +1191,7 @@ Literal Expr representation
 ---
 
 Identifier Expr representation
+  @serializable
 
 
 #### class IdentifierExpr methods
@@ -1177,6 +1210,7 @@ Identifier Expr representation
 ---
 
 Unary Expr representation
+  @serializable
 
 
 #### class UnaryExpr methods
@@ -1195,6 +1229,7 @@ Unary Expr representation
 ---
 
 Condition Expr representation
+  @serializable
 
 
 #### class ConditionExpr methods
@@ -1213,6 +1248,7 @@ Condition Expr representation
 ---
 
 Call Expr representation
+  @serializable
 
 
 #### class CallExpr methods
@@ -1231,6 +1267,7 @@ Call Expr representation
 ---
 
 Get Expr representation
+  @serializable
 
 
 #### class GetExpr methods
@@ -1249,6 +1286,7 @@ Get Expr representation
 ---
 
 Set Expr representation
+  @serializable
 
 
 #### class SetExpr methods
@@ -1267,6 +1305,7 @@ Set Expr representation
 ---
 
 Index Expr representation
+  @serializable
 
 
 #### class IndexExpr methods
@@ -1285,6 +1324,7 @@ Index Expr representation
 ---
 
 List Expr representation
+  @serializable
 
 
 #### class ListExpr methods
@@ -1303,6 +1343,7 @@ List Expr representation
 ---
 
 Dict Expr representation
+  @serializable
 
 
 #### class DictExpr methods
@@ -1321,6 +1362,7 @@ Dict Expr representation
 ---
 
 Interpolation Expr representation
+  @serializable
 
 
 #### class InterpolationExpr methods
