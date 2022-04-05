@@ -2,13 +2,15 @@
 layout: default
 title: math
 parent: Standard Library
-nav_order: 12
+nav_order: 17
 permalink: /standard/math
 ---
 
 # math
 
-Blade's mathematical library
+This module contains functions and constants to make trigonometric and 
+non-trignonometric mathematics a breeze. The module also defines a couple 
+of commonly used scientific and mathematical constants such as `PI`.
 
 
 
@@ -78,6 +80,14 @@ Blade's mathematical library
   numbers less than or equal to a given positive number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> import math
+  %> math.factorial(60)
+  8.320987112741392e+81
+  ```
 
 
 ^
@@ -86,6 +96,13 @@ Blade's mathematical library
   represents the sine of the angle given in radians
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.sin(46)
+  0.9017883476488092
+  ```
 
 
 ^
@@ -94,6 +111,13 @@ Blade's mathematical library
   represents the cosine of the angle
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.cos(93)
+  0.3174287015197017
+  ```
 
 
 ^
@@ -102,6 +126,13 @@ Blade's mathematical library
   of the angle given
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.tan(11.43)
+  -2.155225644164932
+  ```
 
 
 ^
@@ -109,6 +140,13 @@ Blade's mathematical library
 : returns the hyperbolic sine (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.sinh(1.4)
+  1.904301501451534
+  ```
 
 
 ^
@@ -116,6 +154,13 @@ Blade's mathematical library
 : returns the hyperbolic cosine (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.cosh(1.91)
+  3.450584592563374
+  ```
 
 
 ^
@@ -123,6 +168,13 @@ Blade's mathematical library
 : returns the hyperbolic tangent (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.tanh(2.19)
+  0.9752591705196751
+  ```
 
 
 ^
@@ -131,33 +183,65 @@ Blade's mathematical library
   If the value of x is outside this range, it returns NaN
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.asin(0.123)
+  0.123312275191872
+  ```
 
 
 ^
 {:#math__acos} _math_.**acos**(_n_: number)
 : returns a numeric value between 0 and π radians for x 
   between -1 and 1. 
-  If the value of x is outside this range, it returns NaN
+  
+  > - If the value of x is outside this range, it returns NaN
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.acos(0.471)
+  1.080372275769021
+  ```
 
 
 ^
 {:#math__atan} _math_.returns a numeric value between -(π/2)
 :  <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.atan(math.Infinity)
+  1.570796326794897
+  ```
 
 
 ^
 {:#math__atan2} _math_.**atan2**(_n_: number)
 : returns a numeric value between -π and π representing the 
-  angle theta of an (x, y) point. 
-  This is the counterclockwise angle, measured in radians, 
-  between the positive X axis, and the point (x, y). 
-   <div class="cite"><span class="hint">note</span> <span>the arguments to this function pass the y-coordinate first and the x-coordinate second</span></div>
-
+  angle theta of an (x, y) point. This is the counterclockwise angle, 
+  measured in radians, between the positive X axis, and the point (x, y). 
+  
+  > - the arguments to this function pass the y-coordinate first and the x-coordinate second
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.atan2(math.Infinity, -math.Infinity)
+  2.356194490192345
+  %> math.atan2(1, 2)
+  0.4636476090008061
+  %> math.atan2(-1.5, 2.4)
+  -0.5585993153435624
+  ```
 
 
 ^
@@ -165,6 +249,13 @@ Blade's mathematical library
 : returns the hyperbolic arcsine (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.asinh(3.42)
+  1.943507380182802
+  ```
 
 
 ^
@@ -172,6 +263,13 @@ Blade's mathematical library
 : returns the hyperbolic arccosine (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.acosh(1.21)
+  0.637237379754108
+  ```
 
 
 ^
@@ -179,6 +277,13 @@ Blade's mathematical library
 : returns the hyperbolic arctangent (in radians) of number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.atanh(0.11)
+  0.1104469157900971
+  ```
 
 
 ^
@@ -186,16 +291,32 @@ Blade's mathematical library
 : returns e ** x, where x is the argument, and e is Euler's 
   number (also known as Napier's constant), the base of the 
   natural logarithms
+  
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.exp(4)
+  54.59815003314424
+  ```
 
 
 ^
 {:#math__expm1} _math_.**expm1**(_n_: number)
 : returns (e ** x) - 1, where x is the argument, and e the base of 
   the natural logarithms
+  
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.expm1(1)
+  1.718281828459045
+  ```
 
 
 ^
@@ -203,6 +324,15 @@ Blade's mathematical library
 : returns number n rounded up to the next largest integer
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.ceil(1.65)
+  2
+  %> math.ceil(1.01)
+  2
+  ```
 
 
 ^
@@ -210,16 +340,31 @@ Blade's mathematical library
 : returns the value of a number rounded to the nearest integer
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.round(103.51)
+  104
+  %> math.round(103.49)
+  103
+  ```
 
 
 ^
 {:#math__log} _math_.**log**(_n_: number)
 : returns the natural logarithm (base e) of a number (mathematical ln(x))
-   <div class="cite"><span class="hint">note</span> <span>- If the value of x is 0, the return value is always -inf</span></div>
-
-  - If the value of x is negative, the return value is always NaN
+  > - If the value of x is 0, the return value is always -inf
+  > - If the value of x is negative, the return value is always NaN
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.log(45)
+  3.80666248977032
+  ```
 
 
 ^
@@ -228,6 +373,13 @@ Blade's mathematical library
   If the number is negative, NaN is returned
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.log2(45)
+  5.491853096329675
+  ```
 
 
 ^
@@ -236,6 +388,13 @@ Blade's mathematical library
   If the number is negative, NaN is returned
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.log10(45)
+  1.653212513775344
+  ```
 
 
 ^
@@ -260,6 +419,13 @@ Blade's mathematical library
   If the value of x is less than -1, the return value is always NaN.
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.log1p(45)
+  3.828641396489095
+  ```
 
 
 ^
@@ -267,6 +433,13 @@ Blade's mathematical library
 : returns the cube root of a number n
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.cbrt(64)
+  4
+  ```
 
 
 ^
@@ -276,6 +449,19 @@ Blade's mathematical library
   If the number passed into sign() is 0, it will return a 0.
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.sign(10)
+  1
+  %> math.sign(-20)
+  -1
+  %> math.sign(-0)
+  -0
+  %> math.sign(0)
+  0
+  ```
 
 
 ^
@@ -284,6 +470,13 @@ Blade's mathematical library
   equal to the specified number
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.floor(1.92)
+  1
+  ```
 
 
 ^
@@ -299,6 +492,17 @@ Blade's mathematical library
   or false otherwise
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.is_inf(math.Infinity)
+  true
+  %> math.is_inf(-math.Infinity)
+  true
+  %> math.is_inf(0)
+  false
+  ```
 
 
 ^
@@ -306,6 +510,17 @@ Blade's mathematical library
 : return true if x is neither an Infinity nor a NaN, and false otherwise
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.is_finite(0)
+  true
+  %> math.is_finite(math.NaN)
+  true
+  %> math.is_finite(-math.Infinity)
+  false
+  ```
 
 
 ^
@@ -313,6 +528,19 @@ Blade's mathematical library
 : returns the integer part of a number by removing any fractional
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.trunc(1.92)
+  1
+  %> math.trunc(1.0)
+  1
+  %> math.trunc(1.01)
+  1
+  %> math.trunc(-1.01)
+  -1
+  ```
 
 
 ^
@@ -320,6 +548,13 @@ Blade's mathematical library
 : returns the square root of a nunmber
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.sqrt(100)
+  10
+  ```
 
 
 ^
@@ -329,6 +564,13 @@ Blade's mathematical library
   when the iterable is empty, it returns 1
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.sum([1, 2, [3, 4, [5, 6]]])
+  21
+  ```
 
 
 ^
@@ -338,6 +580,13 @@ Blade's mathematical library
   when the iterable is empty, it returns 1
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.product([1, 2, [3, 4, [5, 6]]])
+  720
+  ```
 
 
 ^
@@ -346,5 +595,12 @@ Blade's mathematical library
   by removing any integer
    <div class="cite"><span class="hint">return</span> <span>number</span></div>
 
+  
+  Example:
+  
+  ```blade-repl
+  %> math.fraction(1.92)
+  92
+  ```
 
 

@@ -2,7 +2,7 @@
 layout: default
 title: ast
 parent: Standard Library
-nav_order: 4
+nav_order: 5
 permalink: /standard/ast
 ---
 
@@ -521,6 +521,8 @@ Provides interface for parsing Blade code into Abstract Syntax Trees
 ---
 
 Represents the result of an ast parse operation
+  @serializable
+  @iterable
 
 
 #### class ParseResult methods
@@ -554,6 +556,7 @@ Blade source code scanner
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
+
 {:#_Scanner_scan} **scan**()
 : scans the source and returns a list of tokens
    <div class="cite"><span class="hint">return</span> <span>list[Token]</span></div>
@@ -568,6 +571,8 @@ Blade source code scanner
 ---
 
 Blade source code token
+  @serializable
+  @printable
 
 
 #### class Token methods
@@ -575,6 +580,7 @@ Blade source code token
 
 {:#_Token_Token} **Token**(_type_: number, _literal_: string, _line_: number)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -595,6 +601,7 @@ Exception raised for errors during parsing
 
 
 
+
 ^
 
 
@@ -612,6 +619,7 @@ base Stmt class
 ---
 
 Echo Stmt representation
+  @serializable
 
 
 #### class EchoStmt methods
@@ -622,6 +630,7 @@ Echo Stmt representation
 
 
 
+
 ^
 
 
@@ -629,6 +638,7 @@ Echo Stmt representation
 ---
 
 Expr Stmt representation
+  @serializable
 
 
 #### class ExprStmt methods
@@ -639,6 +649,7 @@ Expr Stmt representation
 
 
 
+
 ^
 
 
@@ -646,6 +657,7 @@ Expr Stmt representation
 ---
 
 If Stmt representation
+  @serializable
 
 
 #### class IfStmt methods
@@ -656,6 +668,7 @@ If Stmt representation
 
 
 
+
 ^
 
 
@@ -663,6 +676,7 @@ If Stmt representation
 ---
 
 Iter Stmt representation
+  @serializable
 
 
 #### class IterStmt methods
@@ -673,6 +687,7 @@ Iter Stmt representation
 
 
 
+
 ^
 
 
@@ -680,6 +695,7 @@ Iter Stmt representation
 ---
 
 While Stmt representation
+  @serializable
 
 
 #### class WhileStmt methods
@@ -690,6 +706,7 @@ While Stmt representation
 
 
 
+
 ^
 
 
@@ -697,6 +714,7 @@ While Stmt representation
 ---
 
 For Stmt representation
+  @serializable
 
 
 #### class ForStmt methods
@@ -707,6 +725,7 @@ For Stmt representation
 
 
 
+
 ^
 
 
@@ -714,6 +733,7 @@ For Stmt representation
 ---
 
 Continue Stmt representation
+  @serializable
 
 
 
@@ -724,6 +744,7 @@ Continue Stmt representation
 ---
 
 Break Stmt representation
+  @serializable
 
 
 
@@ -734,6 +755,7 @@ Break Stmt representation
 ---
 
 Die Stmt representation
+  @serializable
 
 
 #### class DieStmt methods
@@ -744,6 +766,7 @@ Die Stmt representation
 
 
 
+
 ^
 
 
@@ -751,6 +774,7 @@ Die Stmt representation
 ---
 
 Return Stmt representation
+  @serializable
 
 
 #### class ReturnStmt methods
@@ -761,6 +785,7 @@ Return Stmt representation
 
 
 
+
 ^
 
 
@@ -768,6 +793,7 @@ Return Stmt representation
 ---
 
 Assert Stmt representation
+  @serializable
 
 
 #### class AssertStmt methods
@@ -778,6 +804,7 @@ Assert Stmt representation
 
 
 
+
 ^
 
 
@@ -785,6 +812,7 @@ Assert Stmt representation
 ---
 
 Using Stmt representation
+  @serializable
 
 
 #### class UsingStmt methods
@@ -795,6 +823,7 @@ Using Stmt representation
 
 
 
+
 ^
 
 
@@ -802,6 +831,7 @@ Using Stmt representation
 ---
 
 Import Stmt representation
+  @serializable
 
 
 #### class ImportStmt methods
@@ -812,6 +842,7 @@ Import Stmt representation
 
 
 
+
 ^
 
 
@@ -819,6 +850,7 @@ Import Stmt representation
 ---
 
 Catch Stmt representation
+  @serializable
 
 
 #### class CatchStmt methods
@@ -829,6 +861,7 @@ Catch Stmt representation
 
 
 
+
 ^
 
 
@@ -836,6 +869,7 @@ Catch Stmt representation
 ---
 
 Finally Stmt representation
+  @serializable
 
 
 #### class FinallyStmt methods
@@ -846,6 +880,7 @@ Finally Stmt representation
 
 
 
+
 ^
 
 
@@ -853,6 +888,7 @@ Finally Stmt representation
 ---
 
 Try Stmt representation
+  @serializable
 
 
 #### class TryStmt methods
@@ -863,6 +899,7 @@ Try Stmt representation
 
 
 
+
 ^
 
 
@@ -870,6 +907,7 @@ Try Stmt representation
 ---
 
 Comment Stmt representation
+  @serializable
 
 
 #### class CommentStmt methods
@@ -880,6 +918,7 @@ Comment Stmt representation
 
 
 
+
 ^
 
 
@@ -887,6 +926,7 @@ Comment Stmt representation
 ---
 
 Block Stmt representation
+  @serializable
 
 
 #### class BlockStmt methods
@@ -897,6 +937,7 @@ Block Stmt representation
 
 
 
+
 ^
 
 
@@ -904,6 +945,7 @@ Block Stmt representation
 ---
 
 Assign Stmt representation
+  @serializable
 
 
 #### class AssignStmt methods
@@ -911,6 +953,7 @@ Assign Stmt representation
 
 {:#_AssignStmt_AssignStmt} **AssignStmt**(expr, type, value)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -931,6 +974,7 @@ base Defn class
 ---
 
 Doc Defn representation
+  @serializable
 
 
 #### class DocDefn methods
@@ -938,6 +982,7 @@ Doc Defn representation
 
 {:#_DocDefn_DocDefn} **DocDefn**(data)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -955,6 +1000,7 @@ Parses raw Blade tokens and produces an Abstract Syntax Tree
 
 {:#_Parser_Parser} **Parser**(_tokens_: []Token)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 {:#_Parser_parse} **parse**()
@@ -983,6 +1029,7 @@ base Decl class
 ---
 
 Var Decl representation
+  @serializable
 
 
 #### class VarDecl methods
@@ -993,6 +1040,7 @@ Var Decl representation
 
 
 
+
 ^
 
 
@@ -1000,6 +1048,7 @@ Var Decl representation
 ---
 
 Function Decl representation
+  @serializable
 
 
 #### class FunctionDecl methods
@@ -1010,6 +1059,7 @@ Function Decl representation
 
 
 
+
 ^
 
 
@@ -1017,6 +1067,7 @@ Function Decl representation
 ---
 
 Method Decl representation
+  @serializable
 
 
 #### class MethodDecl methods
@@ -1027,6 +1078,7 @@ Method Decl representation
 
 
 
+
 ^
 
 
@@ -1034,6 +1086,7 @@ Method Decl representation
 ---
 
 Property Decl representation
+  @serializable
 
 
 #### class PropertyDecl methods
@@ -1044,6 +1097,7 @@ Property Decl representation
 
 
 
+
 ^
 
 
@@ -1051,6 +1105,7 @@ Property Decl representation
 ---
 
 Class Decl representation
+  @serializable
 
 
 #### class ClassDecl methods
@@ -1058,6 +1113,7 @@ Class Decl representation
 
 {:#_ClassDecl_ClassDecl} **ClassDecl**(name, superclass, properties, methods)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -1078,6 +1134,7 @@ base Expr class
 ---
 
 Binary Expr representation
+  @serializable
 
 
 #### class BinaryExpr methods
@@ -1088,6 +1145,7 @@ Binary Expr representation
 
 
 
+
 ^
 
 
@@ -1095,6 +1153,7 @@ Binary Expr representation
 ---
 
 Group Expr representation
+  @serializable
 
 
 #### class GroupExpr methods
@@ -1105,6 +1164,7 @@ Group Expr representation
 
 
 
+
 ^
 
 
@@ -1112,6 +1172,7 @@ Group Expr representation
 ---
 
 Literal Expr representation
+  @serializable
 
 
 #### class LiteralExpr methods
@@ -1122,6 +1183,7 @@ Literal Expr representation
 
 
 
+
 ^
 
 
@@ -1129,6 +1191,7 @@ Literal Expr representation
 ---
 
 Identifier Expr representation
+  @serializable
 
 
 #### class IdentifierExpr methods
@@ -1139,6 +1202,7 @@ Identifier Expr representation
 
 
 
+
 ^
 
 
@@ -1146,6 +1210,7 @@ Identifier Expr representation
 ---
 
 Unary Expr representation
+  @serializable
 
 
 #### class UnaryExpr methods
@@ -1156,6 +1221,7 @@ Unary Expr representation
 
 
 
+
 ^
 
 
@@ -1163,6 +1229,7 @@ Unary Expr representation
 ---
 
 Condition Expr representation
+  @serializable
 
 
 #### class ConditionExpr methods
@@ -1173,6 +1240,7 @@ Condition Expr representation
 
 
 
+
 ^
 
 
@@ -1180,6 +1248,7 @@ Condition Expr representation
 ---
 
 Call Expr representation
+  @serializable
 
 
 #### class CallExpr methods
@@ -1190,6 +1259,7 @@ Call Expr representation
 
 
 
+
 ^
 
 
@@ -1197,6 +1267,7 @@ Call Expr representation
 ---
 
 Get Expr representation
+  @serializable
 
 
 #### class GetExpr methods
@@ -1207,6 +1278,7 @@ Get Expr representation
 
 
 
+
 ^
 
 
@@ -1214,6 +1286,7 @@ Get Expr representation
 ---
 
 Set Expr representation
+  @serializable
 
 
 #### class SetExpr methods
@@ -1224,6 +1297,7 @@ Set Expr representation
 
 
 
+
 ^
 
 
@@ -1231,6 +1305,7 @@ Set Expr representation
 ---
 
 Index Expr representation
+  @serializable
 
 
 #### class IndexExpr methods
@@ -1241,6 +1316,7 @@ Index Expr representation
 
 
 
+
 ^
 
 
@@ -1248,6 +1324,7 @@ Index Expr representation
 ---
 
 List Expr representation
+  @serializable
 
 
 #### class ListExpr methods
@@ -1258,6 +1335,7 @@ List Expr representation
 
 
 
+
 ^
 
 
@@ -1265,6 +1343,7 @@ List Expr representation
 ---
 
 Dict Expr representation
+  @serializable
 
 
 #### class DictExpr methods
@@ -1275,6 +1354,7 @@ Dict Expr representation
 
 
 
+
 ^
 
 
@@ -1282,6 +1362,7 @@ Dict Expr representation
 ---
 
 Interpolation Expr representation
+  @serializable
 
 
 #### class InterpolationExpr methods
@@ -1289,6 +1370,7 @@ Interpolation Expr representation
 
 {:#_InterpolationExpr_InterpolationExpr} **InterpolationExpr**(data)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 

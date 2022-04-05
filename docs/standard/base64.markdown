@@ -2,7 +2,7 @@
 layout: default
 title: base64
 parent: Standard Library
-nav_order: 5
+nav_order: 6
 permalink: /standard/base64
 ---
 

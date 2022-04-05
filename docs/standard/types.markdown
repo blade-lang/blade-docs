@@ -2,7 +2,7 @@
 layout: default
 title: types
 parent: Standard Library
-nav_order: 18
+nav_order: 24
 permalink: /standard/types
 ---
 
@@ -10,7 +10,7 @@ permalink: /standard/types
 
 Provides type validation and conversion capabilities
 
-this module is wrapper around the builtin functions
+This module is wrapper around the builtin functions
 where applicable and does and return the same thing as the builtin
 alternative.
 
@@ -20,8 +20,7 @@ alternative.
 
 {:#types__of} _types_.**of**(_value_: any)
 : returns the name of the type of value
-   <div class="cite"><span class="hint">note</span> <span>method implemented as part of core language features</span></div>
-
+  > - method implemented as part of core language features
 
 
 ^
@@ -57,8 +56,7 @@ alternative.
 ^
 {:#types__number} _types_.**is_number**(_value_: any)
 : returns true if the value is a number or false otherwise
-   <div class="cite"><span class="hint">note</span> <span>this method also returns true for integers</span></div>
-
+  > - this method also returns true for integers
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
@@ -167,10 +165,10 @@ The Convert class handles conversion from one type to another
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
+
 {:#_Convert_to_int} **to_int**()
 : convert the value into an integer.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_int()</span></div>
-
+  > - classes may override the return value by declaring a to_int()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
@@ -178,8 +176,7 @@ The Convert class handles conversion from one type to another
 
 {:#_Convert_to_number} **to_number**()
 : convert the value into a number.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_number()</span></div>
-
+  > - classes may override the return value by declaring a to_number()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
@@ -187,8 +184,7 @@ The Convert class handles conversion from one type to another
 
 {:#_Convert_to_string} **to_string**()
 : convert the value into a string.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_string()</span></div>
-
+  > - classes may override the return value by declaring a to_string()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
@@ -196,8 +192,7 @@ The Convert class handles conversion from one type to another
 
 {:#_Convert_to_bool} **to_bool**()
 : converts the value into a boolean.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_bool()</span></div>
-
+  > - classes may override the return value by declaring a to_bool()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
@@ -205,8 +200,7 @@ The Convert class handles conversion from one type to another
 
 {:#_Convert_to_list} **to_list**()
 : convert the value into a list.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_list()</span></div>
-
+  > - classes may override the return value by declaring a to_list()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
@@ -214,8 +208,7 @@ The Convert class handles conversion from one type to another
 
 {:#_Convert_to_dict} **to_dict**()
 : convert the value value into a dictionary.
-   <div class="cite"><span class="hint">note</span> <span>classes may override the return value by declaring a to_dict()</span></div>
-
+  > - classes may override the return value by declaring a to_dict()
   function.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 

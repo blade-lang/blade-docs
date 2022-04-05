@@ -222,6 +222,10 @@ blockquote {
   font-size: .9em;
   text-align: start;
   margin-bottom: 1em;
+
+  ul {
+    margin-bottom: 0;
+  }
 }
 
 .side-bar {
@@ -323,6 +327,10 @@ blockquote {
   dd {
     display: block;
     margin-left: 2em;
+
+    blockquote {
+      margin-top: .5em !important;
+    }
   }
 
   blockquote {

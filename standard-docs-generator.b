@@ -1,6 +1,7 @@
 import os
 import ast
 import json
+import colors
 
 class ParsedFile {
   var classes = []
@@ -15,7 +16,9 @@ class ParsedClass {
 }
 
 def cite(str) {
-  return (str + '\n').replace('/\\@([a-zA-Z_]+)\\s*([^\\n]*)/', 
+  return (str + '\n').
+            replace('/\\@note/', '> -').
+            replace('/\\@([a-zA-Z_]+)[ ]*([^\\n]*)/', 
               ' <div class="cite"><span class="hint">$1</span> <span>$2</span></div>\n')
 }
 
@@ -108,7 +111,7 @@ def get_module_desc(f) {
   var i = 0
   while lines[i].starts_with('#') {
     if !lines[i].match('/^\\s*#\\s*@(module|copyright)/') {
-      result += lines[i].replace('/^#\\s*/', '') + '\n'
+      result += lines[i].replace('/^#\\s?/', '') + '\n'
     }
     i++
   }
@@ -146,6 +149,10 @@ def create_module_doc(index_file, i, module_name, docs) {
   file('docs/standard/${module_name}.markdown', 'w').write(content)
 }
 
+def process_line(source) {
+  echo colors.text('  Processing ${source}...', colors.style.italic)
+}
+
 if os.args.length() < 3 {
   echo 'Please specify source path'
 } else {
@@ -154,18 +161,27 @@ if os.args.length() < 3 {
   var sources = os.read_dir(source_dir)
   sources.sort()
 
+  echo colors.text('Started generating Blade standard library documentation...', colors.text_color.blue)
+  echo ''
+
   iter var i = 0; i < sources.length(); i++ {
     var source = sources[i], module_name = source.replace('/\\.b/', '')
 
-    if source.ends_with('.b') { # it's a file
+    if source.ends_with('.b') and !source.starts_with('_') { # it's a file
+      process_line('${source_dir}/${source}')
+
       var parse_list = ast.parse(file('${source_dir}/${source}').read())
       create_module_doc('${source_dir}/${source}', i + 1, module_name, get_docs(module_name, parse_list))
     } else {  # it's a directory
-      if !source.starts_with('.') {
+      if !source.starts_with('.') and !source.starts_with('_') {
+        process_line('${source_dir}/${source}')
+
         var parsed = []
 
         for f in os.read_dir('${source_dir}/${source}') {
-          if !f.starts_with('.') {
+          if !f.starts_with('.') and !f.starts_with('_') {
+            process_line('${source_dir}/${source}/${f}')
+
             parsed.append(ast.parse(file('${source_dir}/${source}/${f}').read())) 
           } 
         }
@@ -183,5 +199,7 @@ if os.args.length() < 3 {
     }
   }
 
-  echo 'Successfully generated documentation!'
+  echo ''
+  echo colors.text(colors.text('Successfully generated Blade standard library documentation!', colors.text_color.green), colors.style.bold)
+  echo ''
 }

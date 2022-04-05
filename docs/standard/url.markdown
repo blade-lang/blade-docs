@@ -2,19 +2,50 @@
 layout: default
 title: url
 parent: Standard Library
-nav_order: 19
+nav_order: 25
 permalink: /standard/url
 ---
 
 # url
 
-Provides functionalities for parsing and processing URLs
+This module provides classes and functions for parsing and processing URLs.
+This module supports username and passwords in URLs in order to support an 
+arbitrary number of RFC combinations but this does not strictly conform to 
+RFC1738.
+
+The scope of URL in this module have not been limited to HTTP or any protocol 
+for that matter. However, where deducable, the module tries to conform to the 
+most appropriate URL for the specified scheme.
+
+Constructing a URL is vey simple. Here is an example.
+
+### Example,
+
+```blade-repl
+%> import url
+%> var link = url.Url('https', 'example.com', 9000)
+%> link.absolute_url()
+'https://example.com:9000'
+```
+
+What each function and class method does are easy to deduce from their names.
+
+For example, we can use the `parse()` function to convert a URL string into a URL 
+instance like below.
+
+```blade-repl
+%> link = url.parse('https://example.com:9000')
+%> link.scheme
+'https'
+%> link.port
+'9000'
+```
 
 
 
 <h2>Functions</h2><hr>
 
-{:#url__encode} _url_.**encode**(_url_: string, _strict_: boolean [default = false])
+{:#url__encode} _url_.**encode**(_url_: string, _strict_: boolean)
 : URL-encodes string
   
   this function is convenient when encoding a string to be used in 
@@ -25,10 +56,11 @@ Provides functionalities for parsing and processing URLs
   percent (%) sign in order to conform with RFC 3986. Otherwise,
   is is encoded with the plus (+) sign in order to align with
   the default encoding used by modern browsers.
-   <div class="cite"><span class="hint">note</span> <span>strict mode is disabled by default</span></div>
-
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
+   <div class="cite"><span class="hint">defualt</span> <span>strict: false</span></div>
+
+  > - strict mode is disabled by default
 
 
 ^
@@ -57,7 +89,15 @@ Provides functionalities for parsing and processing URLs
 ### _class_ UrlMalformedException  < _Exception_
 ---
 
-Excpetion class thrown when the url is malformed
+Excpetion thrown when a url is malformed
+
+
+#### class UrlMalformedException methods
+---
+
+{:#_UrlMalformedException_UrlMalformedException} **UrlMalformedException**(_message_: string)
+:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 
@@ -68,13 +108,15 @@ Excpetion class thrown when the url is malformed
 ---
 
 The Url class provides functionalities for parsing and processing URLs
+  @serializable
+  @printable
 
 
 #### class Url properties
 ---
 
 {:#Url_Url_scheme} _Url._**scheme**
-: The url scheme e.g. http, https, ftp, tcp etc...
+: The url scheme e.g. http, https, ftp, tcp etc.
 
 
 {:#Url_Url_host} _Url._**host**
@@ -87,7 +129,9 @@ The Url class provides functionalities for parsing and processing URLs
 
 
 {:#Url_Url_path} _Url._**path**
-: The path of the URL. default = /
+: The path of the URL.
+   <div class="cite"><span class="hint">default</span> <span>/</span></div>
+
 
 
 {:#Url_Url_hash} _Url._**hash**
@@ -116,8 +160,9 @@ The Url class provides functionalities for parsing and processing URLs
 #### class Url methods
 ---
 
-{:#_Url_Url} **Url**(scheme, host, port, path, query, hash, username, password)
+{:#_Url_Url} **Url**(_scheme_: string, _host_: string [, _port_: string [, _path_: string [, _query_: string [, _hash_: string [, _username_: string [, _password_: string]]]]]])
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
 
 
 {:#_Url_authority} **authority**()
@@ -127,8 +172,7 @@ The Url class provides functionalities for parsing and processing URLs
   terminated by the next slash ("/"), question mark ("?"), or number
   sign ("#") character, or by the end of the URI.
  
-   <div class="cite"><span class="hint">note</span> <span>: mailto scheme does not have an authority. For this reason, mailto schemes return an empty string as authority.</span></div>
-
+  > - mailto scheme does not have an authority. For this reason, mailto schemes return an empty string as authority.
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
 
