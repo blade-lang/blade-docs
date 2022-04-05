@@ -171,6 +171,64 @@ For example:
 -0.1335264070215359
 ```
 
+## First-Class Package Management
+---
+
+For Blade, package management is such an important and integral part to software development 
+that we decided to add package management as a language feature by offering first-class 
+support fo it.
+
+Blade lets you download packages and libraries into your source code directory and
+call it from your code as if it were a standard library. Making it available for all 
+applications and files that will be called from or created within that directory.
+
+For every directory where you call the `blade` command to run programs, Blade looks for the 
+following directory structure and marks all modules and packages in that directory as part 
+of the built-in library.
+
+```sh
+.blade
+|__ libs
+|____ ...
+|__ bin
+|____ ...
+```
+
+Blade modules and packages in `.blade/libs` will be importable like a standard library 
+package/module, while `C` extensions found in the `.blade/bin` directory will be loaded 
+when Blade starts up. If a module/package is a mixture of `C` extensions and standard 
+Blade module/package, such module or package should be added to the `.blade/libs` directory 
+while the object file of the `C` extension should go into `.blade/bin`.
+
+> It is important to note that modules and libraries having a conflicting name with a 
+> standard library will take precedence and will be loaded instead of the standard library.
+> This is not a drawback in anyway. Rather, it provides the user with the choice of 
+> overriding any of the standard libraries with any preferred alternative.
+
+For example, create the directory `.blade/libs` in your current directory and create a 
+file `sample.b` in that directory. Paste the following code into it.
+
+```blade
+var version = '1.0.0'
+```
+
+Now create a new file `test.b` in your current directory and save the following code in it:
+
+```blade
+import sample
+echo sample.version
+```
+
+Now run your file using:
+
+```terminal
+$ blade sample.b
+```
+
+You should see `1.0.0` printed in the console. Voila!
+
+> Remember, the package name set in your `C` extensions MUST start with an underscore 
+> (`_`) to make it callable.
 
 <br><br><br>
 <hr>

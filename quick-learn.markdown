@@ -769,4 +769,34 @@ my_package
 
 Import as usual!
 
+## Fist-class package management
+
+Blade allows you to download packages and libraries into your source code directory and
+call it from your code as if it were a standard library. It's simple.
+
+Simply create a directory `.blade/libs` at the root of your application and download 
+Blade modules and/or packages into the directory into that directory. For example, 
+create the directory `.blade/libs` in your current directory and create a file `test.b` 
+in that directory. Paste the following code into it.
+
+```blade
+var name = 'Paula'
+```
+
+Now create a new file `sample.b` in your current directory and save the following code in it:
+
+```blade
+import test
+echo test.name
+```
+
+Now run your file using:
+
+```terminal
+$ blade sample.b
+```
+
+You should see `Paula` printed in the console. Voila!
+> This features extends to C extensions created for Blade as well.
+
 [More](./tutorial/modules)
