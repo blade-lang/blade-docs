@@ -16,7 +16,6 @@ Welcome! This is the official documentation for Blade 0.0.71.
 
 <div style="color:red">This documentation is a work in progress!</div>
 
-<img src="https://github.com/blade-lang/blade/actions/workflows/codeql.yml/badge.svg" style="height: 27px" />
 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" style="height: 27px" />
 <a class="github-button" href="https://github.com/blade-lang/blade" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star blade-lang/blade on GitHub">Star</a>
 <a class="github-button" href="https://github.com/blade-lang" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @blade-lang on GitHub">Follow @blade-lang</a>
@@ -78,18 +77,12 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 
 Blade currently supports and have been tested on the Linux, OSX and Windows operating system. To install Blade, you need to have [CMake](https://cmake.org/download/) and a C/C++ compiler toolchain/IDE installed on your computer.
 
+### For Linux and macOS
+
 If you are on a Unix, OSX or Linux machine, you can use the automated install tool by running the command below in your favorite terminal.
 
-### For Linux
-
 ```terminal
-$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall-linux.sh)
-```
-
-### For OSX
-
-```terminal
-$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/autoinstall-osx.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts/install.sh)
 ```
 
 
