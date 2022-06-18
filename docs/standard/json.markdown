@@ -51,13 +51,13 @@ Example,
 %> json.encode([1, 2, 3])
 '[1,2,3]'
 %> 
-%> json.encode({name: 'Blade', version: '0.0.71'})
-'{"name":"Blade","version":"0.0.71"}'
+%> json.encode({name: 'Blade', version: '0.0.72'})
+'{"name":"Blade","version":"0.0.72"}'
 %> 
-%> json.encode({name: 'Blade', version: '0.0.71'}, false)
+%> json.encode({name: 'Blade', version: '0.0.72'}, false)
 '{
   "name": "Blade", 
-  "version": "0.0.71"
+  "version": "0.0.72"
 }'
 ```
 

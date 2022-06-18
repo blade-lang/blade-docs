@@ -40,11 +40,40 @@ For example:
 'Happy 17th birthday'
 ```
 
-> **_@note:_** In a while loop, the user has the responsibility to evaluate the condition to false. In 
-> our example, we incremented the value of `age` before we end the loop so that `age` can finally reach 
-> a value at which the loops condition evaluation returns false.
+In a while loop, the user has the responsibility to evaluate the condition to false. In our example, 
+we incremented the value of `age` before we end the loop so that `age` can finally reach a value at 
+which the loops condition evaluation returns false.
 
 That's it!
+
+
+## Do...While Loops
+---
+
+The _do...while_ loop behaves very similar to the while loop except that it runs the body of the loop 
+once before evaluating the condition.
+
+For example:
+
+```blade-repl
+%> var i = 10
+%> do {
+..   echo 'Iteration ${i}'
+..   i--
+.. } while i > 0
+Iteration 10
+Iteration 9
+Iteration 8
+Iteration 7
+Iteration 6
+Iteration 5
+Iteration 4
+Iteration 3
+Iteration 2
+Iteration 1
+```
+
+In a _do...while_ loop the condition is written after the body of the loop. Like the _while_ loop, the responsiblility to evaluate the condition to false is on the user.
 
 
 ## Iter Loops

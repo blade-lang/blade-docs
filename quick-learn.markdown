@@ -25,7 +25,7 @@ Simple type `blade` in your terminal to launch REPL mode
 
 ```terminal
 $ blade
-Blade 0.0.71 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Blade 0.0.72 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type ".exit" to quit or ".credits" for more information
 %> 
@@ -211,6 +211,24 @@ This statement takes a value and matches it against a set of constants to run th
 'Item at 1 is Mango'
 'Item at 2 is Banana
 'Item at 3 is Peach'
+```
+[More](./tutorial/loops)
+
+
+## `do...while` loop
+---
+
+```blade-repl
+%> var i = 5
+%> do {
+..   echo i
+..   i--
+.. } while i > 0
+5
+4
+3
+2
+1
 ```
 [More](./tutorial/loops)
 
