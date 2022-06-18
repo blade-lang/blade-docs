@@ -16,8 +16,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     end
 
     keywords = %w(
-      and as assert break catch class continue def default die echo 
-      else finally for if import in iter or return 
+      and as assert break catch class continue def default die do
+      echo else finally for if import in iter or return 
       static try using var when while
     )
 
@@ -34,8 +34,8 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     builtins = %w(
       print hex int is_bool is_string is_list is_dict is_number
       is_instance is_iterable is_class is_function id bin abs
-      bytes file chr delprop getprop hashprop is_Callable is_object
-      is_bytes is_file max microtime time min oct rand ord setprop
+      bytes file chr delprop getprop hashprop is_callable is_object
+      is_bytes is_file instance_of max microtime time min oct rand ord setprop
       sum to_int to_bool to_list to_number to_string typeof
     )
 
