@@ -61,6 +61,7 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 
 
 ## Why should I use Blade?
+---
 
 If you fall into one of more of this categories or have one of the following needs, then Blade is the right language for you.
 

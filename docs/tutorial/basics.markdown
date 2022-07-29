@@ -13,6 +13,7 @@ If you have installed Blade or still thinking about whether to install it or not
 you must have an idea of what Blade is and why Blade.
 
 ## TL;DR
+---
 
 If you fall into one of more of this categories or have one of the following needs, then Blade is the right language for you.
 
@@ -27,6 +28,7 @@ If you fall into one of more of this categories or have one of the following nee
 There are many more use-cases where Blade is a great fit. This is just the bare minimal.
 
 ## The Prose
+---
 
 If you've ever had experience with a compiled language (e.g. C/C++, Java, etc), then one thing you'll quickly
 notice (at least I did) was how much the whole process of write-compile-run-debug can be tedious and get
