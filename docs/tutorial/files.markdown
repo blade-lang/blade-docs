@@ -88,7 +88,7 @@ true
 
 Now check your current directory and you should see the empty but valid gif image courtsey of [Probably Programming](http://probablyprogramming.com/2009/03/15/the-tiniest-gif-ever){:target="_blank"} there.
 
-## File methods
+## `file()` methods
 ---
 
 The file object contains the following methods:
