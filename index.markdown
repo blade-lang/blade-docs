@@ -60,6 +60,21 @@ syntax set with a very natural feel.
 Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics vampire slayer &mdash; Blade.
 
 
+## Why should I use Blade?
+
+If you fall into one of more of this categories or have one of the following needs, then Blade is the right language for you.
+
+- You want Python's simplicity but love coding with braces and other things C-like.
+- You want a language with first-class support for package management.
+- You need a quick script for automating mundane tasks on your device.
+- You need a language that allows fast prototyping.
+- You want to do backend development without needing to depend on a framework.
+- You want a scripting language you can easily port your existing C99 codes to with less hassle (Work in progress).
+- You want a familiar language that can be embedded into your application that's more extensive than Lua.
+
+There are many more use-cases where Blade is a great fit. This is just the bare minimal.
+
+
 ## Download
 ---
 

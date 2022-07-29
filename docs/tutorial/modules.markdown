@@ -240,4 +240,4 @@ plead with you to keep up to date with this documentation to follow the developm
 
 <br><br>
 
-[Previous Topic](./error-handling)
+[Previous Topic](./error-handling) | [Next Topic](./bytes){:class="float-right"}
