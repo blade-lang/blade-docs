@@ -33,14 +33,20 @@ Welcome! This is the official documentation for Blade 0.0.73.
 
 ```blade
 import http
+import json
 
 var server = http.server(3000)
-server.on_receive(|req, res| {
-  res.write('It works!')
+server.on_receive(|request, response| {
+  echo 'Request from ${request.ip} to ${request.path}.'
+  
+  response.headers['Content-Type'] = 'application/json'
+  response.write(json.encode(request))
 })
+
+echo 'Listening on Port 3000...'
 server.listen()
 ```
-_A simple HTTP server in Blade_
+_A simple HTTP server listening on port 3000 in Blade_
 
 <br><br>
 
