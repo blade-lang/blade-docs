@@ -32,19 +32,15 @@ Welcome! This is the official documentation for Blade 0.0.73.
 <br>
 
 ```blade
-def sum(numbers) {
-    var result = 0
+import http
 
-    for num in numbers {
-        result += num
-    }
-
-    echo 'the sum is ${result}'
-}
-
-sum([1, 2, 3, 4]) # this prints "the sum is 10"
+var server = http.server(3000)
+server.on_receive(|req, res| {
+  res.write('It works!')
+})
+server.listen()
 ```
-_A simple Blade program to sum a list of numbers by [@BenStigsen](https://github.com/BenStigsen)._{: .fs-2 .text-grey-dk-000 target="_blank" }
+_A simple HTTP server in Blade_
 
 <br><br>
 
