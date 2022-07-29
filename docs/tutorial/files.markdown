@@ -138,12 +138,20 @@ The file object contains the following methods:
   _An example has been given above._
 
 ^
+{:#file-gets} _file_.**gets**([_length_: number])
+: Same as `read()`, but doesn't open or close the file automatically.
+
+^
 {:#file-write} _file_.**write**(_data_: string | bytes)
 : Writes a string or bytes to an opened file at the current insertion point. When the file is opened with the `a` mode 
   enabled, write will always start from the end of the file. If the `seek()` method has been previously called, write 
   will begin from the seeked position, otherwise it will start at the beginning of the file.
 
   _An example has been given above._
+
+^
+{:#file-puts} _file_.**puts**(_data_: string | bytes)
+: Same as `write()`, but doesn't open or close the file automatically.
 
 ^
 {:#file-number} _file_.**number**()
