@@ -167,6 +167,10 @@ if os.args.length() < 3 {
   iter var i = 0; i < sources.length(); i++ {
     var source = sources[i], module_name = source.replace('/\\.b/', '')
 
+    # ignore the http2 module.
+    if source.starts_with('http2') or source.starts_with('zip2') 
+      continue
+
     if source.ends_with('.b') and !source.starts_with('_') { # it's a file
       process_line('${source_dir}/${source}')
 

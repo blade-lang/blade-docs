@@ -2,7 +2,7 @@
 layout: default
 title: json
 parent: Standard Library
-nav_order: 16
+nav_order: 17
 permalink: /standard/json
 ---
 
@@ -51,13 +51,13 @@ Example,
 %> json.encode([1, 2, 3])
 '[1,2,3]'
 %> 
-%> json.encode({name: 'Blade', version: '0.0.73'})
-'{"name":"Blade","version":"0.0.73"}'
+%> json.encode({name: 'Blade', version: '0.0.7'})
+'{"name":"Blade","version":"0.0.7"}'
 %> 
-%> json.encode({name: 'Blade', version: '0.0.73'}, false)
+%> json.encode({name: 'Blade', version: '0.0.7'}, false)
 '{
   "name": "Blade", 
-  "version": "0.0.73"
+  "version": "0.0.7"
 }'
 ```
 

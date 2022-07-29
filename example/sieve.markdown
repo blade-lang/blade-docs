@@ -3,9 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Sieve 
+title: Sieve benchmark
 parent: Learn by Examples
-description: The sieve benchmark counts the number of primes below 600000 using the Blade programming .language.
+description: The sieve benchmark counts the number of primes below 600000 using the Blade programming language.
 ---
 
 # Sieve

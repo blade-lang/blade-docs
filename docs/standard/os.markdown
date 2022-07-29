@@ -2,7 +2,7 @@
 layout: default
 title: os
 parent: Standard Library
-nav_order: 19
+nav_order: 20
 permalink: /standard/os
 ---
 
@@ -158,8 +158,8 @@ This module provides functions for interfacing with the underlying operating sys
   [., .., myprogram.b, single_thread.b, test.b, buggy.b]
   ```
   
-  > - `.` indicates current directory and can be used as argument to _path_ as well.
-  > - `..` indicates parent directory and can be used as argument to _path_ as well.
+  > - `.` indicates current directory and can be used as argument to _os.path_ as well.
+  > - `..` indicates parent directory and can be used as argument to _os.path_ as well.
 
 
 ^
@@ -225,13 +225,42 @@ This module provides functions for interfacing with the underlying operating sys
   
   ```blade-repl
   %> os.join_paths('/home/user', '/path/to/myfile.ext')
-  '/home/user//path/to/myfile.ext'
+  '/home/user/path/to/myfile.ext'
   ```
 
 
 ^
 {:#os__real_path} _os_.**real_path**(_path_: string)
-: returns the original path to a relative path
+: returns the original path to a relative path.
+  > - if the path is a file, see `abs_path()`
+   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+
+
+
+^
+{:#os__abs_path} _os_.**abs_path**(_path_: string)
+: returns the original path to a relative path.
+  > - unlike real_path(), this function returns full path for a file
+   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+
+
+
+^
+{:#os__dir_name} _os_.**dir_name**(_path_: string)
+: Returns the parent directory of the pathname pointed to by `path`.  Any trailing
+  `/` characters are not counted as part of the directory name.  If `path` is an
+  empty string, or contains no `/` characters, dir_name() returns the string ".", 
+  signifying the current directory.
+   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+
+
+
+^
+{:#os__base_name} _os_.**base_name**(_path_: string)
+: The base_name() function returns the last component from the pathname pointed to by 
+  `path`, deleting any trailing `/` characters.  If path consists entirely of `/` 
+  characters, the string '/' is returned.  If path is an empty string, the string '.' 
+  is returned.
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
 

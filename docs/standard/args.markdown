@@ -2,7 +2,7 @@
 layout: default
 title: args
 parent: Standard Library
-nav_order: 4
+nav_order: 3
 permalink: /standard/args
 ---
 
@@ -103,8 +103,8 @@ Usage: myprogram call
 
 
 ^
-{:#args__CHOICE} _args._**CHOICE**
-: value type enumeration choices.
+{:#args__LIST} _args._**LIST**
+: value type for list
 
 
 
@@ -147,8 +147,10 @@ A configurable commandline parser.
 #### class Parser methods
 ---
 
-{:#_Parser_Parser} **Parser**(_name_: string)
-:  <div class="cite"><span class="hint">param</span> <span>name refers to the name of the cli program.</span></div>
+{:#_Parser_Parser} **Parser**(_name_: string [, _default_help_: bool = true])
+:  <div class="cite"><span class="hint">param</span> <span>`name` refers to the name of the cli program.</span></div>
+
+   <div class="cite"><span class="hint">param</span> <span>`default_help` whether to show help when no command or option is matched or not.</span></div>
 
    <div class="cite"><span class="hint">constructor</span> <span></span></div>
 

@@ -242,10 +242,8 @@ The standard. The general workflow is as follows.
 You can also just mail your issues to [Ore Richard Muyiwa](mailto:eqliqandfriends@gmail.com) directly.
 
 
-## Sponsors
+<!-- ## Sponsors
 ---
-
-<!-- ![IMG](https://github.com/blade-lang/blade/raw/main/jetbrains.png) -->
 
 <ul class="list-style-none">
 {% for sponsor in site.sponsors %}
@@ -253,7 +251,7 @@ You can also just mail your issues to [Ore Richard Muyiwa](mailto:eqliqandfriend
      <a href="#{{ sponsor.link }}"><img src="{{ sponsor.image }}" width="64" height="64" alt="{{ sponsor.name }}"/></a>
   </li>
 {% endfor %}
-</ul>
+</ul> -->
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

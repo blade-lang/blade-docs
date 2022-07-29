@@ -2,7 +2,7 @@
 layout: default
 title: socket
 parent: Standard Library
-nav_order: 21
+nav_order: 22
 permalink: /standard/socket
 ---
 
@@ -677,7 +677,7 @@ The Socket class provides interface for working with Socket clients
   the caller until a connection is present.  If the socket is marked non-blocking and no pending connections 
   are present on the queue, accept() returns an error as described below.  
   
-  The accepted socket may not be used to accept more connections.  The original socket socket, remains open.
+  The accepted socket may not be used to accept more connections.  The original socket remains open.
    <div class="cite"><span class="hint">return</span> <span>Socket</span></div>
 
 

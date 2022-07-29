@@ -2,7 +2,7 @@
 layout: default
 title: http
 parent: Standard Library
-nav_order: 12
+nav_order: 13
 permalink: /standard/http
 ---
 
@@ -431,54 +431,86 @@ Http request handler and object.
 
 {:#HttpRequest_HttpRequest_request_uri} _HttpRequest._**request_uri**
 : The original request URL as sent in the raw request.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_path} _HttpRequest._**path**
 : The requested path or file. E.g. if the Request URI is `/users?sort=desc`, 
   then the path is `/users`.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_method} _HttpRequest._**method**
-: A string corresponding to the HTTP method of the request: GET, POST, PUT, etc.
+: The HTTP method of the request: GET, POST, PUT, etc.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
+   <div class="cite"><span class="hint">default</span> <span>GET</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_host} _HttpRequest._**host**
 : The hostname derived from the `Host` header or the first instance of 
   `X-Forwarded-Host` if set.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_ip} _HttpRequest._**ip**
 : The IP address of the remote client that initiated the request.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_headers} _HttpRequest._**headers**
 : A dictionary containing the headers sent with the request.
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_queries} _HttpRequest._**queries**
 : A dictionary containing the entries of the URI query string.
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_cookies} _HttpRequest._**cookies**
 : A dictionary containing the cookies sent with the request.
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_body} _HttpRequest._**body**
 : A dictionary containing all data submitted in the request body.
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_files} _HttpRequest._**files**
 : A dictionary containing the data of all files uploaded in the request.
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpRequest_HttpRequest_http_version} _HttpRequest._**http_version**
 : The HTTP version used for the request.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
+
+
+{:#HttpRequest_HttpRequest_auth_method} _HttpRequest._**auth_method**
+: The HTTP authentication method to use when the uri contains a credential.
+   <div class="cite"><span class="hint">type</span> <span>Auth</span></div>
+
+   <div class="cite"><span class="hint">default</span> <span>Auth.ANY</span></div>
+
 
 
 #### class HttpRequest methods
 ---
 
-{:#_HttpRequest_parse} **parse**(_raw_data_: string [, _client_: Socket])
+{:#_HttpRequest_parse} **parse**(_raw_data_: string [, _client_: Socket | TLSSocket])
 : Parses a raw HTTP request string into a correct HttpRequest
    <div class="cite"><span class="hint">return</span> <span>boolean</span></div>
 
@@ -579,11 +611,25 @@ HTTP server
   > - do not set a value to it directly. Use `load_certs()` instead.
 
 
+{:#HttpServer_HttpServer_verify_certs} _HttpServer._**verify_certs**
+: This value controls whether the client certificate should be verified 
+  or not.
+   <div class="cite"><span class="hint">boolean</span> <span></span></div>
+
+
+
 #### class HttpServer methods
 ---
 
 {:#_HttpServer_HttpServer} **HttpServer**(_port_: int [, _host_: string [, _is_secure_: bool]])
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
+
+
+{:#_HttpServer_load_certs} **load_certs**(_cert_file_: string | file [, _private_key_file_: string | file])
+: loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
+  > - certificates can only be loaded for secure servers.
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
 

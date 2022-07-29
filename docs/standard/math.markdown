@@ -2,7 +2,7 @@
 layout: default
 title: math
 parent: Standard Library
-nav_order: 17
+nav_order: 18
 permalink: /standard/math
 ---
 

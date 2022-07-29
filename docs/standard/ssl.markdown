@@ -2,7 +2,7 @@
 layout: default
 title: ssl
 parent: Standard Library
-nav_order: 23
+nav_order: 24
 permalink: /standard/ssl
 ---
 
@@ -189,6 +189,34 @@ SSL interface class
 : begins accepting data on SSL
 
 
+{:#_SSL_accept} **connect**()
+: connects to an SSL server instance
+
+
+{:#_SSL_write} **write**(_data_: string | bytes)
+: writes data to the current I/O stream.
+   <div class="cite"><span class="hint">return</span> <span>int representing the total bytes written</span></div>
+
+
+
+{:#_SSL_read} **read**([_length_: int])
+: reads data off the I/O and returns it
+   <div class="cite"><span class="hint">default</span> <span>length = -1</span></div>
+
+   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+
+
+
+{:#_SSL_error} **error**([_code_: int])
+: returns the last SSL error number
+   <div class="cite"><span class="hint">return</span> <span>int</span></div>
+
+
+
+{:#_SSL_shutdown} **shutdown**()
+: shutdown the SSL object
+
+
 {:#_SSL_free} **free**()
 : frees this SSL and all associated resources
 
@@ -203,23 +231,98 @@ SSL interface class
 ^
 
 
-### _class_ SSLSocket  < _Socket_
+### _class_ TLSSocket 
 ---
 
-SSLSocket is an SSL/TLS enabled socket.
-  @extends Socket
+TLS enabled Socket version powered by OpenSSL.
+  @printable
 
 
-#### class SSLSocket methods
+#### class TLSSocket properties
 ---
 
-{:#_SSLSocket_SSLSocket} **SSLSocket**(_method_: ptr)
+{:#TLSSocket_TLSSocket_host} _TLSSocket._**host**
+: This property holds the host bound, to be bound to or connected to by the current socket.
+  Whenever a host is not given, the host will default to localhost.
+
+
+{:#TLSSocket_TLSSocket_port} _TLSSocket._**port**
+: The port currently bound or connected to by the socket
+
+
+{:#TLSSocket_TLSSocket_family} _TLSSocket._**family**
+: The socket family (which must be one of the `AF_` variables).
+  The default family for the socket is AF_INET
+
+
+{:#TLSSocket_TLSSocket_type} _TLSSocket._**type**
+: The type of socket stream used by the socket.
+  The default socket type is `SOCK_STREAM`
+
+
+{:#TLSSocket_TLSSocket_protocol} _TLSSocket._**protocol**
+: The current operating protocol of the socket that controls the 
+  underlying behavior of the socket. The default is `IPPROTO_TCP`.
+
+
+{:#TLSSocket_TLSSocket_id} _TLSSocket._**id**
+: The file descriptor id of the current socket on the host machine.
+
+
+{:#TLSSocket_TLSSocket_is_client} _TLSSocket._**is_client**
+: `true` when the socket is a client to a server socket, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_bound} _TLSSocket._**is_bound**
+: `true` when the socket is bound to a given port on the device, `false` 
+  otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_connected} _TLSSocket._**is_connected**
+: `true` when the socket is connected to a server socket, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_listening} _TLSSocket._**is_listening**
+: `true` when the socket is currently listening on a host device port as a 
+  server, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_closed} _TLSSocket._**is_closed**
+: `true` when the socket is closed, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_shutdown} _TLSSocket._**is_shutdown**
+: `true` when the socket is shutdown, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_is_blocking} _TLSSocket._**is_blocking**
+: `true` when the socket is running in a blocking mode, `false` otherwise.
+
+
+{:#TLSSocket_TLSSocket_shutdown_reason} _TLSSocket._**shutdown_reason**
+: The property holds the reason for which the last `shutdown` operation 
+  was called or `-1` if `shutdown` was never requested.
+
+
+{:#TLSSocket_TLSSocket_send_timeout} _TLSSocket._**send_timeout**
+: The amount of time in milliseconds that the socket waits before it 
+  terminates a `send` operation. This is equal to the `SO_SNDTIMEO`.
+
+
+{:#TLSSocket_TLSSocket_receive_timeout} _TLSSocket._**receive_timeout**
+: The amount of time in milliseconds that the socket waits before it 
+  terminates a `receive` operation. This is equal to the `SO_RCVTIMEO`.
+
+
+#### class TLSSocket methods
+---
+
+{:#_TLSSocket_TLSSocket} **TLSSocket**([_socket_: Socket [, _context_: SSLContext [, _ssl_: SSL]]])
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
-  > - method must be a valid method pointer defined in the <em>ssl</em> module
 
 
-{:#_SSLSocket_connect} **connect**(_host_: string, _port_: int [, _timeout_: int])
+{:#_TLSSocket_connect} **connect**(_host_: string, _port_: int [, _timeout_: int])
 : Initiates a connection to the given host on the specified port. If host is `nil`, it will 
   connect on to the current hostn specified on the socket.
   
@@ -229,22 +332,14 @@ SSLSocket is an SSL/TLS enabled socket.
 
 
 
-{:#_SSLSocket_accept} **accept**()
-: Accepts a connection on a socket
-  
-  This method extracts the first connection request on the queue of pending connections, creates a new socket 
-  with the same properties of the current socket, and allocates a new file descriptor for the socket.  If no 
-  pending connections are present on the queue, and the socket is not marked as non-blocking, accept() blocks 
-  the caller until a connection is present.  If the socket is marked non-blocking and no pending connections 
-  are present on the queue, accept() returns an error as described below.  
-  
-  > - The accepted socket may not be used to accept more connections.  
-  > - The original socket socket, remains open.
-   <div class="cite"><span class="hint">return</span> <span>Socket</span></div>
+{:#_TLSSocket_bind} **bind**(_port_: int [, _host_: string])
+: Binds this socket to the given port on the given host. If host is `nil` or not specified, it will connect 
+  on to the current hostn specified on the socket. 
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
 
-{:#_SSLSocket_send} **send**(_message_: string | file | bytes, _flags_: int)
+{:#_TLSSocket_send} **send**(_message_: string | file | bytes, _flags_: int)
 : Sends the specified message to the socket. When this methods accepts a file as a message, 
   the file is read and the resultant bytes of the file content is streamed to the socket.
   
@@ -253,7 +348,7 @@ SSLSocket is an SSL/TLS enabled socket.
 
 
 
-{:#_SSLSocket_receive} **receive**([_length_: int [, _flags_: int]])
+{:#_TLSSocket_receive} **receive**([_length_: int [, _flags_: int]])
 : Receives bytes of the given length from the socket. If the length is not given, it default length of 
   -1 indicating that the total available data on the socket stream will be read. 
   If no data is available for read on the socket, the socket will wait to receive data or until the 
@@ -265,44 +360,99 @@ SSLSocket is an SSL/TLS enabled socket.
 
 
 
-{:#_SSLSocket_read} **read**([_length_: int])
+{:#_TLSSocket_read} **read**([_length_: int])
 : Reads bytes of the given length from the socket. If the length is not given, it default length of 
   -1 indicating that the total available data on the socket stream will be read. 
   
-  > Unlike with plain `Socket`, this is basically a wrapper for the `receive()` method.
+  > This method differs from `receive()` in that it does not check for a socket having data to 
+  > read or not and will block until data of _length_ have been read or no more data is available for 
+  > reading.
+  > - Only use this function after a call to `receive()` has succeeded.
    <div class="cite"><span class="hint">default</span> <span>Length = 1024</span></div>
 
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
 
 
-{:#_SSLSocket_close} **close**()
+{:#_TLSSocket_listen} **listen**([_queue_length_: int])
+: Listen for connections on a socket
+  
+  This method puts the socket in a state where it is willing to accept incoming connections and creates 
+  a queue limit of `queue_length` for incoming connections. If a connection request arrives with 
+  the queue full, the client may receive an error with an indication of `ECONNREFUSED`. 
+  Alternatively, if the underlying protocol supports retransmission, the request may be ignored 
+  so that retries may succeed.
+  
+  When the `queue_length` is ommited or set to -1, the method will use the default queue limit of 
+  the current platform which is usually equal to `SOMAXCONN`.
+  
+  > - listen() call applies only to sockets of type `SOCK_STREAM` (which is the default)
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_TLSSocket_accept} **accept**()
+: Accepts a connection on a socket
+  
+  This method extracts the first connection request on the queue of pending connections, creates a new socket 
+  with the same properties of the current socket, and allocates a new file descriptor for the socket.  If no 
+  pending connections are present on the queue, and the socket is not marked as non-blocking, accept() blocks 
+  the caller until a connection is present.  If the socket is marked non-blocking and no pending connections 
+  are present on the queue, accept() returns an error as described below.  
+  
+  The accepted socket may not be used to accept more connections.  The original socket remains open.
+   <div class="cite"><span class="hint">return</span> <span>TLSSocket</span></div>
+
+
+
+{:#_TLSSocket_close} **close**()
 : Closes the socket
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
 
-{:#_SSLSocket_get_context} **get_context**()
+{:#_TLSSocket_shutdown} **shutdown**()
+: The shutdown() call causes all or part of a full-duplex connection on the socket associated with 
+  socket to be shut down.
+  
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_TLSSocket_set_option} **set_option**(_option_: int, _value_: any)
+: Sets the options of the current socket.
+  > - Only `SO_` variables are valid option types
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_TLSSocket_get_option} **get_option**(_option_: int)
+: Gets the options set on the current socket
+   <div class="cite"><span class="hint">return</span> <span>any</span></div>
+
+
+
+{:#_TLSSocket_set_blocking} **set_blocking**(_mode_: bool)
+: Sets if the socket should operate in blocking or non-blocking mode. `true` for blocking 
+  (default) and `false` for non-blocking.
+
+
+{:#_TLSSocket_info} **info**()
+: Returns a dictionary containing the address, port and family of the current socket or an 
+  empty dictionary if the socket information could not be retrieved.
+   <div class="cite"><span class="hint">return</span> <span>dictionary</span></div>
+
+
+
+{:#_TLSSocket_get_socket} **get_socket**()
+: returns the underlying Socket instance
+   <div class="cite"><span class="hint">return</span> <span>Socket</span></div>
+
+
+
+{:#_TLSSocket_get_context} **get_context**()
 : returns the underlying SSLContext instance
    <div class="cite"><span class="hint">return</span> <span>SSLContext</span></div>
-
-
-
-
-^
-
-
-### _class_ TLSSocket  < _SSLSocket_
----
-
-TLSSocket is the generic TLS SSL Socket
-
-
-#### class TLSSocket methods
----
-
-{:#_TLSSocket_TLSSocket} **TLSSocket**()
-:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
 
@@ -433,7 +583,7 @@ SSL Binary Input/Output
 
 {:#_BIO_write} **write**(_data_: string | bytes)
 : writes data to the current I/O stream.
-   <div class="cite"><span class="hint">return</span> <span>int representing the total bytes read</span></div>
+   <div class="cite"><span class="hint">return</span> <span>int representing the total bytes written</span></div>
 
 
 
@@ -458,13 +608,13 @@ SSL Binary Input/Output
 : attempts to accept the connected socket.
 
 
-{:#_BIO_error} **error**()
+{:#_BIO_error} **error**([_code_: int])
 : returns the last SSL error number
    <div class="cite"><span class="hint">return</span> <span>int</span></div>
 
 
 
-{:#_BIO_error_string} **error_string**()
+{:#_BIO_error_string} **error_string**([_code_: int])
 : returns the last SSL error as string
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 
@@ -566,6 +716,12 @@ SSL context representation class
 
 {:#_SSLContext_load_certs} **load_certs**(_cert_file_: string | file, _private_key_file_: string | file)
 : loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_SSLContext_set_ciphers} **set_ciphers**(_ciphers_: string)
+: sets the list of allowed ciphers. This list must be colon (:) separated.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 

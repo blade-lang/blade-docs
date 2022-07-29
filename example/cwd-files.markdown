@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Advanced LS 
+title: Get files in directory
 parent: Learn by Examples
 description: Lists the aboslute path of all files in the given path using the Blade programming language.
 ---

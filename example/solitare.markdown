@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Solitare 
+title: Solve Solitare
 parent: Learn by Examples
 description: This program solves the (English) peg solitaire board game using the Blade programming language.
 ---

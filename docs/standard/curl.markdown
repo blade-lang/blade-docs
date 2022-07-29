@@ -2,7 +2,7 @@
 layout: default
 title: curl
 parent: Standard Library
-nav_order: 9
+nav_order: 10
 permalink: /standard/curl
 ---
 
@@ -599,6 +599,10 @@ cURL Mime object for multipart-data forms and POST requests.
 
 {:#_CurlMime_add} **add**(_name_: string, _value_: any)
 : Adds a new mime part with the given name and value.
+
+
+{:#_CurlMime_add_file} **add_file**(_name_: string, _file_: string)
+: Adds a new mime part with the given name and file.
 
 
 {:#_CurlMime_get_pointer} **get_pointer**()
