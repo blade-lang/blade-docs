@@ -5,7 +5,7 @@
 layout: home
 title: Get files in directory
 parent: Learn by Examples
-description: Lists the aboslute path of all files in the given path using the Blade programming language.
+description: Lists the absolute path of all files in the given path using the Blade programming language.
 ---
 
 # Advanced LS
