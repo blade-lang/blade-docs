@@ -114,7 +114,7 @@ $ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts
 > 
 > This also allows us to build valid Blade C extensions on Windows with less hassle. 
 > Check out the [blade-ext-demo](https://github.com/blade-lang/blade-ext-demo) or any of the extension in the 
-> [ext](https://github.com/blade-lang/blade/ext) directory for more info on how to write a valid C extension for Blade.
+> [packages](https://github.com/blade-lang/blade/packages) directory for more info on how to write a valid C extension for Blade.
 >
 > #### Important Notice
 > 1. Only TDM-GCC, WinLibs, MinGW64 and MSVC compiler have been tested and are currently guaranted to build Blade. While other compilers may build it, they are not currently recommended.
