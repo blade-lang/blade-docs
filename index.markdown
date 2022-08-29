@@ -37,8 +37,6 @@ import json
 
 var server = http.server(3000)
 server.on_receive(|request, response| {
-  echo 'Request from ${request.ip} to ${request.path}.'
-  
   response.headers['Content-Type'] = 'application/json'
   response.write(json.encode(request))
 })
@@ -53,9 +51,11 @@ _A simple HTTP server listening on port 3000 in Blade_
 
 ## What is Blade?
 ---
-Blade is a simple, fast, clean and dynamic language that allows you to develop complex applications 
+Blade is a simple, fast, clean and dynamic language that allows you to develop applications 
 quickly. Blade emphasises algorithm over syntax and for this reason, it has a very small but powerful 
-syntax set with a very natural feel.
+syntax set with a very natural feel. Blade builds upon the best features of JavaScript, Python and Ruby 
+to give developers a familiar and powerful system that feels native for developers coming from any of 
+these languages and an easy way to leverage the strength of any.
 
 Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics vampire slayer &mdash; Blade.
 
@@ -63,14 +63,14 @@ Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics
 ## Why should I use Blade?
 ---
 
-If you fall into one of more of this categories or have one of the following needs, then Blade is the right language for you.
+If you fall into one of more of these categories or have one of the following needs, then Blade is the right language for you.
 
+- You want a language with a very minimal learning curve (easier to learn than Python).
 - You want Python's simplicity but love coding with braces and other things C-like.
 - You want a language with first-class support for package management.
 - You need a quick script for automating mundane tasks on your device.
 - You need a language that allows fast prototyping.
 - You want to do backend development without needing to depend on a framework.
-- You want a scripting language you can easily port your existing C99 codes to with less hassle (Work in progress).
 - You want a familiar language that can be embedded into your application that's more extensive than Lua.
 
 There are many more use-cases where Blade is a great fit. This is just the bare minimal.
@@ -122,13 +122,32 @@ $ bash <(curl -s https://raw.githubusercontent.com/blade-lang/blade/main/scripts
 
 To install Blade with TDM-GCC or WinLibs, install [TDM-GCC](https://github.com/jmeubank/tdm-gcc/releases/download/v10.3.0-tdm64-2/tdm64-gcc-10.3.0-2.exe)
 or [WinLibs](https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-9.0.0-msvcrt-r5/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r5.zip) 
-via the given links. Add TDM-GCC or WinLibs `bin` directory to your environment path. TDM-GCC also allows you to add to path during its installation. 
+via the given links. Add TDM-GCC or WinLibs `bin` directory to your environment path. TDM-GCC also allows you to add to path during its installation.
+
+#### Dependencies
+
+The following dependencies are required and can be installed via Cygwin or Vcpkg.
+
+- CMake
+- OpenSSL
+- Curl
+- Libffi
+
 After this, run the following commands from the root of your Blade clone:
 
 ```shell
 git clone https://github.com/blade-lang/blade.git
 cd blade
 cmake -B . -DCMAKE_MAKE_PROGRAM=mingw32-make -G "Unix Makefiles"
+cmake --build .
+```
+
+If your dependencies were installed via Vcpkg, you may need to reference the Vcpkg toolchain. E.g.
+
+```shell
+git clone https://github.com/blade-lang/blade.git
+cd blade
+cmake -B . -DCMAKE_MAKE_PROGRAM=mingw32-make -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=PATH_TO_VCKPG\scripts\buildsystems\vcpkg.cmake
 cmake --build .
 ```
 
@@ -151,6 +170,8 @@ $ cd blade
 $ cmake -B .
 $ cmake --build .
 ```
+
+> See the Windows section above for a list of dependencies.
 
 **_See [BUILDING](https://github.com/blade-lang/blade/blob/main/BUILDING.md) for more details._**
 
