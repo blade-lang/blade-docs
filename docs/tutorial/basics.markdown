@@ -17,12 +17,12 @@ you must have an idea of what Blade is and why Blade.
 
 If you fall into one of more of this categories or have one of the following needs, then Blade is the right language for you.
 
+- You want a language with a very minimal learning curve (easier to learn than Python).
 - You want Python's simplicity but love coding with braces and other things C-like.
 - You want a language with first-class support for package management.
 - You need a quick script for automating mundane tasks on your device.
 - You need a language that allows fast prototyping.
 - You want to do backend development without needing to depend on a framework.
-- You want a scripting language you can easily port your existing C99 codes to with less hassle (Work in progress).
 - You want a familiar language that can be embedded into your application that's more extensive than Lua.
 
 There are many more use-cases where Blade is a great fit. This is just the bare minimal.

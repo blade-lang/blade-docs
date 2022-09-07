@@ -2,7 +2,7 @@
 layout: default
 title: http
 parent: Standard Library
-nav_order: 13
+nav_order: 14
 permalink: /standard/http
 ---
 
@@ -390,26 +390,71 @@ Rather, it gives the tools required to craft any request body of your choice.
 
 <h2>Functions</h2><hr>
 
+{:#http__set_headers} _http_.**set_headers**(_headers_: dict)
+: Sets the request headers for the current module instance.
+   
+  This function returns HttpClient in order to allow for idiomatic 
+  chaining such as:
+  
+  ```blade
+  import http
+  var client = http.set_headers({
+    'Authorization': 'Bearer SomeAPIBearerToken',
+    'Host': 'example.com',
+  })
+  
+  echo client.get('/current-user').body.to_string()
+  ```
+   <div class="cite"><span class="hint">returns</span> <span>HttpClient</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception</span></div>
+
+
+
+^
 {:#http__get} _http_.**get**(_url_: string)
 : sends an Http GET request and returns an HttpResponse
-  or throws one of SocketException or Exception if it fails
+  or throws one of SocketException or Exception if it fails.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
 
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
 
-^
-{:#http__post} _http_.**post**(_url_: string, [_data_: string])
-: sends an Http POST request and returns an HttpResponse
-  or throws one of SocketException or Exception if it fails
 
 
 ^
-{:#http__put} _http_.**put**(_url_: string, [_data_: string])
-: sends an Http PUT request and returns an HttpResponse
-  or throws one of SocketException or Exception if it fails
+{:#http__post} _http_.**post**(_url_: string, [_data_: string | bytes])
+: sends an Http POST request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+^
+{:#http__put} _http_.**put**(_url_: string, [_data_: string | bytes])
+: sends an Http PUT request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+^
+{:#http__delete} _http_.**delete**(_url_: string)
+: sends an Http DELETE request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
 
 
 ^
 {:#http__server} _http_.**server**(_port_: int, _address_: string, _is_secure_: bool)
 : Creates an new HttpServer instance.
+   <div class="cite"><span class="hint">returns</span> <span>HttpServer</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
 
 
 
@@ -530,14 +575,6 @@ Http request handler and object.
 
 HTTP related Exceptions
   @printable
-
-
-#### class HttpException methods
----
-
-{:#_HttpException_HttpException} **HttpException**(_message_: string)
-:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
-
 
 
 
@@ -771,6 +808,38 @@ Handles http requests.
 
 
 
+{:#_HttpClient_get} **get**(_url_: string)
+: sends an Http GET request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+{:#_HttpClient_post} **post**(_url_: string, [_data_: string | bytes])
+: sends an Http POST request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+{:#_HttpClient_put} **put**(_url_: string, [_data_: string | bytes])
+: sends an Http PUT request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+{:#_HttpClient_delete} **delete**(_url_: string)
+: sends an Http DELETE request and returns an HttpResponse.
+   <div class="cite"><span class="hint">returns</span> <span>HttpResponse</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
 
 ^
 
@@ -823,8 +892,8 @@ Represents the response to an Http request
 
 
 
-{:#_HttpResponse_write} **write**(_data_: string)
-: Writes data to the request response. 
+{:#_HttpResponse_write} **write**(_data_: string | bytes)
+: Writes data to the response response. 
   
   > This method should be prefered over writing directly to the body 
   > property to prevent unexpected behaviors.

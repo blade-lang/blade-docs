@@ -2,7 +2,7 @@
 layout: default
 title: types
 parent: Standard Library
-nav_order: 26
+nav_order: 27
 permalink: /standard/types
 ---
 

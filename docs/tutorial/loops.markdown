@@ -109,7 +109,7 @@ For example:
 .. }
 Unhandled Exception: 'i' is undefined in this scope
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 A good practice would look something like the below:

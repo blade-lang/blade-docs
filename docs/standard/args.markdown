@@ -93,8 +93,8 @@ Usage: myprogram call
 
 ^
 {:#args__BOOL} _args._**BOOL**
-: value type boolean (accepts `1` and `0` as well as `true` and 
-  `false` as valid values).
+: value type boolean (accepts `1` and `0` as well as `true` 
+  and `false` as valid values).
 
 
 ^
@@ -105,6 +105,11 @@ Usage: myprogram call
 ^
 {:#args__LIST} _args._**LIST**
 : value type for list
+
+
+^
+{:#args__CHOICE} _args._**CHOICE**
+: value type enumeration choices.
 
 
 
@@ -167,6 +172,10 @@ A configurable commandline parser.
   - `type`: type must be one of the args types and will indicate 
   how the parsed data should be interpreted in the final result.
   - `required`: tells the parser if a value is compulsory for this option.
+  - `choices`: a list of allowed options or a dictionary of allowed 
+  options with their respective descriptions.
+  
+  > - the `choices` option only works for type `CHOICE`.
 
 
 {:#_Parser_add_command} **add_command**(_name_: string [, _help_: string [, _opts_: dict]])
@@ -176,7 +185,17 @@ A configurable commandline parser.
   
   - The `type` property a must be one of the args types and will indicate 
   how the parsed data should be interpreted in the final result.
-  - The action property must be a function.
+  - The `action` property must be a function.
+  
+  The `opts` dictionary can contain one or more of:
+  
+  - `type`: type must be one of the args types and will indicate 
+  how the parsed data should be interpreted in the final result.
+  - `required`: tells the parser if a value is compulsory for this option.
+  - `choices`: a list of allowed options or a dictionary of allowed 
+  options with their respective descriptions.
+  
+  > - the `choices` option only works for type `CHOICE`.
 
 
 {:#_Parser_parse} **parse**()

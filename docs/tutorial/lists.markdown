@@ -323,11 +323,11 @@ Lists support methods operations too. Here are a list of all the methods support
   %> a.remove_at(6)
   Unhandled Exception: list index 6 out of range at remove_at()
     StackTrace:
-      File: <repl>, Line: 1, In: <script>
+      <repl>:1 -> @.script()
   %> a.remove_at(-1)
   Unhandled Exception: list index -1 out of range at remove_at()
     StackTrace:
-      File: <repl>, Line: 1, In: <script>
+      <repl>:1 -> @.script()
   ```
 
 
@@ -492,7 +492,7 @@ Lists support methods operations too. Here are a list of all the methods support
   %> [13, 14, 15, 16].get(6)
   Unhandled Exception: list index 6 out of range at get()
     StackTrace:
-      File: <repl>, Line: 1, In: <script>
+      <repl>:1 -> @.script()
   ```
 
 

@@ -14,11 +14,11 @@ reserved words (also refered to as Keywords in the rest of the documentation) mu
 as shown here. 
 
 | `and` | `as` | `assert` | `break` | `catch` | `class` | 
-| `continue` | `def` | `default` | `die` | `echo` | `else` | 
-| `false` | `finally` | `for` | `if` | `import` | `in` | 
-| `iter` | `nil` | `or` | `parent` | `return` | `self` | 
-| `static` | `true` | `try` | `using` | `var` | `when` | 
-| `while` |
+| `continue` | `def` | `default` | `die` | `do` | `echo` |
+| `else` | `false` | `finally` | `for` | `if` | `import` |
+| `in` | `iter` | `nil` | `or` | `parent` | `return` |
+| `self` | `static` | `true` | `try` | `using` | `var` |
+| `when` | `while` |
 
 > **_Any change in case of any of the letters that make any reserved word make them into 
 > regular identifiers._**

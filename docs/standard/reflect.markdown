@@ -2,7 +2,7 @@
 layout: default
 title: reflect
 parent: Standard Library
-nav_order: 21
+nav_order: 22
 permalink: /standard/reflect
 ---
 
@@ -117,6 +117,13 @@ Try it out!
 
 ^
 {:#reflect__get_type} _reflect_.**get_type**(_object_: instance)
+: Returns the type of an instance as string
+   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+
+
+
+^
+{:#reflect__get_function_metadata} _reflect_.**get_type**(_object_: instance)
 : Returns the type of an instance as string
    <div class="cite"><span class="hint">return</span> <span>string</span></div>
 

@@ -2,7 +2,7 @@
 layout: default
 title: curl
 parent: Standard Library
-nav_order: 10
+nav_order: 11
 permalink: /standard/curl
 ---
 

@@ -55,8 +55,9 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       end
 
       rule %r/\s+/, Text
-      rule %r/(Unhandled [a-zA-Z_]+:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s*File:.*?[\r\n]+)*/m, Error
-      rule %r/SyntaxError:\s*[\r\n](\s*((File:)|(Error at)).*?[\r\n]+)*/m, Error
+      rule %r/(Unhandled [a-zA-Z_]+:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s{2,}.*?[\r\n]+)*/m, Error
+      rule %r/SyntaxError[^\r\n]+[\r\n]+\s+[^\r\n]+/m, Error
+      rule %r/(Illegal State:).*?[\r\n]\s*StackTrace:\s*[\r\n](\s{2,}.*?[\r\n]+)*/m, Error
       rule %r/^((%>)|(\.\.)) /, Generic::Prompt
       rule %r/^(% )?[^>\|].*?$/, Generic::Output
       rule %r(#.*?$), Comment::Single

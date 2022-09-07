@@ -91,7 +91,7 @@ For example:
 %> math
 Unhandled Exception: 'math' is undefined in this scope
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 In the above example, the `math` variable wasn't defined because we asked Blade to name it `m` instead. So it's a runtime 
@@ -230,12 +230,66 @@ You should see `1.0.0` printed in the console. Voila!
 > Remember, the package name set in your `C` extensions MUST start with an underscore 
 > (`_`) to make it callable.
 
-<br><br><br>
-<hr>
 
-**_If you've come this far then you are already a Blade master! What you've learnt so far coupled with the standard library 
-opens the door to endless possiblities. Remember that Blade is a growing language and stuffs are bound to change so we 
-plead with you to keep up to date with this documentation to follow the development of the language of Ninjas._**
+## Default Exports and Imports
+
+In Blade, modules and packages can export a default function that will be called if when a user 
+instantiates a module or package as they would instantiate a function or class by simply declaring 
+a function whose name is the same as the module or package's.
+
+For example, a module `jump` can declare a function `jump()` in itself like this:
+
+```blade
+# jump.b
+def jump(x) {
+  return x + 1
+}
+```
+
+A user of this module can call the `jump()` function without using `jump.jump(100)` by just calling the module itself directly.
+
+```blade
+# jump_test.b
+import jump
+
+echo jump(100)
+```
+
+The `jump()` function automatically becomes available for calling via the module name itself. 
+Other functions declared in the module will still have to be called using the standard syntax 
+of `jump.another_style()`.
+
+---
+
+When the user of a module or package imports a package or module, they can carefully select any of the 
+functions in the module or package as the default import rather than the one created by the author if 
+they so wish by simply renaming the entire module or package to the name of a function available in 
+the module or package using the `as` keyword. 
+
+For example, if the `jump` module also declares the function `slowly()` to allow users jump slowly as 
+well as the `jump()` function for a default kind of jump, you can choose to not default to the default 
+jump but rather default to a slow jump if you wish.
+
+```blade
+# jump.b
+
+def jump(x) {
+  return x + 10
+}
+
+def slow(x) {
+  return x + 5
+}
+```
+
+When you import the `jump` module without renaming it, the `jump()` function will become available to you via the module name directly. To change this behavior to use the `slow()`, we can import it like this:
+
+```blade
+# jump_test.b
+import jump as slow
+
+echo slow(15)
+```
 
 
 <br><br>

@@ -25,7 +25,7 @@ Simple type `blade` in your terminal to launch REPL mode
 
 ```terminal
 $ blade
-Blade 0.0.73 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Blade 0.0.74 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type ".exit" to quit or ".credits" for more information
 %> 
@@ -498,7 +498,7 @@ Class fields or methods whose name starts with an underscore (`_`) are private a
 %> cls._number_of_desks   # this will cause an exception
 Unhandled Exception: cannot call private property '_number_of_desks' from instance of Class
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 [More](./tutorial/classes)
 
@@ -586,7 +586,7 @@ Simply create a decorator for the function.
 %> to_string(person)
 Unhandled Exception: undefined method '@to_string' in Person
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 > **_@note:_** Some builtin functions do not support decoration. e.g. `max()`.
@@ -659,7 +659,7 @@ Blade comes with the built-in class `Exception` and all exceptions must derive f
 %> die Exception('I died')
 Unhandled Exception: I died
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
 [More](./tutorial/error-handling)
 
@@ -697,7 +697,7 @@ Simply subclass `Exception` as follows.
 %> die CustomError('I died too!')
 Unhandled CustomError: I died too!
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
 [More](./tutorial/error-handling)
 
@@ -708,13 +708,13 @@ Unhandled CustomError: I died too!
 ```blade-repl
 %> assert 10 == 10
 %> assert 10 > 11
-Unhandled Exception: AssertionError
+Illegal State:
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 %> assert 10 > 11, 'Failue!'
-Unhandled Exception: AssertionError: Failue!
+Illegal State: Failue!
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
 [More](./tutorial/asserts)
 
@@ -737,7 +737,7 @@ Unhandled Exception: AssertionError: Failue!
 %> http
 Unhandled Exception: 'http' is undefined in this scope
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 ### Import all exported values into current namespace
@@ -746,7 +746,7 @@ Unhandled Exception: 'http' is undefined in this scope
 %> math
 Unhandled Exception: 'math' is undefined in this scope
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 %> product
 <function product at 0x133e10180>
 ```
@@ -757,7 +757,7 @@ Unhandled Exception: 'math' is undefined in this scope
 %> os
 Unhandled Exception: 'os' is undefined in this scope
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 %> osystem
 <module osystem at /blade/libs/os.b>
 ```

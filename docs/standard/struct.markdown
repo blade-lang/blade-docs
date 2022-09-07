@@ -2,7 +2,7 @@
 layout: default
 title: struct
 parent: Standard Library
-nav_order: 25
+nav_order: 26
 permalink: /standard/struct
 ---
 
@@ -82,5 +82,13 @@ structs and vice-versa in the binary format.
   > If you do not name an element, numeric indices starting from 1 are used. Be aware 
   > that if you have more than one unnamed element, some data is overwritten because the 
   > numbering restarts from 1 for each element.
+
+
+^
+{:#struct__pack_from} _struct_.**pack_from**(_format_: string, _args_: list)
+: Same as `pack()` except that instead of accepting arbitrary values after 
+  format, it expects the values to be in a list.
+   <div class="cite"><span class="hint">return</span> <span>bytes</span></div>
+
 
 

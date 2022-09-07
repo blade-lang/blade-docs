@@ -159,9 +159,10 @@ a variable will raise a syntax error. For example:
 %> using true {
 ..   when (2 * 5) echo 'Bug'
 .. }
-SyntaxError:
-    File: <repl>, Line: 2
-    Error at '(': only constants can be used in when expressions
+SyntaxError at '(': only constants can be used in when expressions
+  <repl>:2
+SyntaxError at '}': expected expression
+  <repl>:3
 ```
 
 For those coming from the Java or C++, take notice that there is no use of the `break` keyword. 
@@ -171,9 +172,8 @@ In fact, it is a syntax error to use a break keyword here. For example,
 %> using 1 {
 ..   when 1 break
 .. }
-SyntaxError:
-    File: <repl>, Line: 2
-    Error at 'break': 'break' can only be used in a loop
+SyntaxError at 'break': 'break' can only be used in a loop
+  <repl>:2
 ```
 
 The using statement also support a `default` case which will be executed if given whenever a match 

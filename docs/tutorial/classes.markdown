@@ -246,7 +246,7 @@ For example:
 %> private._value
 Unhandled Exception: cannot call private property '_value' from instance of HasPrivate
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 Blade also support _static_ class members. A static member of a class is a member that can not only be accessed by instances 
@@ -269,7 +269,7 @@ For example:
 %> HasStatic().my_static_field
 Unhandled Exception: undefined property 'my_static_field'
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 %> 
 %> HasStatic.my_static_method()
 ```
@@ -328,9 +328,8 @@ Let's look at the following brilliant use of decorators as an example:
 %> # note that you cannot call this method yourself
 %> # or from any blade scipt
 %> MyLibraryImplementation().@docs()
-SyntaxError:
-    File: <repl>, Line: 1
-    Error at '@docs': expected property name after '.'
+SyntaxError at '@docs': expected property name after '.'
+  <repl>:1
 %> 
 %> # but our library's show_docs() function can print that documenation
 %> show_docs(MyLibraryImplementation())
@@ -399,7 +398,7 @@ For example:
 %> to_string(Person())
 Unhandled Exception: undefined method '@to_string' in Person
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 %> 
 %> # with override
 %> class Person {

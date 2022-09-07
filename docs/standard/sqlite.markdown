@@ -2,7 +2,7 @@
 layout: default
 title: sqlite
 parent: Standard Library
-nav_order: 23
+nav_order: 24
 permalink: /standard/sqlite
 ---
 
@@ -247,11 +247,12 @@ SQLite3 management class
 
 
 
-{:#_SQLite3_exec} **exec**(_query_: string)
+{:#_SQLite3_exec} **exec**(_query_: string [, _params_: list | dict])
 : Executes a query string as is and returns `true` if the
   query was executed or `false` otherwise.
   
   > - this method does not return a query result
+  > - this method takes optional params like `query()` (see below).
    <div class="cite"><span class="hint">return</span> <span>boolean</span></div>
 
    <div class="cite"><span class="hint">throws</span> <span>SQLiteException if an error occured</span></div>

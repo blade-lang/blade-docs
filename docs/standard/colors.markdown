@@ -2,7 +2,7 @@
 layout: default
 title: colors
 parent: Standard Library
-nav_order: 8
+nav_order: 9
 permalink: /standard/colors
 ---
 

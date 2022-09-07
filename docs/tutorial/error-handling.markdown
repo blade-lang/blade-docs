@@ -17,9 +17,8 @@ Blade typically reports Syntax errors looking like the below.
 > **_@note:_** Syntax errors cannot be handled.
 
 ```blade-repl
-SyntaxError:
-    File: <repl>, Line: 1
-    Error at ':': end of statement expected
+SyntaxError at ':': end of statement expected
+  <repl>:1
 ```
 
 While Runtime Exceptions are reported similar to the following.
@@ -27,7 +26,7 @@ While Runtime Exceptions are reported similar to the following.
 ```blade-repl
 Unhandled Exception: only functions and classes can be called
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 
@@ -40,7 +39,7 @@ Blade comes with the built-in _class_ `Exception` which is raised everytime a Ru
 %> [1,2,3][5]
 Unhandled Exception: list index 5 out of range
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 Blade allows us to manually trigger a Runtime Exception at any point in a program as well via the `die` keyword. 
@@ -51,7 +50,7 @@ For example:
 %> die Exception('I was manually triggered')
 Unhandled Exception: I was manually triggered
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 
@@ -64,20 +63,12 @@ from the built-in `Exception` class.
 For example:
 
 ```blade-repl
-%> class MyCustomException < Exception {
-..   MyCustomException(message) {
-..     parent(message)
-..   }
-.. }
-%> 
-%> die MyCustomException('Something happened!')
-Unhandled MyCustomException: Something happened!
+%> class MyCustomException < Exception {}
+%> die MyCustomException('Something happened')
+Unhandled MyCustomException: Something happened
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
-
-> **_@note:_** As Blade does not support automatic parent constructor initialization, you should always call the _parent_ 
-> constructor in the custom Exception's constructor to maintain interopability with other Exceptions in the system.
 
 
 ## Catching Exceptions
@@ -169,7 +160,7 @@ For example:
 'I will still run'
 Unhandled Exception: No exception
   StackTrace:
-    File: <repl>, Line: 3, In: <script>
+    <repl>:2 -> @.script()
 ```
 
 
@@ -184,9 +175,9 @@ For example:
 
 ```blade-repl
 %> assert 10 == 5
-Unhandled Exception: AssertionError
+Illegal State:
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 %> 
 %> var a = 13
 %> var b = 24
@@ -199,10 +190,10 @@ and the message by a comma (`,`). None string error messages will be converted t
 For example:
 
 ```blade-repl
-%> assert 5 > 25, 'Bad mathematician'
-Unhandled Exception: AssertionError: Bad mathematician
+%> assert 5 > 25, 'Bad mathematician!'
+Illegal State: Bad mathematician!
   StackTrace:
-    File: <repl>, Line: 2, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 

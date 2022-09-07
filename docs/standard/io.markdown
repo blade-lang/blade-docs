@@ -90,9 +90,21 @@ echo name
 
 
 ^
-{:#io__readline} _io_.**readline**([_message_: string])
+{:#io__getch} _io_.**getch**()
+: reads character(s) from standard input without printing to standard output
+ 
+  when length is given, gets `length` number of characters
+  else, gets a single character
+   <div class="cite"><span class="hint">returns</span> <span>char | string</span></div>
+
+
+
+^
+{:#io__readline} _io_.**readline**([_message_: string [, _secure_: bool = false [, obscure_text = '*']]])
 : reads an entire line from standard input. If a _messagge_ is given, the 
-  message will be printed before it begins to wait for a user input.
+  message will be printed before it begins to wait for a user input. If 
+  _secure_ is `true`, the user's input will not be printing and _obscure_text_ 
+  will be printed instead.
   
   > - newlines will not be added automatically for messages.
    <div class="cite"><span class="hint">returns</span> <span>string</span></div>

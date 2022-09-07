@@ -185,7 +185,7 @@ The sample code below shows an example of the clear distinctive use of character
 %> echo ord('AB')
 Unhandled Exception: ord() expects character as argument, string given
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 A more complex example that skips a lot into the future of this tutorial is given as below for reference.
@@ -280,7 +280,7 @@ For example, the following code throws an exception.
 %> 'Hello'[6]
 Unhandled Exception: string index 6 out of range
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 In addition to indexing, slicing is also supported. While indexing is used to obtain individual characters, slicing allows you to obtain subparts of a string.
@@ -335,7 +335,7 @@ For example,
 > 'Blade'[0] = 'J'
 Unhandled Exception: strings do not support object assignment
   StackTrace:
-    File: <repl>, Line: 1, In: <script>
+    <repl>:1 -> @.script()
 ```
 
 > You may notice how we are trying to assign to a string object directly instead of a variable and think

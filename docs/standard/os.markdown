@@ -224,7 +224,7 @@ This module provides functions for interfacing with the underlying operating sys
   Example,
   
   ```blade-repl
-  %> os.join_paths('/home/user', '/path/to/myfile.ext')
+  %> os.join_paths('/home/user', 'path/to/myfile.ext')
   '/home/user/path/to/myfile.ext'
   ```
 

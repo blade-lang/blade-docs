@@ -2,7 +2,7 @@
 layout: default
 title: date
 parent: Standard Library
-nav_order: 11
+nav_order: 12
 permalink: /standard/date
 ---
 
@@ -147,6 +147,18 @@ identified by its ordinal number within a calendar month within that year.
   %> to_string(date.from_jd(22063))
   '<Date year: 2022, month: 3, day: 5, hour: 18, minute: 35, seconds: 0>'
   ```
+
+
+^
+{:#date__date} _date_./*
+  **date**([_year_: number [, _month_: number [, _day_: number [, _hour_: number [, _minute_: number [, _seconds_: number]]]]]])
+: date([year: number [, month: number [, day: number [, hour: number [, minute: number [, seconds: number]]]]]])
+ 
+  Returns a new `Date` instance representing the given system date or the current date if no argument is specified.
+   <div class="cite"><span class="hint">return</span> <span>Date</span></div>
+
+  > - all arguments are optional
+ /
 
 
 

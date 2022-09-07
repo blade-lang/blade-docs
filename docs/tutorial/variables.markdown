@@ -81,9 +81,8 @@ The following variable declaration is bound to fail as it makes use of a reserve
 
 ```blade-repl
 %> echo = 'Failure!'
-SyntaxError:
-    File: <repl>, Line: 1
-    Error at '=': expected expression
+SyntaxError at '=': expected expression
+  <repl>:1
 ```
 
 ## Variable scopes

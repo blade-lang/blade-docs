@@ -2,7 +2,7 @@
 layout: default
 title: clib
 parent: Standard Library
-nav_order: 7
+nav_order: 8
 permalink: /standard/clib
 ---
 

@@ -369,6 +369,12 @@ The byte stram object contains the following methods:
   ```
  
 
+<br><br><br>
+<hr>
+
+**_If you've come this far then you are already a Blade master! What you've learnt so far coupled with the standard library 
+opens the door to endless possiblities. Remember that Blade is a growing language and stuffs are bound to change so we 
+plead with you to keep up to date with this documentation to follow the development of the language of Ninjas._**
 
 
 [Previous Topic](./modules)

@@ -286,9 +286,8 @@ For example:
 %> def test(name, ..., age) {
 ..   echo name
 .. }
-SyntaxError:
-    File: <repl>, Line: 1
-    Error at ',': expected ')' after function parameters
+SyntaxError at ',': expected ')' after function parameters
+  <repl>:1
 ```
 
 
