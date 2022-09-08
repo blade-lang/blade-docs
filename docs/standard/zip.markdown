@@ -156,7 +156,7 @@ ZipItem represents a single file or directory in a zip archive.
 #### class ZipItem methods
 ---
 
-{:#_ZipItem_from_dict} **from_dict**(_dict_: dictionary)
+{:#_ZipItem_from_dict} _static_ **from_dict**(_dict_: dictionary)
 : Creates a new ZipItem from a dictionary.
   The dictionary should contain the following keys:
   - `name`: string

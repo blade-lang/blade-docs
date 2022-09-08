@@ -46,7 +46,7 @@ def get_class_docs(module, klass) {
 
     for method in klass.methods {
       if method.doc {
-        methods.append(get_function_docs(nil, klass.name, method))
+        methods.append(get_function_docs(nil, klass.name, method, method.is_static))
       }
     }
 
@@ -59,13 +59,13 @@ def get_class_docs(module, klass) {
   return result
 }
 
-def get_function_docs(module, klass, function) {
+def get_function_docs(module, klass, function, is_static) {
   var line1 = function.doc.match('/^[^)]+\)/')
 
   if line1{
     line1 = line1[0].
           replace('/([a-zA-Z0-9_]+):/', '_$1_:').
-          replace('/([a-zA-Z0-9_]+)\(/', '**$1**(')
+          replace('/([a-zA-Z0-9_]+)\(/', is_static ? '_static_ **$1**(' : '**$1**(')
   }
 
   var body = cite('\n'.join(function.doc.split('\n')[1,]).trim())
@@ -150,7 +150,7 @@ def create_module_doc(index_file, i, module_name, docs) {
 }
 
 def process_line(source) {
-  echo colors.text('  Processing ${source}...', colors.style.italic)
+  echo colors.text('  Processing ${source}', colors.style.italic)
 }
 
 if os.args.length() < 3 {
