@@ -2,7 +2,7 @@
 layout: default
 title: hash
 parent: Standard Library
-nav_order: 13
+nav_order: 14
 permalink: /standard/hash
 ---
 

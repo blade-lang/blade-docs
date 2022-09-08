@@ -2,7 +2,7 @@
 layout: default
 title: sqlite
 parent: Standard Library
-nav_order: 24
+nav_order: 25
 permalink: /standard/sqlite
 ---
 

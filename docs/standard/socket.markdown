@@ -2,7 +2,7 @@
 layout: default
 title: socket
 parent: Standard Library
-nav_order: 23
+nav_order: 24
 permalink: /standard/socket
 ---
 

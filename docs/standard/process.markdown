@@ -2,7 +2,7 @@
 layout: default
 title: process
 parent: Standard Library
-nav_order: 21
+nav_order: 22
 permalink: /standard/process
 ---
 
@@ -14,7 +14,7 @@ processors on a machine.
 
 Example Usage:
 
-```
+```blade
 var shared = SharedValue()
 
 var pr = Process(|p, s| {

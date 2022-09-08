@@ -2,7 +2,7 @@
 layout: default
 title: array
 parent: Standard Library
-nav_order: 4
+nav_order: 5
 permalink: /standard/array
 ---
 

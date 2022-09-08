@@ -2,7 +2,7 @@
 layout: default
 title: date
 parent: Standard Library
-nav_order: 12
+nav_order: 13
 permalink: /standard/date
 ---
 

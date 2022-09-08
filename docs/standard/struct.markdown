@@ -2,7 +2,7 @@
 layout: default
 title: struct
 parent: Standard Library
-nav_order: 26
+nav_order: 27
 permalink: /standard/struct
 ---
 
