@@ -60,12 +60,12 @@ def get_class_docs(module, klass) {
 }
 
 def get_function_docs(module, klass, function) {
-  var line1 = function.doc.match('/^[^)]+\\)/')
+  var line1 = function.doc.match('/^[^)]+\)/')
 
   if line1{
     line1 = line1[0].
           replace('/([a-zA-Z0-9_]+):/', '_$1_:').
-          replace('/([a-zA-Z0-9_]+)\\(/', '**$1**(')
+          replace('/([a-zA-Z0-9_]+)\(/', '**$1**(')
   }
 
   var body = cite('\n'.join(function.doc.split('\n')[1,]).trim())
