@@ -127,331 +127,331 @@ class TTY is an interface to TTY terminals this class contains definitions
 #### class TTY properties
 ---
 
-{:#TTY_TTY_TTY_IFLAG} _TTY._**TTY_IFLAG**
+{:#TTY_TTY_TTY_IFLAG} _static_ _TTY._**TTY_IFLAG**
 : TTY attribute for input flags
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TTY_OFLAG} _TTY._**TTY_OFLAG**
+{:#TTY_TTY_TTY_OFLAG} _static_ _TTY._**TTY_OFLAG**
 : TTY attribute for output flags
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TTY_CFLAG} _TTY._**TTY_CFLAG**
+{:#TTY_TTY_TTY_CFLAG} _static_ _TTY._**TTY_CFLAG**
 : TTY attribute for control flags
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TTY_LFLAG} _TTY._**TTY_LFLAG**
+{:#TTY_TTY_TTY_LFLAG} _static_ _TTY._**TTY_LFLAG**
 : TTY attribute for local flags
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TTY_ISPEED} _TTY._**TTY_ISPEED**
+{:#TTY_TTY_TTY_ISPEED} _static_ _TTY._**TTY_ISPEED**
 : TTY attribute for input speed
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TTY_OSPEED} _TTY._**TTY_OSPEED**
+{:#TTY_TTY_TTY_OSPEED} _static_ _TTY._**TTY_OSPEED**
 : TTY attribute for output speed
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IGNBRK} _TTY._**IGNBRK**
+{:#TTY_TTY_IGNBRK} _static_ _TTY._**IGNBRK**
 : ignore BREAK condition
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_BRKINT} _TTY._**BRKINT**
+{:#TTY_TTY_BRKINT} _static_ _TTY._**BRKINT**
 : map BREAK to SIGINTR 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IGNPAR} _TTY._**IGNPAR**
+{:#TTY_TTY_IGNPAR} _static_ _TTY._**IGNPAR**
 : ignore (discard) parity errors
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_PARMRK} _TTY._**PARMRK**
+{:#TTY_TTY_PARMRK} _static_ _TTY._**PARMRK**
 : mark parity and framing errors 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_INPCK} _TTY._**INPCK**
+{:#TTY_TTY_INPCK} _static_ _TTY._**INPCK**
 : enable checking of parity errors
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ISTRIP} _TTY._**ISTRIP**
+{:#TTY_TTY_ISTRIP} _static_ _TTY._**ISTRIP**
 : strip 8th bit off chars 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_INLCR} _TTY._**INLCR**
+{:#TTY_TTY_INLCR} _static_ _TTY._**INLCR**
 : map NL into CR
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IGNCR} _TTY._**IGNCR**
+{:#TTY_TTY_IGNCR} _static_ _TTY._**IGNCR**
 : ignore CR 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ICRNL} _TTY._**ICRNL**
+{:#TTY_TTY_ICRNL} _static_ _TTY._**ICRNL**
 : map CR to NL (ala CRMOD)
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IXON} _TTY._**IXON**
+{:#TTY_TTY_IXON} _static_ _TTY._**IXON**
 : enable output flow control 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IXOFF} _TTY._**IXOFF**
+{:#TTY_TTY_IXOFF} _static_ _TTY._**IXOFF**
 : enable input flow control
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IXANY} _TTY._**IXANY**
+{:#TTY_TTY_IXANY} _static_ _TTY._**IXANY**
 : any char will restart after stop 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IUTF8} _TTY._**IUTF8**
+{:#TTY_TTY_IUTF8} _static_ _TTY._**IUTF8**
 : maintain state for UTF-8 VERASE
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_OPOST} _TTY._**OPOST**
+{:#TTY_TTY_OPOST} _static_ _TTY._**OPOST**
 : enable following output processing
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ONLCR} _TTY._**ONLCR**
+{:#TTY_TTY_ONLCR} _static_ _TTY._**ONLCR**
 : map NL to CR-NL (ala CRMOD)
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CSIZE} _TTY._**CSIZE**
+{:#TTY_TTY_CSIZE} _static_ _TTY._**CSIZE**
 : character size mask 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CS5} _TTY._**CS5**
+{:#TTY_TTY_CS5} _static_ _TTY._**CS5**
 : 5 bits (pseudo)
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CS6} _TTY._**CS6**
+{:#TTY_TTY_CS6} _static_ _TTY._**CS6**
 : 6 bits 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CS7} _TTY._**CS7**
+{:#TTY_TTY_CS7} _static_ _TTY._**CS7**
 : 7 bits 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CS8} _TTY._**CS8**
+{:#TTY_TTY_CS8} _static_ _TTY._**CS8**
 : 8 bits
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CSTOPB} _TTY._**CSTOPB**
+{:#TTY_TTY_CSTOPB} _static_ _TTY._**CSTOPB**
 : send 2 stop bits 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CREAD} _TTY._**CREAD**
+{:#TTY_TTY_CREAD} _static_ _TTY._**CREAD**
 : enable receiver 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_PARENB} _TTY._**PARENB**
+{:#TTY_TTY_PARENB} _static_ _TTY._**PARENB**
 : parity enable 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_PARODD} _TTY._**PARODD**
+{:#TTY_TTY_PARODD} _static_ _TTY._**PARODD**
 : odd parity, else even 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_HUPCL} _TTY._**HUPCL**
+{:#TTY_TTY_HUPCL} _static_ _TTY._**HUPCL**
 : hang up on last close 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_CLOCAL} _TTY._**CLOCAL**
+{:#TTY_TTY_CLOCAL} _static_ _TTY._**CLOCAL**
 : ignore modem status lines 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ECHOE} _TTY._**ECHOE**
+{:#TTY_TTY_ECHOE} _static_ _TTY._**ECHOE**
 : visually erase chars 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ECHOK} _TTY._**ECHOK**
+{:#TTY_TTY_ECHOK} _static_ _TTY._**ECHOK**
 : echo NL after line kill 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ECHO} _TTY._**ECHO**
+{:#TTY_TTY_ECHO} _static_ _TTY._**ECHO**
 : enable echoing 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ECHONL} _TTY._**ECHONL**
+{:#TTY_TTY_ECHONL} _static_ _TTY._**ECHONL**
 : echo NL even if ECHO is off 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ISIG} _TTY._**ISIG**
+{:#TTY_TTY_ISIG} _static_ _TTY._**ISIG**
 : enable signals INTR, QUIT, [D]SUSP 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_ICANON} _TTY._**ICANON**
+{:#TTY_TTY_ICANON} _static_ _TTY._**ICANON**
 : canonicalize input lines 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_IEXTEN} _TTY._**IEXTEN**
+{:#TTY_TTY_IEXTEN} _static_ _TTY._**IEXTEN**
 : enable DISCARD and LNEXT 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TOSTOP} _TTY._**TOSTOP**
+{:#TTY_TTY_TOSTOP} _static_ _TTY._**TOSTOP**
 : stop background jobs from output 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_NOFLSH} _TTY._**NOFLSH**
+{:#TTY_TTY_NOFLSH} _static_ _TTY._**NOFLSH**
 : don't flush after interrupt 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TCSANOW} _TTY._**TCSANOW**
+{:#TTY_TTY_TCSANOW} _static_ _TTY._**TCSANOW**
 : make change immediate 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TCSADRAIN} _TTY._**TCSADRAIN**
+{:#TTY_TTY_TCSADRAIN} _static_ _TTY._**TCSADRAIN**
 : drain output, then change 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_TCSAFLUSH} _TTY._**TCSAFLUSH**
+{:#TTY_TTY_TCSAFLUSH} _static_ _TTY._**TCSAFLUSH**
 : drain output, flush input 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VEOF} _TTY._**VEOF**
+{:#TTY_TTY_VEOF} _static_ _TTY._**VEOF**
 : ICANON
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VEOL} _TTY._**VEOL**
+{:#TTY_TTY_VEOL} _static_ _TTY._**VEOL**
 : ICANON
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VERASE} _TTY._**VERASE**
+{:#TTY_TTY_VERASE} _static_ _TTY._**VERASE**
 : ICANON
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VKILL} _TTY._**VKILL**
+{:#TTY_TTY_VKILL} _static_ _TTY._**VKILL**
 : ICANON
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VINTR} _TTY._**VINTR**
+{:#TTY_TTY_VINTR} _static_ _TTY._**VINTR**
 : ISIG
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VQUIT} _TTY._**VQUIT**
+{:#TTY_TTY_VQUIT} _static_ _TTY._**VQUIT**
 : ISIG
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VSUSP} _TTY._**VSUSP**
+{:#TTY_TTY_VSUSP} _static_ _TTY._**VSUSP**
 : ISIG
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VSTART} _TTY._**VSTART**
+{:#TTY_TTY_VSTART} _static_ _TTY._**VSTART**
 : IXON, IXOFF 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VSTOP} _TTY._**VSTOP**
+{:#TTY_TTY_VSTOP} _static_ _TTY._**VSTOP**
 : IXON, IXOFF 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VMIN} _TTY._**VMIN**
+{:#TTY_TTY_VMIN} _static_ _TTY._**VMIN**
 : !ICANON 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
-{:#TTY_TTY_VTIME} _TTY._**VTIME**
+{:#TTY_TTY_VTIME} _static_ _TTY._**VTIME**
 : !ICANON
    <div class="cite"><span class="hint">static</span> <span></span></div>
 

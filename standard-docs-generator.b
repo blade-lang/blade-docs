@@ -30,7 +30,7 @@ def get_class_docs(module, klass) {
 
     for prop in klass.properties {
       if prop.doc {
-        props.append(get_var_docs(klass.name, klass.name, prop))
+        props.append(get_var_docs(klass.name, klass.name, prop, prop.is_static))
       }
     }
 
@@ -73,8 +73,8 @@ def get_function_docs(module, klass, function, is_static) {
   return "{:#${module}_${klass}_${function.name}} ${module ? '_${module}_.' : nil}${line1}\n: ${body}"
 }
 
-def get_var_docs(module, klass, var_data) {
-  return '{:#${module}_${klass}_${var_data.name}} _${module ? module + '.' : nil}_**${var_data.name}**\n: ${cite(var_data.doc)}'
+def get_var_docs(module, klass, var_data, is_static) {
+  return '{:#${module}_${klass}_${var_data.name}}${is_static ? " _static_" : nil} _${module ? module + '.' : nil}_**${var_data.name}**\n: ${cite(var_data.doc)}'
 }
 
 def get_docs(module, parse_list) {
