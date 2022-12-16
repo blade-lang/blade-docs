@@ -899,4 +899,12 @@ Represents the response to an Http request
   > property to prevent unexpected behaviors.
 
 
+{:#_HttpResponse_redirect} **redirect**(_location_: string [, _status_: string])
+: Redirects the client to a new location. This function simultaneously sets 
+  the `Location` header and returns a 30x status code. If the `status` 
+  parameter is not given, the function defaults to `302`.
+  
+  > - when supplying a status, it must be a 30x
+
+
 

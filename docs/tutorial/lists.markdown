@@ -222,9 +222,9 @@ Lists support methods operations too. Here are a list of all the methods support
 
 
 ^
-{:#index_of} _list_.**index_of**(_x_: any)
-: Returns the zero-based index of the first occurrence of the value _x_ in the list or `-1` if 
-  the list does not contain the value _x_.
+{:#index_of} _list_.**index_of**(_x_: any [, start_index: number = 0])
+: Returns the zero-based index of the first occurrence of the value _x_ in the list starting from the 
+  given _start_index_ or `-1` if the list does not contain the value _x_.
 
   For example:
 
@@ -233,6 +233,10 @@ Lists support methods operations too. Here are a list of all the methods support
   -1
   %> [4,5,6,5].index_of(5)
   1
+  %> ['a', 'b', 'r', 'a', 'h', 'a', 'm'].index_of('a')
+  0
+  %> ['a', 'b', 'r', 'a', 'h', 'a', 'm'].index_of('a', 1)
+  3
   ```
 
 

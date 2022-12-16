@@ -602,9 +602,9 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   ```
 
 ^
-{:#index_of} _string_.**index_of**(_str_: string)
+{:#index_of} _string_.**index_of**(_str_: string [, start_index: number])
 : Returns the index position of the first occurrence of the string _`str`_ in the string _`string`_. If
-  the _str_ cannot be found anywhere in _string_, it returns -1.
+  the _str_ cannot be found anywhere in _string_, it returns -1. If the `start_index` parameter is argument is given, it will start scanning from the given index.
 
   For example:
 
@@ -615,6 +615,10 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   1
   > 'hello, world'.index_of('q')
   -1
+  %> 'hello, world'.index_of('o')
+  4
+  %> 'hello, world'.index_of('o', 5)  # next index of `o` starting from index 5.
+  8
   ```
 
 ^
@@ -783,7 +787,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   ```
 
 ^
-{:#replace} _string_.**replace**(_str_: regex | string, _replacement_: string)
+{:#replace} _string_.**replace**(_str_: regex | string, _replacement_: string [, use_regex: bool = true])
 : Returns a copy of the string with all occurrences or matches of _str_ replaced by the _replacement_
   string.
 
@@ -803,6 +807,9 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   %> 'John is 26 years old'.replace('/(\d+)/', '1\\$2')
   'John is 1$2 years old'
   ```
+
+  > When the third parameter _`use_regex`_ is set to false, _str_ will never be treated as a regular
+  > expression even if it contains a valid regular expression.
 
 Apart from the above listed methods, String also implements the _[Iterable Decorators](./class)_ which
 we'll talk about in details under the _[Class](./class)_ lesson.

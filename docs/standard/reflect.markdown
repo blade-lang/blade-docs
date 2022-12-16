@@ -130,6 +130,14 @@ Try it out!
 
 
 ^
+{:#reflect__get_class} _reflect_.**get_class**(_object_: instance)
+: Returns the class value of an instance as an object that can be 
+  used to create a new instance of that same class.
+   <div class="cite"><span class="hint">return</span> <span>class</span></div>
+
+
+
+^
 {:#reflect__is_ptr} _reflect_.**is_ptr**(_value_: any)
 : Returns `true` if _value_ is a pointer, `false` otherwise.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
