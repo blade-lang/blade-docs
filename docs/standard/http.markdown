@@ -857,37 +857,57 @@ Represents the response to an Http request
 
 {:#HttpResponse_HttpResponse_version} _HttpResponse._**version**
 : The HTTP version of the response
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 {:#HttpResponse_HttpResponse_status} _HttpResponse._**status**
 : The HTTP response status code
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
 
 
 {:#HttpResponse_HttpResponse_headers} _HttpResponse._**headers**
 : The HTTP response headers
+   <div class="cite"><span class="hint">type</span> <span>dictionary</span></div>
+
 
 
 {:#HttpResponse_HttpResponse_time_taken} _HttpResponse._**time_taken**
 : Total time taken for the HTTP request that generated this HttpResponse to complete
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
 
 
 {:#HttpResponse_HttpResponse_redirects} _HttpResponse._**redirects**
 : The number of times the HTTP request that generated this HttpResponse was redirected.
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
 
 
 {:#HttpResponse_HttpResponse_responder} _HttpResponse._**responder**
 : The final URL that provided the HttpResponse
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
   > - This might differ from the original request URI.
 
 
 {:#HttpResponse_HttpResponse_body} _HttpResponse._**body**
 : The content of the HTTP response as bytes
+   <div class="cite"><span class="hint">type</span> <span>bytes</span></div>
+
+
+
+{:#HttpResponse_HttpResponse_cookies} _HttpResponse._**cookies**
+: The cookies to be sent back to the client
+   <div class="cite"><span class="hint">type</span> <span>list</span></div>
+
 
 
 #### class HttpResponse methods
 ---
 
-{:#_HttpResponse_HttpResponse} **HttpResponse**(_body_: string, _status_: int, _headers_: dict, _version_: string, _time_taken_: number, _redirects_: int, _responder_: string)
+{:#_HttpResponse_HttpResponse} **HttpResponse**(_body_: string, _status_: int, _headers_: dict, _cookies_: list, _version_: string, _time_taken_: number, _redirects_: int, _responder_: string)
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
 
 
@@ -899,10 +919,20 @@ Represents the response to an Http request
   > property to prevent unexpected behaviors.
 
 
+{:#_HttpResponse_set_cookie} **set_cookie**(_key_: string, _value_: string [, _domain_: string [, _path_: string [, _expires_: string [, _secure_: bool [, extras]]]]])
+: Sets a cookie to be send back to a client with the given _key_ and _value_. 
+  When other parameters are given, they are used to construct a correct Set-Cookie 
+  header based on their named properties.
+   <div class="cite"><span class="hint">throw</span> <span>HttpException</span></div>
+
+
+
 {:#_HttpResponse_redirect} **redirect**(_location_: string [, _status_: string])
 : Redirects the client to a new location. This function simultaneously sets 
   the `Location` header and returns a 30x status code. If the `status` 
   parameter is not given, the function defaults to `302`.
+   <div class="cite"><span class="hint">throw</span> <span>HttpException</span></div>
+
   
   > - when supplying a status, it must be a 30x
 

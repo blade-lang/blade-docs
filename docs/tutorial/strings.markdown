@@ -367,11 +367,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'This is a pretty long string'.length()
+  %> 'This is a pretty long string'.length()
   28
-  > 'उनका एक समय'.length()
+  %> 'उनका एक समय'.length()
   11
-  > 'This text mixes English and 粵語'.length()
+  %> 'This text mixes English and 粵語'.length()
   30
   ```
 
@@ -384,7 +384,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'blade'.upper()
+  %> 'blade'.upper()
   'BLADE'
   ```
 
@@ -395,7 +395,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'Blade Is Bae'.lower()
+  %> 'Blade Is Bae'.lower()
   'blade is bae'
   ```
 
@@ -407,11 +407,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'abracadabra'.is_alpha()
+  %> 'abracadabra'.is_alpha()
   true
-  > 'my tooth aches'.is_alpha()
+  %> 'my tooth aches'.is_alpha()
   false
-  > ''.is_alpha()
+  %> ''.is_alpha()
   false
   ```
 
@@ -423,17 +423,17 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '3Idiots'.is_alnum()
+  %> '3Idiots'.is_alnum()
   true
-  > 'Three Idiots'.is_alnum()
+  %> 'Three Idiots'.is_alnum()
   false
-  > '3 Idiots'.is_alnum()
+  %> '3 Idiots'.is_alnum()
   false
-  > '3'.is_alnum()
+  %> '3'.is_alnum()
   true
-  > 'idiots'.is_alnum()
+  %> 'idiots'.is_alnum()
   true
-  > ''.is_alnum()
+  %> ''.is_alnum()
   false
   ```
 
@@ -445,11 +445,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '123.5'.is_number()
+  %> '123.5'.is_number()
   false
-  > '1970'.is_number()
+  %> '1970'.is_number()
   true
-  > '1980s'.is_number()
+  %> '1980s'.is_number()
   false
   ```
 
@@ -461,13 +461,13 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'all'.is_lower()
+  %> 'all'.is_lower()
   true
-  > 'all...123'.is_lower()
+  %> 'all...123'.is_lower()
   true
-  > 'All...123'.is_lower()
+  %> 'All...123'.is_lower()
   false
-  > ''.is_lower()
+  %> ''.is_lower()
   false
   ```
 
@@ -479,13 +479,13 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'ALL'.is_upper()
+  %> 'ALL'.is_upper()
   true
-  > 'ALL...123'.is_upper()
+  %> 'ALL...123'.is_upper()
   true
-  > 'All...123'.is_upper()
+  %> 'All...123'.is_upper()
   false
-  > ''.is_upper()
+  %> ''.is_upper()
   false
   ```
 
@@ -497,11 +497,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '.     '.is_space()
+  %> '.     '.is_space()
   false
-  > '\r\n'.is_space()
+  %> '\r\n'.is_space()
   true
-  > '\t  '.is_space()
+  %> '\t  '.is_space()
   true
   ```
 
@@ -518,11 +518,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '  example  '.trim()
+  %> '  example  '.trim()
   'example'
-  > '  example  '.trim('e')
+  %> '  example  '.trim('e')
   '  example  '
-  > 'example'.trim('e')
+  %> 'example'.trim('e')
   'xampl'
   ```
 
@@ -534,9 +534,9 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '  example  '.ltrim()
+  %> '  example  '.ltrim()
   'example  '
-  > 'example'.ltrim('e')
+  %> 'example'.ltrim('e')
   'xample'
   ```
 
@@ -548,9 +548,9 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > '  example  '.rtrim()
+  %> '  example  '.rtrim()
   '  example'
-  > 'example'.rtrim('e')
+  %> 'example'.rtrim('e')
   'exampl'
   ```
 
@@ -566,16 +566,16 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > ','.join(['ok', 1, true])
+  %> ','.join(['ok', 1, true])
   'ok,1,true'
-  > '--'.join('name')
+  %> '--'.join('name')
   'n--a--m--e'
-  > ','.join('a')
+  %> ','.join('a')
   'a'
   ```
 
 ^
-{:#split} _string_.**split**(_delimiter_: string)
+{:#split} _string_.**split**(_delimiter_: string | regex)
 : Returns a list of words or characters in a string after separating the content of the string at every
   point where the _delimiter_ is found. 
   
@@ -589,16 +589,18 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'name'.split('')
+  %> 'name'.split('')
   [n, a, m, e]
-  > '1<>2<>3'.split('<>')
+  %> '1<>2<>3'.split('<>')
   [1, , 2, , 3]
-  > '1,2,3'.split(',')
+  %> '1,2,3'.split(',')
   [1, 2, 3]
-  > ''.split(',')
+  %> ''.split(',')
   []
-  > '地点'.split('')
+  %> '地点'.split('')
   [地, 点]
+  %> 'who is in the garden'.split('/\s/')
+  [who, is, in, the, garden]
   ```
 
 ^
@@ -609,11 +611,11 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   For example:
 
   ```blade-repl
-  > 'hello, world'.index_of(' ')
+  %> 'hello, world'.index_of(' ')
   6
-  > 'hello, world'.index_of('e')
+  %> 'hello, world'.index_of('e')
   1
-  > 'hello, world'.index_of('q')
+  %> 'hello, world'.index_of('q')
   -1
   %> 'hello, world'.index_of('o')
   4
