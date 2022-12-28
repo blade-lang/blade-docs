@@ -3,7 +3,7 @@ layout: default
 title: struct
 parent: Standard Library
 nav_order: 27
-permalink: /standard/struct
+permalink: /standard/struct.html
 ---
 
 # struct

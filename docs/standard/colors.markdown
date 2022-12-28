@@ -3,7 +3,7 @@ layout: default
 title: colors
 parent: Standard Library
 nav_order: 10
-permalink: /standard/colors
+permalink: /standard/colors.html
 ---
 
 # colors

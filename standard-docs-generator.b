@@ -128,7 +128,7 @@ def create_module_doc(index_file, i, module_name, docs) {
   'title: ${module_name}\n'+
   'parent: Standard Library\n'+
   'nav_order: ${i}\n'+
-  'permalink: /standard/${module_name}\n'+
+  'permalink: /standard/${module_name}.html\n'+
   '---\n\n# ${module_name}\n\n${module_description}\n\n'
 
   if docs.variables {

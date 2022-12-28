@@ -3,7 +3,7 @@ layout: default
 title: math
 parent: Standard Library
 nav_order: 19
-permalink: /standard/math
+permalink: /standard/math.html
 ---
 
 # math

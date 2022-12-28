@@ -3,7 +3,7 @@ layout: default
 title: bcrypt
 parent: Standard Library
 nav_order: 8
-permalink: /standard/bcrypt
+permalink: /standard/bcrypt.html
 ---
 
 # bcrypt

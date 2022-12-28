@@ -3,7 +3,7 @@ layout: default
 title: curl
 parent: Standard Library
 nav_order: 12
-permalink: /standard/curl
+permalink: /standard/curl.html
 ---
 
 # curl

@@ -3,7 +3,7 @@ layout: default
 title: ast
 parent: Standard Library
 nav_order: 6
-permalink: /standard/ast
+permalink: /standard/ast.html
 ---
 
 # ast

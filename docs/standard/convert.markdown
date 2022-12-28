@@ -3,7 +3,7 @@ layout: default
 title: convert
 parent: Standard Library
 nav_order: 11
-permalink: /standard/convert
+permalink: /standard/convert.html
 ---
 
 # convert

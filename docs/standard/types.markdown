@@ -3,7 +3,7 @@ layout: default
 title: types
 parent: Standard Library
 nav_order: 28
-permalink: /standard/types
+permalink: /standard/types.html
 ---
 
 # types

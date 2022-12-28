@@ -3,7 +3,7 @@ layout: default
 title: date
 parent: Standard Library
 nav_order: 13
-permalink: /standard/date
+permalink: /standard/date.html
 ---
 
 # date

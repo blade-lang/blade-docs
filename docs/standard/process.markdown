@@ -3,7 +3,7 @@ layout: default
 title: process
 parent: Standard Library
 nav_order: 22
-permalink: /standard/process
+permalink: /standard/process.html
 ---
 
 # process

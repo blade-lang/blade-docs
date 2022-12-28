@@ -3,7 +3,7 @@ layout: default
 title: zlib
 parent: Standard Library
 nav_order: 31
-permalink: /standard/zlib
+permalink: /standard/zlib.html
 ---
 
 # zlib

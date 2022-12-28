@@ -3,7 +3,7 @@ layout: default
 title: args
 parent: Standard Library
 nav_order: 4
-permalink: /standard/args
+permalink: /standard/args.html
 ---
 
 # args

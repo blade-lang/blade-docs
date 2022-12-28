@@ -3,7 +3,7 @@ layout: default
 title: clib
 parent: Standard Library
 nav_order: 9
-permalink: /standard/clib
+permalink: /standard/clib.html
 ---
 
 # clib

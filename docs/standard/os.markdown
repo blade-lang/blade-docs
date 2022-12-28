@@ -3,7 +3,7 @@ layout: default
 title: os
 parent: Standard Library
 nav_order: 21
-permalink: /standard/os
+permalink: /standard/os.html
 ---
 
 # os

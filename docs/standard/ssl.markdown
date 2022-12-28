@@ -3,7 +3,7 @@ layout: default
 title: ssl
 parent: Standard Library
 nav_order: 26
-permalink: /standard/ssl
+permalink: /standard/ssl.html
 ---
 
 # ssl

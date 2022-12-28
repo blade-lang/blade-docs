@@ -3,7 +3,7 @@ layout: default
 title: mime
 parent: Standard Library
 nav_order: 20
-permalink: /standard/mime
+permalink: /standard/mime.html
 ---
 
 # mime

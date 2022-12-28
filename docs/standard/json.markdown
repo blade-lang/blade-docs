@@ -3,7 +3,7 @@ layout: default
 title: json
 parent: Standard Library
 nav_order: 18
-permalink: /standard/json
+permalink: /standard/json.html
 ---
 
 # json

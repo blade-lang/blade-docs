@@ -3,7 +3,7 @@ layout: default
 title: url
 parent: Standard Library
 nav_order: 29
-permalink: /standard/url
+permalink: /standard/url.html
 ---
 
 # url

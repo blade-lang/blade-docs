@@ -3,7 +3,7 @@ layout: default
 title: array
 parent: Standard Library
 nav_order: 5
-permalink: /standard/array
+permalink: /standard/array.html
 ---
 
 # array

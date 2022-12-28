@@ -3,7 +3,7 @@ layout: default
 title: reflect
 parent: Standard Library
 nav_order: 23
-permalink: /standard/reflect
+permalink: /standard/reflect.html
 ---
 
 # reflect

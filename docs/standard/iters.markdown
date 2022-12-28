@@ -3,7 +3,7 @@ layout: default
 title: iters
 parent: Standard Library
 nav_order: 17
-permalink: /standard/iters
+permalink: /standard/iters.html
 ---
 
 # iters

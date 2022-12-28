@@ -3,7 +3,7 @@ layout: default
 title: base64
 parent: Standard Library
 nav_order: 7
-permalink: /standard/base64
+permalink: /standard/base64.html
 ---
 
 # base64

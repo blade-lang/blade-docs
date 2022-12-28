@@ -3,7 +3,7 @@ layout: default
 title: zip
 parent: Standard Library
 nav_order: 30
-permalink: /standard/zip
+permalink: /standard/zip.html
 ---
 
 # zip
