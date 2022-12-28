@@ -21,12 +21,13 @@
 title: Blade Docs
 email: eqliqandfriends@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blade is an interpreted high-level general-purpose multi-paradigm 
-  programming language with an emphasis on simplicity, flexibility 
-  and expressiveness (the core pillars)
+  Blade is a simple, fast, clean and dynamic language that allows you to 
+  develop applications quickly. Blade emphasises algorithm over syntax and 
+  for this reason, it has a very small but powerful syntax set with a very 
+  natural feel.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: bladelang
 github_username:  blade-lang
 
 # Build settings
