@@ -5,13 +5,13 @@
 layout: home
 title: Introduction
 nav_order: 0
-description: Welcome! This is the official documentation for Blade 0.0.75.
+description: Welcome! This is the official documentation for Blade 0.0.76.
 ---
 
 # The Blade Language Documentation
 {: .fs-9 }
 
-Welcome! This is the official documentation for Blade 0.0.75.
+Welcome! This is the official documentation for Blade 0.0.76.
 {: .fs-6 .fw-300 }
 
 <div style="color:red">This documentation is a work in progress!</div>
@@ -80,9 +80,9 @@ There are many more use-cases where Blade is a great fit. This is just the bare 
 ---
 
 <span>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.75/blade-windows-v0.0.75.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.75/blade-linux-v0.0.75.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.75/blade-macos-v0.0.75.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.76/blade-windows-v0.0.76.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.76/blade-linux-v0.0.76.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.76/blade-macos-v0.0.76.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
 </span>
 
 > - This downloads only support `x86-64` plaforms. 
@@ -185,7 +185,7 @@ Something like this:
 
 ```terminal
 $ blade
-Blade 0.0.75 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
+Blade 0.0.76 (running on BladeVM 0.0.6), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type ".exit" to quit or ".credits" for more information
 %> echo 'Hello, World'
@@ -255,7 +255,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.75 (running on BladeVM 0.0.6)
+Blade 0.0.76 (running on BladeVM 0.0.6)
 ```
 
 
