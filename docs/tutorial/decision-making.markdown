@@ -3,7 +3,7 @@ layout: default
 title: Decision Making
 parent: Tutorial
 nav_order: 8
-permalink: /tutorial/decision-making
+permalink: /tutorial/decision-making.html
 ---
 
 # Decision Making
@@ -208,4 +208,4 @@ To have more than one statement in the `when` option, simply use a block. For ex
 
 <br><br>
 
-[Previous Topic](./reserved) | [Next Topic](./loops){:class="float-right"}
+[Previous Topic](./reserved.html) | [Next Topic](./loops.html){:class="float-right"}

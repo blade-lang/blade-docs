@@ -90,7 +90,7 @@ Operators such as `+=`, `-=`, `++`, `--` are all supported.
 36
 160
 ```
-[More](./tutorial/variables)
+[More](./tutorial/variables.html)
 
 
 ## Comments
@@ -108,7 +108,7 @@ Single line comments begin with an `#`, multiline comments are wrapped in `/*` a
   */
 */
 ```
-[More](./tutorial/comments)
+[More](./tutorial/comments.html)
 
 
 ## String interpolation
@@ -130,7 +130,7 @@ Blade strings allow you to evaluate expressions within strings using the interpo
 'a was 93, but is now 107'
 ```
 The arguments to _replace_ could have used `''` pairs too. We only used `""` for clarity.<br>
-[More](./tutorial/strings)
+[More](./tutorial/strings.html)
 
 
 ## `if...else...` statements
@@ -159,7 +159,7 @@ else echo 'a is not 20'
  * a is 20
  */
 ```
-[More](./tutorial/decision-making)
+[More](./tutorial/decision-making.html)
 
 
 ## Ternary operators `?:`
@@ -172,7 +172,7 @@ Simple expression time decisions are supported via ternary operators
 %> echo a < 10 ? 'Failed.' : 'Congrats!'
 'Congrats!'
 ```
-[More](./tutorial/decision-making)
+[More](./tutorial/decision-making.html)
 
 
 ### `using` statements
@@ -193,7 +193,7 @@ This statement takes a value and matches it against a set of constants to run th
 .. }
 'My name is James'
 ```
-[More](./tutorial/decision-making)
+[More](./tutorial/decision-making.html)
 
 
 ## `while` loop
@@ -212,7 +212,7 @@ This statement takes a value and matches it against a set of constants to run th
 'Item at 2 is Banana
 'Item at 3 is Peach'
 ```
-[More](./tutorial/loops)
+[More](./tutorial/loops.html)
 
 
 ## `do...while` loop
@@ -230,13 +230,13 @@ This statement takes a value and matches it against a set of constants to run th
 2
 1
 ```
-[More](./tutorial/loops)
+[More](./tutorial/loops.html)
 
 
 ## `iter` loop
 ---
 
-Blade's version of C/JavaScript's _for_ loops. See [here](./) for why we didn't call it a for loop.
+Blade's version of C/JavaScript's _for_ loops. See [here](./.html) for why we didn't call it a for loop.
 
 ```blade-repl
 %> iter var i = 0; i < 5; i++ {
@@ -248,7 +248,7 @@ Blade's version of C/JavaScript's _for_ loops. See [here](./) for why we didn't 
 'Iteration 3'
 'Iteration 4'
 ```
-[More](./tutorial/loops)
+[More](./tutorial/loops.html)
 
 
 ## Ranges
@@ -264,7 +264,7 @@ You can define numbers over a range using Blade's range operator `..` and they c
 %> 21..3
 <range 21-3>
 ```
-[More](./tutorial/loops)
+[More](./tutorial/loops.html)
 
 
 ## `for` loop
@@ -288,7 +288,7 @@ You can define numbers over a range using Blade's range operator `..` and they c
 'version -> 0.5'
 'website -> https://bladelang.com'
 ```
-[More](./tutorial/loops)
+[More](./tutorial/loops.html)
 
 
 ## Iterables
@@ -327,7 +327,7 @@ Blade comes with built-in support for strings, ranges, bytes, lists, and diction
 'l'
 'o'
 ```
-[More](./tutorial/lists)
+[More](./tutorial/lists.html)
 
 
 ## Functions
@@ -365,7 +365,7 @@ Use the `def` keyword to define a function.
 %> outer_function()()
 20
 ```
-[More](./tutorial/functions)
+[More](./tutorial/functions.html)
 
 
 ## Type check and conversions
@@ -382,7 +382,7 @@ true
 > **_@note:_** They type of a dictionary is shortened to `dict` for builtin functions. i.e. we have `to_dict()` and `is_dict()`.
 
 
-[More](./tutorial/type-casting)
+[More](./tutorial/type-casting.html)
 
 
 ## Class
@@ -394,7 +394,7 @@ true
 %> # creating instance of a class...
 %> var person = Person()
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Class methods
@@ -411,7 +411,7 @@ true
 %> person.say_hello('Hank')
 'Hello, Hank'
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Class constructors
@@ -435,7 +435,7 @@ Constructors are simply class methods bearing the same name as the class.
 %> person.say_hello()
 'Hello, Stark'
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Class fields
@@ -451,7 +451,7 @@ Constructors are simply class methods bearing the same name as the class.
 %> '${point.x}, ${point.y}'
 '2.143, 7.941'
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Static class fields and methods
@@ -471,7 +471,7 @@ Constructors are simply class methods bearing the same name as the class.
 %> Math.abs(-91)
 91
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Private class fields and methods
@@ -500,7 +500,7 @@ Unhandled Exception: cannot call private property '_number_of_desks' from instan
   StackTrace:
     <repl>:1 -> @.script()
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Inheritance
@@ -539,7 +539,7 @@ Unhandled Exception: cannot call private property '_number_of_desks' from instan
 'Come here Bingo'
 'Whats up?'
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Class decorator
@@ -553,7 +553,7 @@ These are methods meant to provide information on how to use the class and they 
 ..   }
 .. }
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Overriding builtin-methods
@@ -592,7 +592,7 @@ Unhandled Exception: undefined method '@to_string' in Person
 > **_@note:_** Some builtin functions do not support decoration. e.g. `max()`.
 
 
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Class as iterables
@@ -624,7 +624,7 @@ To convert a class into an iterable, simply implement the `@iter()` and `@itern(
 'Alex'
 'Justina'
 ```
-[More](./tutorial/classes)
+[More](./tutorial/classes.html)
 
 
 ## Reading and Writing Files
@@ -647,7 +647,7 @@ To convert a class into an iterable, simply implement the `@iter()` and `@itern(
 %> file('test.txt').read()
 'It works!'
 ```
-[More](./tutorial/working-with-files)
+[More](./tutorial/working-with-files.html)
 
 
 ## Throwing exceptions
@@ -661,7 +661,7 @@ Unhandled Exception: I died
   StackTrace:
     <repl>:1 -> @.script()
 ```
-[More](./tutorial/error-handling)
+[More](./tutorial/error-handling.html)
 
 
 ## Handling exceptions
@@ -679,7 +679,7 @@ Unhandled Exception: I died
 'Error: list index 1 out of range'
 "I'll run after all even if there is an error"
 ```
-[More](./tutorial/error-handling)
+[More](./tutorial/error-handling.html)
 
 
 ## Custom Exceptions
@@ -699,7 +699,7 @@ Unhandled CustomError: I died too!
   StackTrace:
     <repl>:1 -> @.script()
 ```
-[More](./tutorial/error-handling)
+[More](./tutorial/error-handling.html)
 
 
 ## Asserts
@@ -716,7 +716,7 @@ Illegal State: Failue!
   StackTrace:
     <repl>:1 -> @.script()
 ```
-[More](./tutorial/asserts)
+[More](./tutorial/asserts.html)
 
 
 ## Importing packages and modules
@@ -771,7 +771,7 @@ import ..test # prefix path with a range (..) for the parent directory.
 > **_@note:_** Every Blade `.b` script is a module.
 
 
-[More](./tutorial/modules)
+[More](./tutorial/modules.html)
 
 
 ## Creating packages
@@ -817,4 +817,4 @@ $ blade sample.b
 You should see `Paula` printed in the console. Voila!
 > This features extends to C extensions created for Blade as well.
 
-[More](./tutorial/modules)
+[More](./tutorial/modules.html)

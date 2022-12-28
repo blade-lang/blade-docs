@@ -3,7 +3,7 @@ layout: default
 title: Numbers & Operators
 parent: Tutorial
 nav_order: 4
-permalink: /tutorial/numbers
+permalink: /tutorial/numbers.html
 ---
 
 
@@ -197,4 +197,4 @@ enough that this legends will be sure to not need another lesson on how to use t
 
 <br><br>
 
-[Previous Topic](./comments) | [Next Topic](./strings){:class="float-right"}
+[Previous Topic](./comments.html) | [Next Topic](./strings.html){:class="float-right"}

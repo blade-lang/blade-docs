@@ -3,7 +3,7 @@ layout: default
 title: Comments
 parent: Tutorial
 nav_order: 3
-permalink: /tutorial/comments
+permalink: /tutorial/comments.html
 ---
 
 # Comments
@@ -86,4 +86,4 @@ another block comment
 
 <br><br>
 
-[Previous Topic](./hello) | [Next Topic](./numbers){:class="float-right"}
+[Previous Topic](./hello.html) | [Next Topic](./numbers.html){:class="float-right"}

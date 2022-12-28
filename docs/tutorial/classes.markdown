@@ -3,7 +3,7 @@ layout: default
 title: Class
 parent: Tutorial
 nav_order: 14
-permalink: /tutorial/class
+permalink: /tutorial/class.html
 ---
 
 # Class
@@ -150,7 +150,7 @@ For example:
 'I am a class'
 ```
 
-One can easily check if a class is derived from another using the [`is_instance()`](./builtin-functions#is_instance) function. For example:
+One can easily check if a class is derived from another using the [`is_instance()`](./builtin-functions.html#is_instance) function. For example:
 
 ```blade-repl
 %> var derived = Derived()
@@ -282,7 +282,7 @@ Blade _decorators_ are special syntaxed functions that is used to provide detail
 language features. 
 
 Along this course of this tutorial, we have seen how a for statement can be used loop through iterables and have defined a few 
-iterables such as [strings](./strings), [lists](./lists), [dictionaries](./dictionaries) etc. 
+iterables such as [strings](./strings.html), [lists](./lists.html), [dictionaries](./dictionaries.html) etc. 
 
 Why are these objects iterables?
 
@@ -382,7 +382,7 @@ For example,
 
 As previously discussed, the result of most built-in functions with a general exception for all methods with names in 
 the format `is_...` support overrides from classes via decorators in the format `@to_[method name]`. For example, the 
-[`abs()`](./builtin-functions#abs) method can be overriden by implementing the decorator `@to_abs()`. The exception to this 
+[`abs()`](./builtin-functions.html#abs) method can be overriden by implementing the decorator `@to_abs()`. The exception to this 
 naming convenction are methods whose name are in the form `to_...` in which case the `to_` prepend will be omitted.
 
 For example:
@@ -414,7 +414,7 @@ Unhandled Exception: undefined method '@to_string' in Person
 The overriding decorator must accept `n - 1` arguments, where `n` is the number of arguments of the original built-in 
 functions. For example, the `to_string()` function accepts 1 parameter and the override `@to_string()` above accepts `1 - 1 = 0` arguments.
 
-Check the [builtin functions](./builtin-functions) documentation for more information on the functions that support value 
+Check the [builtin functions](./builtin-functions.html) documentation for more information on the functions that support value 
 overriding and those that do not.
 
 
@@ -422,4 +422,4 @@ overriding and those that do not.
 
 <br><br>
 
-[Previous Topic](./builtin-functions) | [Next Topic](./working-with-files){:class="float-right"}
+[Previous Topic](./builtin-functions.html) | [Next Topic](./working-with-files.html){:class="float-right"}

@@ -3,7 +3,7 @@ layout: default
 title: Reserveds Words
 parent: Tutorial
 nav_order: 7
-permalink: /tutorial/reserved
+permalink: /tutorial/reserved.html
 ---
 
 # Reserved Words
@@ -29,4 +29,4 @@ as shown here.
 
 <br><br>
 
-[Previous Topic](./variables) | [Next Topic](./decision-making){:class="float-right"}
+[Previous Topic](./variables.html) | [Next Topic](./decision-making.html){:class="float-right"}

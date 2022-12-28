@@ -3,7 +3,7 @@ layout: default
 title: Working with Files
 parent: Tutorial
 nav_order: 16
-permalink: /tutorial/working-with-files
+permalink: /tutorial/working-with-files.html
 ---
 
 # Working with Files
@@ -397,4 +397,4 @@ The file object contains the following methods:
 
 <br><br>
 
-[Previous Topic](./class) | [Next Topic](./error-handling){:class="float-right"}
+[Previous Topic](./class.html) | [Next Topic](./error-handling.html){:class="float-right"}

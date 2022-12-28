@@ -3,7 +3,7 @@ layout: default
 title: Getting Started
 parent: Tutorial
 nav_order: 1
-permalink: /tutorial/intro
+permalink: /tutorial/intro.html
 ---
 
 
@@ -64,4 +64,4 @@ scientific, academic and research engineering to mention a few.
 _Now, let us get started!_
 
 
-[Next Topic](./hello){:class="float-right"}
+[Next Topic](./hello.html){:class="float-right"}

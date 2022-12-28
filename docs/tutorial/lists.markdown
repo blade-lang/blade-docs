@@ -3,7 +3,7 @@ layout: default
 title: Lists
 parent: Tutorial
 nav_order: 10
-permalink: /tutorial/lists
+permalink: /tutorial/lists.html
 ---
 
 # Lists
@@ -46,7 +46,7 @@ Working with Lists is a breeze. For example, adding two lists together looks lik
 [Hello, World]
 ```
 
-Lists follow the same indexing and slicing rules as [Strings](./strings) so for breviety, we'll 
+Lists follow the same indexing and slicing rules as [Strings](./strings.html) so for breviety, we'll 
 not go into the whole academic stuffs anymore.
 
 Just for a quick run-through, accessing indexes in _Lists_ will look like this:
@@ -59,7 +59,7 @@ Just for a quick run-through, accessing indexes in _Lists_ will look like this:
 'III'
 ```
 
-And slicing _Lists_ just like [Strings](./strings#string-operations) will look like this:
+And slicing _Lists_ just like [Strings](./strings.html#string-operations) will look like this:
 
 ```blade-repl
 %> var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -568,4 +568,4 @@ Lists support methods operations too. Here are a list of all the methods support
 
 <br><br>
 
-[Previous Topic](./loops) | [Next Topic](./dictionaries){:class="float-right"}
+[Previous Topic](./loops.html) | [Next Topic](./dictionaries.html){:class="float-right"}

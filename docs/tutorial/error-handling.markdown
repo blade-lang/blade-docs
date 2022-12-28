@@ -3,7 +3,7 @@ layout: default
 title: Error Handling
 parent: Tutorial
 nav_order: 17
-permalink: /tutorial/error-handling
+permalink: /tutorial/error-handling.html
 ---
 
 # Error Handling
@@ -201,4 +201,4 @@ Illegal State: Bad mathematician!
 
 <br><br>
 
-[Previous Topic](./working-with-files) | [Next Topic](./modules){:class="float-right"}
+[Previous Topic](./working-with-files.html) | [Next Topic](./modules.html){:class="float-right"}

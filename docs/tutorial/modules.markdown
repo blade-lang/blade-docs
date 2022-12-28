@@ -3,7 +3,7 @@ layout: default
 title: Modules & Packages
 parent: Tutorial
 nav_order: 19
-permalink: /tutorial/modules
+permalink: /tutorial/modules.html
 ---
 
 # Modules and Packages
@@ -294,4 +294,4 @@ echo slow(15)
 
 <br><br>
 
-[Previous Topic](./error-handling) | [Next Topic](./bytes){:class="float-right"}
+[Previous Topic](./error-handling.html) | [Next Topic](./bytes.html){:class="float-right"}

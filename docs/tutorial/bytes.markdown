@@ -3,7 +3,7 @@ layout: default
 title: Working with Binary data
 parent: Tutorial
 nav_order: 20
-permalink: /tutorial/bytes
+permalink: /tutorial/bytes.html
 ---
 
 # Working with Binary data
@@ -377,4 +377,4 @@ opens the door to endless possiblities. Remember that Blade is a growing languag
 plead with you to keep up to date with this documentation to follow the development of the language of Ninjas._**
 
 
-[Previous Topic](./modules)
+[Previous Topic](./modules.html)

@@ -3,7 +3,7 @@ layout: default
 title: Variables & Statements
 parent: Tutorial
 nav_order: 6
-permalink: /tutorial/variables
+permalink: /tutorial/variables.html
 ---
 
 # Variables & Statements
@@ -166,4 +166,4 @@ For example, we can have multiple variable assignment on the same line as follow
 
 <br><br>
 
-[Previous Topic](./strings) | [Next Topic](./reserved){:class="float-right"}
+[Previous Topic](./strings.html) | [Next Topic](./reserved.html){:class="float-right"}

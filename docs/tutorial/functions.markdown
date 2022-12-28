@@ -3,7 +3,7 @@ layout: default
 title: Functions
 parent: Tutorial
 nav_order: 12
-permalink: /tutorial/functions
+permalink: /tutorial/functions.html
 ---
 
 # Functions
@@ -295,4 +295,4 @@ SyntaxError at ',': expected ')' after function parameters
 
 <br><br>
 
-[Previous Topic](./dictionaries) | [Next Topic](./builtin-functions){:class="float-right"}
+[Previous Topic](./dictionaries.html) | [Next Topic](./builtin-functions.html){:class="float-right"}

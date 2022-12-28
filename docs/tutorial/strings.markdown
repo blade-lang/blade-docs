@@ -3,7 +3,7 @@ layout: default
 title: Strings
 parent: Tutorial
 nav_order: 5
-permalink: /tutorial/strings
+permalink: /tutorial/strings.html
 ---
 
 # Strings
@@ -349,8 +349,8 @@ know when you don't need a string anymore and will gracefully delete the string 
 
 ---
 **_If you have no previous experience with C style languages or don't know what methods are, you may which 
-to proceed into the [next](./variables) topic of the tutorial and come back here after you've completed 
-the [Class](./class) tutorial._**
+to proceed into the [next](./variables.html) topic of the tutorial and come back here after you've completed 
+the [Class](./class.html) tutorial._**
 
 ---
 
@@ -759,7 +759,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   substring _str_. Otherwise, it returns `false`.
 
   If the string _str_ contains a valid [regular expression](#regular-expressions) (we'll get to that shortly below), it returns `false` if a match for the regex _str_ cannot be found in the string. Otherwise, it 
-  returns a [dictionary](./dictionaries) containing all first matching substring.
+  returns a [dictionary](./dictionaries.html) containing all first matching substring.
 
   For example:
 
@@ -777,7 +777,7 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
 ^
 {:#matches} _string_.**matches**(_reg_: regex)
 : Returns a dictionary containing every match of the given regular expression _reg_ in the source string.
-  If no match is found, an empty [dictionary](./dictionaries) is returned.
+  If no match is found, an empty [dictionary](./dictionaries.html) is returned.
 
   For example:
 
@@ -813,8 +813,8 @@ Blade string comes with a lot of powerful text processing capabilities wrapped i
   > When the third parameter _`use_regex`_ is set to false, _str_ will never be treated as a regular
   > expression even if it contains a valid regular expression.
 
-Apart from the above listed methods, String also implements the _[Iterable Decorators](./class)_ which
-we'll talk about in details under the _[Class](./class)_ lesson.
+Apart from the above listed methods, String also implements the _[Iterable Decorators](./class.html)_ which
+we'll talk about in details under the _[Class](./class.html)_ lesson.
 
 ## Regular Expressions
 ---
@@ -880,4 +880,4 @@ Or the same query with modifiers,
 
 <br><br>
 
-[Previous Topic](./numbers) | [Next Topic](./variables){:class="float-right"}
+[Previous Topic](./numbers.html) | [Next Topic](./variables.html){:class="float-right"}

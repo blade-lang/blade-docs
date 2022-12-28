@@ -3,7 +3,7 @@ layout: default
 title: Built-in Functions
 parent: Tutorial
 nav_order: 13
-permalink: /tutorial/builtin-functions
+permalink: /tutorial/builtin-functions.html
 ---
 
 # Built-in Functions
@@ -227,4 +227,4 @@ built-in functions followed by their respective documentations.
 
 <br><br>
 
-[Previous Topic](./functions) | [Next Topic](./class){:class="float-right"}
+[Previous Topic](./functions.html) | [Next Topic](./class.html){:class="float-right"}

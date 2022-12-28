@@ -3,7 +3,7 @@ layout: default
 title: Dictionaries
 parent: Tutorial
 nav_order: 11
-permalink: /tutorial/dictionaries
+permalink: /tutorial/dictionaries.html
 ---
 
 # Dictionaries
@@ -23,8 +23,8 @@ For example:
 {}
 ```
 
-> While dictionary values can be any valid Blade object, keys can only be one of [String](./strings), 
-> [Number](./numbers) or Boolean.
+> While dictionary values can be any valid Blade object, keys can only be one of [String](./strings.html), 
+> [Number](./numbers.html) or Boolean.
 
 For example:
 
@@ -353,4 +353,4 @@ detailed below.
 
 <br><br>
 
-[Previous Topic](./lists) | [Next Topic](./functions){:class="float-right"}
+[Previous Topic](./lists.html) | [Next Topic](./functions.html){:class="float-right"}

@@ -3,7 +3,7 @@ layout: default
 title: Loops & Ranges
 parent: Tutorial
 nav_order: 9
-permalink: /tutorial/loops
+permalink: /tutorial/loops.html
 ---
 
 # Loops & Ranges
@@ -242,7 +242,7 @@ Ranges also have a few methods.
 > the upper limit of the range is not interpreted as a number since the range was not assigned to 
 > a variable.
 
-Other examples of iterables are [Strings](./strings), [Lists](./lists), [Dictionaries](./dictionaries), [Bytes](/standard/bytes) etc.
+Other examples of iterables are [Strings](./strings.html), [Lists](./lists.html), [Dictionaries](./dictionaries.html), [Bytes](/standard/bytes) etc.
 
 
 ## For Loops
@@ -292,10 +292,10 @@ come across in the tutorial.
 ---
 
 **_Infact, we'll like to get you exited ahead of time by sharing a simple secret &mdash; In Blade, 
-you can convert any [class](./class) into an iterable simply by implementing two 
-[decorators](./class#decorators) and it'll work perfectly with the for loop._**
+you can convert any [class](./class.html) into an iterable simply by implementing two 
+[decorators](./class.html.html#decorators) and it'll work perfectly with the for loop._**
 
 
 <br><br>
 
-[Previous Topic](./decision-making) | [Next Topic](./lists){:class="float-right"}
+[Previous Topic](./decision-making.html) | [Next Topic](./lists.html){:class="float-right"}

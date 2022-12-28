@@ -3,7 +3,7 @@ layout: default
 title: Hello, World
 parent: Tutorial
 nav_order: 2
-permalink: /tutorial/hello
+permalink: /tutorial/hello.html
 ---
 
 # Hello, World
@@ -97,7 +97,7 @@ We'll learn more about the `print` thing you saw there later. For now, it's good
 1. Using the `echo` command
 2. Using the `print` function
 
-You'll see how they differ when we explain `print` better [here](./builtin-functions).
+You'll see how they differ when we explain `print` better [here](./builtin-functions.html).
 
 
 ## Blade the Calculator
@@ -142,4 +142,4 @@ But if you want to do beautiful and amazing things, let's continue into the next
 
 <br><br>
 
-[Previous Topic](./intro) | [Next Topic](./comments){:class="float-right"}
+[Previous Topic](./intro.html) | [Next Topic](./comments.html){:class="float-right"}
