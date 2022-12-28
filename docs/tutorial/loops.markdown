@@ -293,7 +293,7 @@ come across in the tutorial.
 
 **_Infact, we'll like to get you exited ahead of time by sharing a simple secret &mdash; In Blade, 
 you can convert any [class](./class.html) into an iterable simply by implementing two 
-[decorators](./class.html.html#decorators) and it'll work perfectly with the for loop._**
+[decorators](./class.html#decorators) and it'll work perfectly with the for loop._**
 
 
 <br><br>
