@@ -232,6 +232,7 @@ You should see `1.0.0` printed in the console. Voila!
 
 
 ## Default Exports and Imports
+---
 
 In Blade, modules and packages can export a default function that will be called if when a user 
 instantiates a module or package as they would instantiate a function or class by simply declaring 
@@ -259,6 +260,7 @@ The `jump()` function automatically becomes available for calling via the module
 Other functions declared in the module will still have to be called using the standard syntax 
 of `jump.another_style()`.
 
+## Function promotion
 ---
 
 When the user of a module or package imports a package or module, they can carefully select any of the 
@@ -291,6 +293,7 @@ import jump as slow
 echo slow(15)
 ```
 
+> This is the only standard way of accessing a private function in a module without need for the `reflect` module.
 
 <br><br>
 
