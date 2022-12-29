@@ -25,8 +25,8 @@ Welcome! This is the official documentation for Blade 0.0.76.
 
 <div class="fs-8">
 <a href="#download" class="btn btn-primary fs-4 mb-4 mb-md-0 mr-2">Installation <i class="fa-regular fa-circle-down"></i></a>
-<a href="./quick-learn" class="btn btn-red fs-4 mb-4 mb-md-0 mr-2">Quick Language Overview</a>
-<a href="./examples" class="btn btn-green fs-4 mb-4 mb-md-0 mr-2">Learn by Example</a>
+<a href="/quick-learn.html" class="btn btn-red fs-4 mb-4 mb-md-0 mr-2">Quick Language Overview</a>
+<a href="/examples.html" class="btn btn-green fs-4 mb-4 mb-md-0 mr-2">Learn by Example</a>
 </div>
 
 <br>
