@@ -688,11 +688,7 @@ Unhandled Exception: I died
 Simply subclass `Exception` as follows.
 
 ```blade-repl
-%> class CustomError < Exception {
-..   CustomError(message) {
-..     parent(message)
-..   }
-.. }
+%> class CustomError < Exception {}
 %> 
 %> die CustomError('I died too!')
 Unhandled CustomError: I died too!

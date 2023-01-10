@@ -64,7 +64,7 @@ aux_links:
 aux_links_new_tab: false
 
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/blade_logo.png"
+# logo: "/assets/images/blade_logo.png"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter

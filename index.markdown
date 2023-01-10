@@ -8,6 +8,9 @@ nav_order: 0
 description: Welcome! This is the official documentation for Blade 0.0.77.
 ---
 
+> Introducing [Nyssa Package Manager](https://nyssa.bladelang.com). The official package manager for the Blade programming language.
+{: .fs-4 .text-red-300 }
+
 # The Blade Language Documentation
 {: .fs-9 }
 
@@ -84,6 +87,8 @@ There are many more use-cases where Blade is a great fit. This is just the bare 
 <a href="https://github.com/blade-lang/blade/releases/download/v0.0.77/blade-linux-v0.0.77.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
 <a href="https://github.com/blade-lang/blade/releases/download/v0.0.77/blade-macos-v0.0.77.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
 </span>
+
+> It is advisable to install [Nyssa](https://nyssa.bladelang.com) the official package manager after installing Blade. [See installation instruction here](https://nyssa.bladelang.com/docs).
 
 > - This downloads only support `x86-64` plaforms. 
 > - Apple M1 devices should install `Rosetta 2` to run the downloaded application or install from source.
