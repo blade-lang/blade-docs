@@ -449,7 +449,7 @@ Rather, it gives the tools required to craft any request body of your choice.
 
 
 ^
-{:#http__server} _http_.**server**(_port_: int, _address_: string, _is_secure_: bool)
+{:#http__server} _http_.**server**(_port_: int, _address_: string)
 : Creates an new HttpServer instance.
    <div class="cite"><span class="hint">returns</span> <span>HttpServer</span></div>
 
@@ -591,12 +591,6 @@ HTTP server
 #### class HttpServer properties
 ---
 
-{:#HttpServer_HttpServer_is_secure} _HttpServer._**is_secure**
-: A boolean value indicating if the server should/will be TLS/SSL secured or not.
-   <div class="cite"><span class="hint">default</span> <span>false</span></div>
-
-
-
 {:#HttpServer_HttpServer_host} _HttpServer._**host**
 : The host address to which this server will be bound
    <div class="cite"><span class="hint">default</span> <span>socket.IP_LOCAL (127.0.0.1)</span></div>
@@ -636,18 +630,6 @@ HTTP server
 
 
 
-{:#HttpServer_HttpServer_cert_file} _HttpServer._**cert_file**
-: The SSL/TLS ceritificate file that will be used be used by a secured server for 
-  serving requests.
-  > - do not set a value to it directly. Use `load_certs()` instead.
-
-
-{:#HttpServer_HttpServer_private_key_file} _HttpServer._**private_key_file**
-: The SSL/TLS private key file that will be used be used by a secured server for 
-  serving requests.
-  > - do not set a value to it directly. Use `load_certs()` instead.
-
-
 {:#HttpServer_HttpServer_verify_certs} _HttpServer._**verify_certs**
 : This value controls whether the client certificate should be verified 
   or not.
@@ -658,15 +640,8 @@ HTTP server
 #### class HttpServer methods
 ---
 
-{:#_HttpServer_HttpServer} **HttpServer**(_port_: int [, _host_: string [, _is_secure_: bool]])
+{:#_HttpServer_HttpServer} **HttpServer**(_port_: int [, _host_: string])
 :  <div class="cite"><span class="hint">constructor</span> <span></span></div>
-
-
-
-{:#_HttpServer_load_certs} **load_certs**(_cert_file_: string | file [, _private_key_file_: string | file])
-: loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
-  > - certificates can only be loaded for secure servers.
-   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
 
 

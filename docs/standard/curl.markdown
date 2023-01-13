@@ -601,8 +601,24 @@ cURL Mime object for multipart-data forms and POST requests.
 : Adds a new mime part with the given name and value.
 
 
+{:#_CurlMime_add_as} **add_as**(_value_: any, _type_: string)
+: Adds a new mime part with the given data and type.
+
+
+{:#_CurlMime_add_data} **add_data**(_data_: any)
+: Adds a new mime part with the given data.
+
+
 {:#_CurlMime_add_file} **add_file**(_name_: string, _file_: string)
 : Adds a new mime part with the given name and file.
+
+
+{:#_CurlMime_add_mime} **add_mime**(_mime_: CurlMime, _type_: string)
+: Adds a new mime subpart with the given mime.
+
+
+{:#_CurlMime_set_encoding} **set_encoding**(_encoding_: string)
+: Sets the encoding with which the mime will be transfered.
 
 
 {:#_CurlMime_get_pointer} **get_pointer**()
@@ -873,6 +889,43 @@ Auth values for `Options.HTTPAUTH` and `Options.PROXYAUTH`
 
 {:#Auth_Auth_SSH_DEFAULT} _static_ _Auth._**SSH_DEFAULT**
 : The default SSH authentication (same as ANY).
+   <div class="cite"><span class="hint">static</span> <span></span></div>
+
+
+
+
+^
+
+
+### _class_ UseSSL 
+---
+
+cURL request options for `set_option()`
+
+
+#### class UseSSL properties
+---
+
+{:#UseSSL_UseSSL_NONE} _static_ _UseSSL._**NONE**
+: Do not attempt to use SSL.
+   <div class="cite"><span class="hint">static</span> <span></span></div>
+
+
+
+{:#UseSSL_UseSSL_TRY} _static_ _UseSSL._**TRY**
+: Try using SSL, proceed anyway otherwise.
+   <div class="cite"><span class="hint">static</span> <span></span></div>
+
+
+
+{:#UseSSL_UseSSL_CONTROL} _static_ _UseSSL._**CONTROL**
+: Use SSL for the control connection or fail.
+   <div class="cite"><span class="hint">static</span> <span></span></div>
+
+
+
+{:#UseSSL_UseSSL_ALL} _static_ _UseSSL._**ALL**
+: Use SSL for all communication or fail
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 

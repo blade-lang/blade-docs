@@ -45,7 +45,7 @@ The `zip` module contains classes and functions to make working with zip archive
 
 <h2>Functions</h2><hr>
 
-{:#zip__extract} _zip_.**extract**(_file_: string [, _destination_: string = os.**cwd**()
+{:#zip__extract} _zip_.**extract**(_file_: string [, _destination_: string = cwd [, _is_zip64_: bool = false]])
 : Extracts the zip archive at the _file_ path to the given _destination_ directory. 
   If _destination_ is not given, the file will be extracted into the current working 
   directory.
