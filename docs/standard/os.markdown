@@ -17,6 +17,8 @@ This module provides functions for interfacing with the underlying operating sys
 {:#os__platform} _os._**platform**
 : The name of the current platform in string or `unknown` if 
   the platform name could not be determined.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
   
   Example,
   
@@ -30,11 +32,95 @@ This module provides functions for interfacing with the underlying operating sys
 ^
 {:#os__args} _os._**args**
 : A list containing the command line arguments passed to the startup script.
+   <div class="cite"><span class="hint">type</span> <span>list</span></div>
+
 
 
 ^
 {:#os__path_separator} _os._**path_separator**
 : The standard path separator for the current operating system.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
+
+
+^
+{:#os__exe_path} _os._**exe_path**
+: The full path to the running Blade executable.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
+
+
+^
+{:#os__DT_UNKNOWN} _os._**DT_UNKNOWN**
+: Unknown file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_BLK} _os._**DT_BLK**
+: Block device file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_CHR} _os._**DT_CHR**
+: Character device file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_DIR} _os._**DT_DIR**
+: Directory file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_FIFO} _os._**DT_FIFO**
+: Named pipe file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_LNK} _os._**DT_LNK**
+: Symbolic link file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_REG} _os._**DT_REG**
+: Regular file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_SOCK} _os._**DT_SOCK**
+: Local-domain socket file type
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+
+
+^
+{:#os__DT_WHT} _os._**DT_WHT**
+: Whiteout file type (only meaningful on UNIX and some unofficial Linux versions).
+   <div class="cite"><span class="hint">type</span> <span>number</span></div>
+
+  > - value is `-1` on systems where it is not supported.
+
+
+^
+{:#os__current_file} _os._**current_file**
+: current_file()
+  
+  A string containing the path to the current file from which the value is accessed.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
 
 
 
