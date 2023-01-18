@@ -142,4 +142,4 @@ But if you want to do beautiful and amazing things, let's continue into the next
 
 <br><br>
 
-[Previous Topic](./intro.html) | [Next Topic](./comments.html){:class="float-right"}
+[Next Topic](./comments.html){:class="float-right"}

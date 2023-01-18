@@ -54,34 +54,20 @@ _A simple HTTP server listening on port 3000 in Blade_
 
 ## What is Blade?
 ---
-Blade is a simple, fast, clean and dynamic language that allows you to develop applications 
-quickly. Blade emphasises algorithm over syntax and for this reason, it has a very small but powerful 
-syntax set with a very natural feel. Blade builds upon the best features of JavaScript, Python and Ruby 
-to give developers a familiar and powerful system that feels native for developers coming from any of 
-these languages and an easy way to leverage the strength of any.
+Blade is a simple, clean and embeddable dynamic programming language created to be simple enough for beginners, 
+powerful and expressive for professionals and for this reason it has a very small syntax set with a very low 
+learning curve. 
+
+Blade improves upon the best features of JavaScript, Python and Ruby to give developers a familiar and powerful 
+system that feels native for developers coming from any of these languages and an easy way to leverage the strength 
+of any.
 
 Blade is _NOT_ named after any weapon, but rather after the iconic Marvel Comics vampire slayer &mdash; Blade.
 
 
-## Why should I use Blade?
+## How does it differ from Python and Ruby?
 ---
 
-If you fall into one of more of these categories or have one of the following needs, then Blade is the right language for you.
-
-- You want a language with a very minimal learning curve (easier to learn than Python).
-- You want Python's simplicity but love coding with braces and other things C-like.
-- You want a language with first-class support for package management.
-- You need a quick script for automating mundane tasks on your device.
-- You need a language that allows fast prototyping.
-- You want to do backend development without needing to depend on a framework.
-- You want a familiar language that can be embedded into your application that's more extensive than Lua.
-
-There are many more use-cases where Blade is a great fit. This is just the bare minimal.
-
-## Distinguishing Features
----
-
-- Simple syntax and minimal keywords.
 - First-class package management (Package management is built into the language module system).
 - Iterable classes.
 - Backend development without any external dependencies.
