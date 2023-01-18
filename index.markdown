@@ -54,7 +54,7 @@ _A simple HTTP server listening on port 3000 in Blade_
 
 ## What is Blade?
 ---
-Blade is a simple, clean and embeddable dynamic programming language created to be simple enough for beginners, 
+Blade is a simple, clean and embeddable dynamic programming language created to be simple enough for beginners yet 
 powerful and expressive for professionals and for this reason it has a very small syntax set with a very low 
 learning curve. 
 
