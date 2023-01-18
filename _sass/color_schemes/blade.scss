@@ -1,0 +1,30 @@
+@import "./color_schemes/light";
+
+$purple-000: #eb0f6b;
+$purple-100: #bd0f57;
+$purple-200: #a70d4d;
+$purple-300: #7a0b39;
+
+$blue-000: #2c9afa;
+$blue-100: #2894e6;
+$blue-200: #267aaf;
+$blue-300: #185685;
+
+$green-000: #36c5a1;
+$green-100: #29a787;
+$green-200: #1e8a6f;
+$green-300: #126e57;
+
+$body-background-color: $white;
+$sidebar-color: $grey-lt-000;
+$search-background-color: $white;
+$table-background-color: $white;
+$code-background-color: $grey-lt-000;
+$feedback-color: darken($sidebar-color, 3%);
+$body-text-color: $grey-dk-100;
+$body-heading-color: $grey-dk-300;
+$search-result-preview-color: $grey-dk-000;
+$nav-child-link-color: $grey-dk-100;
+$link-color: $purple-200;
+$btn-primary-color: $purple-100;
+$base-button-color: #f7f7f7;

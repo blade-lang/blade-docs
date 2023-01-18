@@ -94,3 +94,5 @@ defaults:
       path: "archives"
     values:
       archives: true
+
+color_scheme: blade
