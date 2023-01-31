@@ -189,7 +189,7 @@ SSL interface class
 : begins accepting data on SSL
 
 
-{:#_SSL_accept} **connect**()
+{:#_SSL_connect} **connect**()
 : connects to an SSL server instance
 
 

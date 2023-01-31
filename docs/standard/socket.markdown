@@ -481,6 +481,15 @@ socket.close()
 
 
 
+^
+{:#socket__socket} _socket_.**socket**(_family_: number [, _type_: number [, _protocol_: number]])
+: Returns a new instance of a Socket.
+   <div class="cite"><span class="hint">example</span> <span>socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)</span></div>
+
+   <div class="cite"><span class="hint">see</span> <span>class Socket</span></div>
+
+
+
 
 
 <h2>Classes</h2><hr>
