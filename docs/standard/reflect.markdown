@@ -123,9 +123,49 @@ Try it out!
 
 
 ^
-{:#reflect__get_function_metadata} _reflect_.**get_type**(_object_: instance)
-: Returns the type of an instance as string
-   <div class="cite"><span class="hint">return</span> <span>string</span></div>
+{:#reflect__get_function_metadata} _reflect_.**get_function_metadata**(_object_: function)
+: Returns the metadata of a function as a dictionary. 
+  This dictionary contains the following keys:
+  
+  - `name`: The name of the function
+  - `arity`: The number of none variable (...) arguments the function defines.
+  - `is_variadic`: If the function accepts variable arguments
+  - `captured_vars`: The number of variables captured (only greater than zero for captures).
+  - `module`: The name of the module from where the function was defined.
+  - `file`: The file in which the function was defined.
+  
+  > - This function does not work for built-in functions
+   <div class="cite"><span class="hint">return</span> <span>dictionary</span></div>
+
+
+
+^
+{:#reflect__get_class_metadata} _reflect_.**get_class_metadata**(_klass_: class)
+: Returns the metadata of a class as a dictionary. 
+  This dictionary contains the following keys:
+  
+  - `name`: The name of the class.
+  - `properties`: a list of the name of non-static properties defined in the class
+  - `static_properties`: a list of the name of static properties defined in the class
+  - `methods`: a list of the name of methods defined in the class
+  - `superclass`: The name of the class it inherits from.
+  
+   <div class="cite"><span class="hint">return</span> <span>dictionary</span></div>
+
+
+
+^
+{:#reflect__get_module_metadata} _reflect_.**get_module_metadata**(_module_: imported module)
+: Returns the metadata of an imported module as a dictionary. 
+  This dictionary contains the following keys:
+  
+  - `name`: The name of the module.
+  - `file`: The file from which the module was imported.
+  - `has_preloader`: `true` if the module is a C extension with a preloader and `false` otherwise.
+  - `has_unloader`: `true` if the module is a C extension with a unloader and `false` otherwise.
+  - `definitions`: A list of the name of objects defined in the module.
+  
+   <div class="cite"><span class="hint">return</span> <span>dictionary</span></div>
 
 
 
@@ -142,5 +182,15 @@ Try it out!
 : Returns `true` if _value_ is a pointer, `false` otherwise.
    <div class="cite"><span class="hint">return</span> <span>bool</span></div>
 
+
+
+^
+{:#reflect__set_global} _reflect_.**set_global**(_fn_: function | class [, _name_: string])
+: Sets a function or class as globally accessible in all modules, function and scopes.
+
+
+^
+{:#reflect__run_script} _reflect_.**run_script**(_path_: string)
+: Runs the content of a given script in-place as if it were part of the current module.
 
 

@@ -148,6 +148,18 @@ Provides OpenSSL bindings for Blade
 
 
 
+<h2>Functions</h2><hr>
+
+{:#ssl__server} _ssl_.**server**(_port_: int, _address_: string)
+: Creates an new TLSServer instance.
+   <div class="cite"><span class="hint">returns</span> <span>TLSServer</span></div>
+
+   <div class="cite"><span class="hint">throws</span> <span>Exception, SocketExcepion, HttpException</span></div>
+
+
+
+
+
 <h2>Classes</h2><hr>
 
 
@@ -454,6 +466,139 @@ TLS enabled Socket version powered by OpenSSL.
 : returns the underlying SSLContext instance
    <div class="cite"><span class="hint">return</span> <span>SSLContext</span></div>
 
+
+
+
+^
+
+
+### _class_ TLSServer 
+---
+
+TLS server
+  @printable
+
+
+#### class TLSServer properties
+---
+
+{:#TLSServer_TLSServer_host} _TLSServer._**host**
+: The host address to which this server will be bound
+   <div class="cite"><span class="hint">default</span> <span>socket.IP_LOCAL (127.0.0.1)</span></div>
+
+
+
+{:#TLSServer_TLSServer_port} _TLSServer._**port**
+: The port to which this server will be bound to on the host.
+
+
+{:#TLSServer_TLSServer_socket} _TLSServer._**socket**
+: The working TLSSocket instance for the TLSServer.
+
+
+{:#TLSServer_TLSServer_resuse_address} _TLSServer._**resuse_address**
+: A boolean value indicating whether to reuse socket addresses or not.
+   <div class="cite"><span class="hint">default</span> <span>true</span></div>
+
+
+
+{:#TLSServer_TLSServer_read_timeout} _TLSServer._**read_timeout**
+: The timeout in milliseconds after which an attempt to read clients 
+  request data will be terminated.
+   <div class="cite"><span class="hint">default</span> <span>2000 (2 seconds)</span></div>
+
+
+
+{:#TLSServer_TLSServer_write_timeout} _TLSServer._**write_timeout**
+: The timeout in milliseconds after which an attempt to write response data to 
+  clients will be terminated. 
+  
+  If we cannot send response to a client after the stipulated time, it will be 
+  assumed such clients have disconnected and existing connections for that 
+  client will be closed and their respective sockets will be discarded.
+  
+   <div class="cite"><span class="hint">default</span> <span>2000 (2 seconds)</span></div>
+
+
+
+{:#TLSServer_TLSServer_cert_file} _TLSServer._**cert_file**
+: The SSL/TLS ceritificate file that will be used be used by a secured server for 
+  serving requests.
+  > - do not set a value to it directly. Use `load_certs()` instead.
+
+
+{:#TLSServer_TLSServer_private_key_file} _TLSServer._**private_key_file**
+: The SSL/TLS private key file that will be used be used by a secured server for 
+  serving requests.
+  > - do not set a value to it directly. Use `load_certs()` instead.
+
+
+{:#TLSServer_TLSServer_verify_certs} _TLSServer._**verify_certs**
+: This value controls whether the client certificate should be verified 
+  or not.
+   <div class="cite"><span class="hint">boolean</span> <span></span></div>
+
+
+
+#### class TLSServer methods
+---
+
+{:#_TLSServer_TLSServer} **TLSServer**(_port_: int [, _host_: string])
+:  <div class="cite"><span class="hint">constructor</span> <span></span></div>
+
+
+
+{:#_TLSServer_load_certs} **load_certs**(_cert_file_: string | file [, _private_key_file_: string | file])
+: loads the given SSL/TLS certificate pairs for the given SSL/TLS context.
+   <div class="cite"><span class="hint">return</span> <span>bool</span></div>
+
+
+
+{:#_TLSServer_close} **close**()
+: stops the server
+
+
+{:#_TLSServer_on_connect} **on_connect**(_fn_: function)
+: Adds a function to be called when a new client connects.
+  > - Function _fn_ MUST accept at one parameter which will be passed the client TLSSocket object.
+  > - multiple `on_connect()` may be set on a single instance.
+
+
+{:#_TLSServer_on_disconnect} **on_disconnect**(_fn_: function)
+: Adds a function to be called when a new client disconnects.
+  > - Function _fn_ MUST accept at one parameter which will be passed the client information.
+  > - multiple `on_disconnect()` may be set on a single instance.
+
+
+{:#_TLSServer_on_receive} **on_receive**(_fn_: function)
+: Adds a function to be called when the server receives a message from a client.
+  
+  > Function _fn_ MUST accept TWO parameters. First parameter will accept the HttpRequest 
+  > object and the second will accept the HttpResponse object.
+  
+  > - multiple `on_receive()` may be set on a single instance.
+
+
+{:#_TLSServer_on_reply} **on_reply**(_fn_: function)
+: Adds a function to be called when the server sends a reply to a client.
+  
+  > Function _fn_ MUST accept one parameter which will be passed the HttpResponse object.
+  
+  > - multiple `on_sent()` may be set on a single instance.
+
+
+{:#_TLSServer_on_error} **on_error**(_fn_: function)
+: Adds a function to be called when the server encounters an error with a client.
+  
+  > Function _fn_ MUST accept two parameters. The first argument will be passed the 
+  > `Exception` object and the second will be passed the client `TLSSocket` object.
+  
+  > - multiple `on_error()` may be set on a single instance.
+
+
+{:#_TLSServer_listen} **listen**()
+: Binds to the instance port and host and starts listening for incoming 
+  connection from HTTPS clients.
 
 
 

@@ -107,27 +107,29 @@ For example:
 
 Anonymnous functions in Blade are functions without a name and are meant purely to be treated as 
 a value. They can be assigned, called and/or returned as value from functions just like a regular 
-function. All anonymous functions are automatically assigned the name `|` by the BladeVM.
+function. All anonymous functions are automatically assigned the name `@` by the BladeVM.
 
 Anonymous functions differ from standard functions only by syntax.
 
 - Anonymous function are not defined by any keyword such as `def`.
-- Their parameter list are enclosed between pairs of vertical bars rather than parenthesis.
+- Their parameter list are preceeded by the `@` sign.
 
 For example:
 
 ```blade-repl
-%> || {} # empty anonymous function
-<function | at 0x127305120>
-%> |name| {     # anonymous function accepting parameter name
+%> @() {} # empty anonymous function
+<function @(0) at 0x127305120>
+%> @(name) {     # anonymous function accepting parameter name
 ..   echo name  # function body
 .. }
 ```
 
+> The anonymous function syntax was changed from using vertical bars (`|`) to using the `@` prefix in Blade `v0.0.83`. The compiler will continue to support the old version till we reach version `v0.1.0` for backward compartibility, but it will no longer be documented.
+
 Anonymous functions as discussed can be called,
 
 ```blade-repl
-%> |name, age| {
+%> @(name, age) {
 ..   echo '${name} is ${age} years old'
 .. }('Pete', 46)
 'Pete is 46 years old'
@@ -136,7 +138,7 @@ Anonymous functions as discussed can be called,
 or assigned to variable, 
 
 ```blade-repl
-%> var get_info = |name, age| {
+%> var get_info = @(name, age) {
 ..   echo '${name} is ${age} years old'
 .. }
 %> get_info('Casandra', 11)
@@ -149,7 +151,7 @@ and passed as argument to functions.
 %> def call(fn) {
 ..   fn('Lionel')
 .. }
-%> call(|name| {
+%> call(@(name) {
 ..   echo 'Hi ${name}'
 .. })
 'Hi Lionel'
@@ -203,7 +205,7 @@ JavaScript is another language that supports closures.
 
 ```blade-repl
 %> def make_adder(x) {
-..   return |y| {
+..   return @(y) {
 ..     return x + y
 ..   }
 .. }
@@ -222,9 +224,9 @@ And another slightly more complex one.
 ```blade-repl
 %> var e = 10   # global scope
 %> def sum(a) {
-..   return |b| {
-..     return |c| {     # outer functions scope
-..       return |d| {
+..   return @(b) {
+..     return @(c) {     # outer functions scope
+..       return @(d) {
 ..         return a + b + c + d + e     # local scope
 ..       }
 ..     }

@@ -5,7 +5,7 @@
 layout: home
 title: Introduction
 nav_order: 0
-description: Welcome! This is the official documentation for Blade 0.0.81.
+description: Welcome! This is the official documentation for Blade 0.0.83.
 ---
 
 > Introducing [Nyssa Package Manager](https://nyssa.bladelang.com). The official package manager for the Blade programming language.
@@ -14,7 +14,7 @@ description: Welcome! This is the official documentation for Blade 0.0.81.
 # The Blade Language Documentation
 {: .fs-9 }
 
-Welcome! This is the official documentation for Blade 0.0.81.
+Welcome! This is the official documentation for Blade 0.0.83.
 {: .fs-6 .fw-300 }
 
 <!-- <div style="color:red">This documentation is a work in progress!</div>
@@ -30,7 +30,7 @@ Welcome! This is the official documentation for Blade 0.0.81.
 [![Gitter](https://badges.gitter.im/blade-lang/community.svg)](https://gitter.im/blade-lang/community)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/blade-lang/blade/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/blade-lang/blade/badge.svg?branch=main)](https://coveralls.io/github/blade-lang/blade?branch=main)
-[![Version](https://img.shields.io/badge/version-0.0.81-green)](https://github.com/blade-lang/blade)
+[![Version](https://img.shields.io/badge/version-0.0.83-green)](https://github.com/blade-lang/blade)
 
 <div class="fs-8">
 <a href="#download" class="btn btn-primary fs-4 mb-4 mb-md-0 mr-2">Installation <i class="fa-regular fa-circle-down"></i></a>
@@ -120,9 +120,9 @@ Blade can be used for a wide range of tasks, including:
 ---
 
 <span>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.81/blade-windows-v0.0.81.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.81/blade-linux-v0.0.81.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.81/blade-macos-v0.0.81.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-windows-v0.0.83.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-linux-v0.0.83.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-macos-v0.0.83.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
 </span>
 
 > It is advisable to install [Nyssa](https://nyssa.bladelang.com) the official package manager after installing Blade. [See installation instruction here](https://nyssa.bladelang.com/docs).
@@ -227,7 +227,7 @@ Something like this:
 
 ```terminal
 $ blade
-Blade 0.0.81 (running on BladeVM 0.0.9), REPL/Interactive mode = ON
+Blade 0.0.83 (running on BladeVM 0.0.9), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type ".exit" to quit or ".credits" for more information
 %> echo 'Hello, World'
@@ -299,7 +299,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.81 (running on BladeVM 0.0.9)
+Blade 0.0.83 (running on BladeVM 0.0.9)
 ```
 
 

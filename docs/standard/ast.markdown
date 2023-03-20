@@ -537,6 +537,24 @@ Represents the result of an ast parse operation
 : adds a new item to the parse result
 
 
+{:#_ParseResult_length} **length**()
+: Returns the length of items in the parsed result.
+   <div class="cite"><span class="hint">returns</span> <span>number</span></div>
+
+
+
+{:#_ParseResult_get} **get**(_index_: int)
+: Returns the item at the given ParseResult index or throws exception if out of range.
+   <div class="cite"><span class="hint">returns</span> <span>Ast</span></div>
+
+
+
+{:#_ParseResult_to_list} **to_list**()
+: Returns the items in the ParseResult as a list object.
+   <div class="cite"><span class="hint">returns</span> <span>List<Ast></span></div>
+
+
+
 
 ^
 
