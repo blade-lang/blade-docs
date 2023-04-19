@@ -120,9 +120,9 @@ Blade can be used for a wide range of tasks, including:
 ---
 
 <span>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-windows-v0.0.83.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-linux-v0.0.83.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
-<a href="https://github.com/blade-lang/blade/releases/download/v0.0.83/blade-macos-v0.0.83.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.84/blade-windows-v0.0.84.zip" class="btn btn-primary fs-6 mb-4 mb-md-0 mr-2">Windows &nbsp;<span class="fa-brands fa-windows"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.84/blade-linux-v0.0.84.zip" class="btn btn-linux fs-6 mb-4 mb-md-0 mr-2">Linux  &nbsp;<span class="fa-brands fa-linux"></span></a>
+<a href="https://github.com/blade-lang/blade/releases/download/v0.0.84/blade-macos-v0.0.84.zip" class="btn btn-gray fs-6 mb-4 mb-md-0 mr-2">MacOS  &nbsp;<span class="fa-brands fa-apple"></span></a>
 </span>
 
 > It is advisable to install [Nyssa](https://nyssa.bladelang.com) the official package manager after installing Blade. [See installation instruction here](https://nyssa.bladelang.com/docs).

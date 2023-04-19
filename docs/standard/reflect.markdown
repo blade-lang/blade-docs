@@ -185,6 +185,32 @@ Try it out!
 
 
 ^
+{:#reflect__get_ptr} _reflect_.**get_ptr**(_value_: any)
+: Returns a pointer to the given value.
+   <div class="cite"><span class="hint">return</span> <span>ptr</span></div>
+
+
+
+^
+{:#reflect__set_ptr} _reflect_.**set_ptr**(_pointer_: ptr, _value_: any)
+: Sets the value at the given pointer's address to the given value.
+
+
+^
+{:#reflect__get_address} _reflect_.**get_address**(_value_: any)
+: Returns a the address of the pointer to the value in memory.
+   <div class="cite"><span class="hint">return</span> <span>ptr</span></div>
+
+
+
+^
+{:#reflect__ptr_from_address} _reflect_.**ptr_from_address**(_address_: number)
+: Returns a pointer to the given memory address.
+   <div class="cite"><span class="hint">returns</span> <span>ptr</span></div>
+
+
+
+^
 {:#reflect__set_global} _reflect_.**set_global**(_fn_: function | class [, _name_: string])
 : Sets a function or class as globally accessible in all modules, function and scopes.
 

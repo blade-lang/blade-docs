@@ -43,6 +43,29 @@ For example:
 {country: Nigeria, dial_code: 234, in_africa: true}
 ```
 
+## Automatic value assignment
+---
+
+Sometimes when creating a dictionary, it is very common to have keys that already match the name of a variable that already exists in scope. For example:
+
+```blade-repl
+%> var name = 'Paulina'
+%> var my_dict = {name: name}
+%> my_dict
+{name: Paulina}
+```
+
+Because of how common and frequent developers do this, Blade has an automatic value assignment feature for dictionaries that allow you to assing variables to dictionary keys if they are already within scope without rewriting them.
+
+For example,
+
+```blade-repl
+%> var name = 'Kagawa'
+%> {name}
+{name: Kagawa}
+```
+
+
 ## Accessing members of a Dictionary
 ---
 

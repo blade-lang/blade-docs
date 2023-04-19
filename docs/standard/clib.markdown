@@ -262,6 +262,35 @@ available types.)
 
 
 
+^
+{:#clib__get_ptr_index} _clib_.**get_ptr_index**(_pointer_: ptr, _type_: clib_type, _index_: number)
+: Get the value at the given index of a pointer based 
+  on the given CLib type.
+  
+   <div class="cite"><span class="hint">return</span> <span>any</span></div>
+
+
+
+^
+{:#clib__set_ptr_index} _clib_.**get_ptr_index**(_pointer_: ptr, _type_: clib_type, _index_: number, _value_: any)
+: Sets the value at the given index of a pointer based 
+  on the given CLib type to the given value.
+  
+   <div class="cite"><span class="hint">return</span> <span>any</span></div>
+
+
+
+^
+{:#clib__struct} _clib_.**struct**(...type)
+: Returns a type that can be used to declare structs. 
+  To create or read value for the struct, you need to use the `pack()` 
+  and `unpack()` function in the `struct` module respectively.
+  
+  > - This function can also be used to define a C union or array.
+   <div class="cite"><span class="hint">return</span> <span>type</span></div>
+
+
+
 
 
 <h2>Classes</h2><hr>

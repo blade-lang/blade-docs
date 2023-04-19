@@ -124,7 +124,7 @@ For example:
 .. }
 ```
 
-> The anonymous function syntax was changed from using vertical bars (`|`) to using the `@` prefix in Blade `v0.0.83`. The compiler will continue to support the old version till we reach version `v0.1.0` for backward compartibility, but it will no longer be documented.
+> The anonymous function syntax was changed from using vertical bars (`|`) to using the `@` prefix in Blade `v0.0.84`. The compiler will continue to support the old version till we reach version `v0.1.0` for backward compartibility, but it will no longer be documented.
 
 Anonymous functions as discussed can be called,
 
