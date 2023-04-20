@@ -300,7 +300,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.84 (running on BladeVM 0.0.9)
+Blade 0.0.84 (running on BladeVM 0.1.0)
 ```
 
 
