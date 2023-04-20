@@ -5,7 +5,7 @@
 layout: home
 title: Introduction
 nav_order: 0
-description: Welcome! This is the official documentation for Blade 0.0.83.
+description: Welcome! This is the official documentation for Blade 0.0.84.
 ---
 
 > Introducing [Nyssa Package Manager](https://nyssa.bladelang.com). The official package manager for the Blade programming language.
@@ -14,7 +14,7 @@ description: Welcome! This is the official documentation for Blade 0.0.83.
 # The Blade Language Documentation
 {: .fs-9 }
 
-Welcome! This is the official documentation for Blade 0.0.83.
+Welcome! This is the official documentation for Blade 0.0.84.
 {: .fs-6 .fw-300 }
 
 <!-- <div style="color:red">This documentation is a work in progress!</div>
@@ -30,7 +30,7 @@ Welcome! This is the official documentation for Blade 0.0.83.
 [![Gitter](https://badges.gitter.im/blade-lang/community.svg)](https://gitter.im/blade-lang/community)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/blade-lang/blade/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/blade-lang/blade/badge.svg?branch=main)](https://coveralls.io/github/blade-lang/blade?branch=main)
-[![Version](https://img.shields.io/badge/version-0.0.83-green)](https://github.com/blade-lang/blade)
+[![Version](https://img.shields.io/badge/version-0.0.84-green)](https://github.com/blade-lang/blade)
 
 <div class="fs-8">
 <a href="#download" class="btn btn-primary fs-4 mb-4 mb-md-0 mr-2">Installation <i class="fa-regular fa-circle-down"></i></a>
@@ -227,7 +227,7 @@ Something like this:
 
 ```terminal
 $ blade
-Blade 0.0.83 (running on BladeVM 0.0.9), REPL/Interactive mode = ON
+Blade 0.0.84 (running on BladeVM 0.0.9), REPL/Interactive mode = ON
 Clang 13.0.0, (Build time = Feb  8 2022, 02:47:36)
 Type ".exit" to quit or ".credits" for more information
 %> echo 'Hello, World'
@@ -280,7 +280,7 @@ to show the CLI options. It should look something like this.
 
 
 ```terminal
-Usage: blade [-[h | c | d | e | j | v | g]] [filename]
+Usage: blade [-[h | c | d | e | j | v | g | w]] [filename]
    -h       Show this help message.
    -v       Show version string.
    -b       Buffer terminal outputs.
@@ -291,6 +291,7 @@ Usage: blade [-[h | c | d | e | j | v | g]] [filename]
    -g arg   Sets the minimum heap size in kilobytes before the GC
             can start. [Default = 1024 (1mb)]
    -c arg   Runs the give code.
+   -w       Show runtime warnings.
 ```
 
 > This help message will automatically be triggered when you try to use an unsupported switch.
@@ -299,7 +300,7 @@ For example, to get the version of Blade installed:
 
 ```terminal
 $ blade -v
-Blade 0.0.83 (running on BladeVM 0.0.9)
+Blade 0.0.84 (running on BladeVM 0.0.9)
 ```
 
 
