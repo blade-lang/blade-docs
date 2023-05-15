@@ -365,6 +365,8 @@ Use the `def` keyword to define a function.
 %> outer_function()()
 20
 ```
+
+Blade also has support for **Anonymous function**. Click more for information.
 [More](./tutorial/functions.html)
 
 
