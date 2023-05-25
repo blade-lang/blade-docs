@@ -48,7 +48,7 @@ import http
 import json
 
 var server = http.server(3000)
-server.on_receive(|request, response| {
+server.on_receive(@(request, response) {
   echo 'Request from ${request.ip} to ${request.path}.'
   response.headers['Content-Type'] = 'application/json'
   response.write(json.encode(request))
@@ -504,6 +504,12 @@ Http request handler and object.
 
 {:#HttpRequest_HttpRequest_ip} _HttpRequest._**ip**
 : The IP address of the remote client that initiated the request.
+   <div class="cite"><span class="hint">type</span> <span>string</span></div>
+
+
+
+{:#HttpRequest_HttpRequest_ipv6} _HttpRequest._**ipv6**
+: The IPv6 address of the remote client that initiated the request.
    <div class="cite"><span class="hint">type</span> <span>string</span></div>
 
 

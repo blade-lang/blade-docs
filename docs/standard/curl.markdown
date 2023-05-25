@@ -1112,14 +1112,14 @@ cURL request options for `set_option()`
 
 
 {:#Option_Option_HTTPHEADER} _static_ _Option._**HTTPHEADER**
-: This points to a linked list of headers, struct curl_slist kind. This
+: This points to a list of HTTP header strings. This
   list is also used for RTSP (in spite of its name) 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
 
 {:#Option_Option_HTTPPOST} _static_ _Option._**HTTPPOST**
-: This points to a linked list of post entries, struct curl_httppost 
+: This points to a linked list of post entries. 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
@@ -1708,7 +1708,7 @@ cURL request options for `set_option()`
 
 
 {:#Option_Option_FTP_FILEMETHOD} _static_ _Option._**FTP_FILEMETHOD**
-: Select "file method" to use when doing FTP, see the curl_ftpmethod
+: Select "file method" to use when doing FTP, see the curl ftpmethod
   above. 
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
@@ -2150,8 +2150,7 @@ cURL request options for `set_option()`
 
 
 {:#Option_Option_PROXYHEADER} _static_ _Option._**PROXYHEADER**
-: This points to a linked list of headers used for proxy requests only,
-  struct curl_slist kind 
+: This points to a list of headers used for proxy requests only.
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 
@@ -2409,6 +2408,12 @@ cURL request options for `set_option()`
 
 {:#Option_Option_MIMEPOST} _static_ _Option._**MIMEPOST**
 : Post MIME data. 
+   <div class="cite"><span class="hint">static</span> <span></span></div>
+
+
+
+{:#Option_Option_READDATA} _static_ _Option._**READDATA**
+: The data that will be used as the body of the request.
    <div class="cite"><span class="hint">static</span> <span></span></div>
 
 

@@ -73,7 +73,7 @@ echo name
 
 
 ^
-{:#io__putc} _io_.**putc**(_c_: char)
+{:#io__putc} _io_.**putc**(_c_: char | number)
 : writes character c to the screen
    <div class="cite"><span class="hint">return</span> <span>nil</span></div>
 

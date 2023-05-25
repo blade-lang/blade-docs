@@ -149,6 +149,10 @@ A configurable commandline parser.
 : A list of commands supported by the parser.
 
 
+{:#Parser_Parser_indexes} _Parser._**indexes**
+: A list of positional values supported by the parser.
+
+
 #### class Parser methods
 ---
 
@@ -171,7 +175,7 @@ A configurable commandline parser.
   will match `-v` in the commandline.
   - `type`: type must be one of the args types and will indicate 
   how the parsed data should be interpreted in the final result.
-  - `required`: tells the parser if a value is compulsory for this option.
+  - `value`: tells the parser the default value for this option.
   - `choices`: a list of allowed options or a dictionary of allowed 
   options with their respective descriptions.
   
@@ -191,9 +195,27 @@ A configurable commandline parser.
   
   - `type`: type must be one of the args types and will indicate 
   how the parsed data should be interpreted in the final result.
-  - `required`: tells the parser if a value is compulsory for this option.
   - `choices`: a list of allowed options or a dictionary of allowed 
   options with their respective descriptions.
+  
+  > - the `choices` option only works for type `CHOICE`.
+
+
+{:#_Parser_add_index} **add_index**(_name_: string [, _help_: string [, _opts_: dict]])
+: adds a support for a new positional argument to the parser.
+  
+  The `opts` dictionary can contain property `type` and `action`.
+  
+  - The `type` property a must be one of the args types and will indicate 
+  how the parsed data should be interpreted in the final result.
+  
+  The `opts` dictionary can contain one or more of:
+  
+  - `type`: type must be one of the args types and will indicate 
+  how the parsed data should be interpreted in the final result.
+  - `value`: tells the parser the default value for this index.
+  - `choices`: a list of allowed options or a dictionary of allowed 
+  values with their respective descriptions.
   
   > - the `choices` option only works for type `CHOICE`.
 

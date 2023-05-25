@@ -46,9 +46,6 @@ available types.)
 
 > **NOT YET SUPPORTED:**
 > - Variadic functions
-> - Arrays
-> - Structs and Unions
-> - Enums
 
 
 
@@ -263,6 +260,27 @@ available types.)
 
 
 ^
+{:#clib__new} _clib_.**new**(_type_: type, ...any)
+: Creates a new C value for the specified clib type with the given values.
+   <div class="cite"><span class="hint">returns</span> <span>bytes</span></div>
+
+
+
+^
+{:#clib__get} _clib_.**get**(_type_: type, _data_: string | bytes)
+: Returns the data contained in a C type _type_ encoded in the data.
+  The data should either be an output of `clib.new()` or a call to a 
+  function returning one of struct, union or array.
+  
+  For structures created with `named_struct()`, a dictionary will 
+  automatically be returned with the values mapped to the names of the 
+  structure elements.
+  
+   <div class="cite"><span class="hint">returns</span> <span>list | dictionary</span></div>
+
+
+
+^
 {:#clib__get_ptr_index} _clib_.**get_ptr_index**(_pointer_: ptr, _type_: clib_type, _index_: number)
 : Get the value at the given index of a pointer based 
   on the given CLib type.
@@ -283,8 +301,27 @@ available types.)
 ^
 {:#clib__struct} _clib_.**struct**(...type)
 : Returns a type that can be used to declare structs. 
-  To create or read value for the struct, you need to use the `pack()` 
-  and `unpack()` function in the `struct` module respectively.
+  To create or read value for the struct you need to use the `new()` 
+  and `get()` functions respectively.
+  Alternatively, you may use the `pack()` and `unpack()` 
+  function in the `struct` module respectively.
+  
+  > - This function can also be used to define a C union or array.
+   <div class="cite"><span class="hint">return</span> <span>type</span></div>
+
+
+
+^
+{:#clib__named_struct} _clib_.**named_struct**(_types_: dictionary)
+: Returns a type that can be used to declare structs based on the named 
+  types. The function works well with the `get()` function because it 
+  automatically assigns the name of the struct elements when getting the 
+  value. 
+  
+  To create or read value for the struct you need to use the `new()` 
+  and `get()` functions respectively.
+  Alternatively, you may use the `pack()` and `unpack()` 
+  function in the `struct` module respectively.
   
   > - This function can also be used to define a C union or array.
    <div class="cite"><span class="hint">return</span> <span>type</span></div>

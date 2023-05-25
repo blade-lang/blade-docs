@@ -719,7 +719,7 @@ The Socket class provides interface for working with Socket clients
 
 
 {:#_Socket_info} **info**()
-: Returns a dictionary containing the address, port and family of the current socket or an 
+: Returns a dictionary containing the address, ipv6, port and family of the current socket or an 
   empty dictionary if the socket information could not be retrieved.
    <div class="cite"><span class="hint">return</span> <span>dictionary</span></div>
 
